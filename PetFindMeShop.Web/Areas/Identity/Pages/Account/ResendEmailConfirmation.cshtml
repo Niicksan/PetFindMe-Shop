@@ -1,0 +1,27 @@
+﻿@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Изпращане на имейл за потвърждение";
+}
+
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<div class="row d-flex align-items-center justify-content-center mt-4">
+    <div class="col-md-4">
+        <form method="post">
+            <h3 class="text-center">Въведете имейл</h3>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-floating mt-2 mb-2">
+                <input asp-for="Input.Email" class="form-control" aria-required="true" />
+                <label asp-for="Input.Email" class="form-label">Имейл</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Изптари</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

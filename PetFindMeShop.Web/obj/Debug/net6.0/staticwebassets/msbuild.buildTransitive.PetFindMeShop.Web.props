@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PetFindMeShop.Web.props" />
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\bin\Debug\net6.0\PetFindMeShop.Common.deps.json
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\bin\Debug\net6.0\PetFindMeShop.Common.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\bin\Debug\net6.0\PetFindMeShop.Common.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\PetFindMeShop.Common.csproj.AssemblyReference.cache
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\PetFindMeShop.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\PetFindMeShop.Common.AssemblyInfoInputs.cache
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\PetFindMeShop.Common.AssemblyInfo.cs
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\PetFindMeShop.Common.csproj.CoreCompileInputs.cache
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\PetFindMeShop.Common.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\refint\PetFindMeShop.Common.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\PetFindMeShop.Common.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Common\obj\Debug\net6.0\ref\PetFindMeShop.Common.dll
