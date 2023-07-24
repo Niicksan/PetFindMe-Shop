@@ -260,3 +260,7 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindM
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Data.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.ViewModels.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\obj\Debug\net6.0\PetFindMeShop.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Common.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Data.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Common.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Data.Models.pdb

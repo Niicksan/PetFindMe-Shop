@@ -12,3 +12,8 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\obj\Debug\net6.0\refint\
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\obj\Debug\net6.0\PetFindMeShop.Data.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\obj\Debug\net6.0\PetFindMeShop.Data.genruntimeconfig.cache
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\obj\Debug\net6.0\ref\PetFindMeShop.Data.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\bin\Debug\net6.0\PetFindMeShop.Common.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\bin\Debug\net6.0\PetFindMeShop.Data.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\bin\Debug\net6.0\PetFindMeShop.Data.Models.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\bin\Debug\net6.0\PetFindMeShop.Common.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Data\obj\Debug\net6.0\PetFindMeShop.Data.csproj.CopyComplete

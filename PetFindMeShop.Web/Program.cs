@@ -1,17 +1,35 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PetFindMeShop.Data;
+using PetFindMeShop.Data.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add Default connectionString.
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<PetFindMeShopDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<PetFindMeShopDbContext>();
+builder.Services.AddDefaultIdentity<Customer>(options =>
+{
+    options.SignIn.RequireConfirmedAccount =
+        builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedAccount");
+    options.Password.RequireLowercase =
+        builder.Configuration.GetValue<bool>("Identity:Password:RequireLowercase");
+    options.Password.RequireUppercase =
+        builder.Configuration.GetValue<bool>("Identity:Password:RequireUppercase");
+    options.Password.RequireNonAlphanumeric =
+        builder.Configuration.GetValue<bool>("Identity:Password:RequireNonAlphanumeric");
+    options.Password.RequiredLength =
+        builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
+})
+.AddRoles<IdentityRole<Guid>>()
+.AddEntityFrameworkStores<PetFindMeShopDbContext>();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -20,6 +38,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
+    app.UseDeveloperExceptionPage();
 }
 else
 {

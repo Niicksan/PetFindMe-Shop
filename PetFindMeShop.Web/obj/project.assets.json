@@ -682,11 +682,11 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.18": {
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.15": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.18",
-          "Microsoft.Extensions.Identity.Stores": "6.0.18"
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.15",
+          "Microsoft.Extensions.Identity.Stores": "6.0.15"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
@@ -3936,18 +3936,43 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "PetFindMeShop.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PetFindMeShop.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetFindMeShop.Common.dll": {}
+        }
+      },
       "PetFindMeShop.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.15",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.15"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.15",
+          "PetFindMeShop.Data.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PetFindMeShop.Data.dll": {}
         },
         "runtime": {
           "bin/placeholder/PetFindMeShop.Data.dll": {}
+        }
+      },
+      "PetFindMeShop.Data.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.15",
+          "PetFindMeShop.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PetFindMeShop.Data.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetFindMeShop.Data.Models.dll": {}
         }
       },
       "PetFindMeShop.ViewModels/1.0.0": {
@@ -4808,10 +4833,10 @@
         "microsoft.aspnetcore.diagnostics.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.18": {
-      "sha512": "BNVnyOq8rsoHxnwIi4djBPwgfSodIVZ/In32HjLkpKFu9X7dDSSaRJVq3zmfgyMy6Bnf0fqZADWIZzyihQFV3g==",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.15": {
+      "sha512": "Ycrx57/G7U5/M8K0iI8dbLyRp2B1eLVhvrGV/wRmlLKYoiEnx7czLj6JoXAnVWRzfzKbgXonYrrNwqSpSgEgPw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.identity.entityframeworkcore/6.0.18",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/6.0.15",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4819,7 +4844,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
         "lib/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
-        "microsoft.aspnetcore.identity.entityframeworkcore.6.0.18.nupkg.sha512",
+        "microsoft.aspnetcore.identity.entityframeworkcore.6.0.15.nupkg.sha512",
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
@@ -11200,10 +11225,20 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "PetFindMeShop.Common/1.0.0": {
+      "type": "project",
+      "path": "../PetFindMeShop.Common/PetFindMeShop.Common.csproj",
+      "msbuildProject": "../PetFindMeShop.Common/PetFindMeShop.Common.csproj"
+    },
     "PetFindMeShop.Data/1.0.0": {
       "type": "project",
       "path": "../PetFindMeShop.Data/PetFindMeShop.Data.csproj",
       "msbuildProject": "../PetFindMeShop.Data/PetFindMeShop.Data.csproj"
+    },
+    "PetFindMeShop.Data.Models/1.0.0": {
+      "type": "project",
+      "path": "../PetFindMeShop.Data.Models/PetFindMeShop.Data.Models.csproj",
+      "msbuildProject": "../PetFindMeShop.Data.Models/PetFindMeShop.Data.Models.csproj"
     },
     "PetFindMeShop.ViewModels/1.0.0": {
       "type": "project",
@@ -11214,7 +11249,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.15",
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.18",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.15",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.18",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.18",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.18",
@@ -11276,7 +11311,7 @@
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[6.0.18, )"
+            "version": "[6.0.15, )"
           },
           "Microsoft.AspNetCore.Identity.UI": {
             "target": "Package",

@@ -864,6 +864,30 @@
             "rid": "win"
           }
         }
+      },
+      "PetFindMeShop.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PetFindMeShop.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetFindMeShop.Common.dll": {}
+        }
+      },
+      "PetFindMeShop.Data.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.15",
+          "PetFindMeShop.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PetFindMeShop.Data.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetFindMeShop.Data.Models.dll": {}
+        }
       }
     }
   },
@@ -2176,13 +2200,24 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "PetFindMeShop.Common/1.0.0": {
+      "type": "project",
+      "path": "../PetFindMeShop.Common/PetFindMeShop.Common.csproj",
+      "msbuildProject": "../PetFindMeShop.Common/PetFindMeShop.Common.csproj"
+    },
+    "PetFindMeShop.Data.Models/1.0.0": {
+      "type": "project",
+      "path": "../PetFindMeShop.Data.Models/PetFindMeShop.Data.Models.csproj",
+      "msbuildProject": "../PetFindMeShop.Data.Models/PetFindMeShop.Data.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.15",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.15",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.15"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.15",
+      "PetFindMeShop.Data.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2211,7 +2246,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Data.Models\\PetFindMeShop.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Data.Models\\PetFindMeShop.Data.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
