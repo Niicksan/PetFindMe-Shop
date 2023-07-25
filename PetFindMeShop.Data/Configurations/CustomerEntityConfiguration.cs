@@ -31,7 +31,7 @@
             customer = new Customer()
             {
                 Id = Guid.Parse("98C666AC-9AEE-80C3-5686-08DB7FBB6666"),
-                UserName = "customer",
+                UserName = "customer@abv.bg",
                 NormalizedUserName = "CUSTOMER",
                 Email = "customer@abv.bg",
                 NormalizedEmail = "CUSTOMER@ABV.BG",
@@ -42,7 +42,7 @@
             };
 
             ph = new PasswordHasher<Customer>();
-            customer.PasswordHash = ph.HashPassword(customer, "custommer123");
+            customer.PasswordHash = ph.HashPassword(customer, "customer123");
 
             customers.Add(customer);
 
@@ -50,9 +50,9 @@
             customer = new Customer()
             {
                 Id = Guid.Parse("811C2B9D-B754-44EF-783B-08DB7FBC8275"),
-                UserName = "maneger",
-                NormalizedUserName = "MANAGER",
-                Email = "maneger@abv.bg",
+                UserName = "manager@abv.bg",
+                NormalizedUserName = "MANAGER@ABV.BG",
+                Email = "manager@abv.bg",
                 NormalizedEmail = "MANAGER@ABV.BG",
                 EmailConfirmed = true,
                 SecurityStamp = "JZDXAYLLGTFDW2QPGEWCOEMNS2XMOHE5",
@@ -61,7 +61,7 @@
             };
 
             ph = new PasswordHasher<Customer>();
-            customer.PasswordHash = ph.HashPassword(customer, "maneger123");
+            customer.PasswordHash = ph.HashPassword(customer, "manager123");
 
             customers.Add(customer);
 
@@ -69,8 +69,8 @@
             customer = new Customer()
             {
                 Id = Guid.Parse("6DCF663D-7CC9-4249-73FC-08DB7FE046B6"),
-                UserName = "admin",
-                NormalizedUserName = "ADMIN",
+                UserName = "admin@petfindmeshop.bg",
+                NormalizedUserName = "ADMIN@PETFINDME.BG",
                 Email = "admin@petfindmeshop.bg",
                 NormalizedEmail = "ADMIN@PETFINDME.BG",
                 EmailConfirmed = true,
