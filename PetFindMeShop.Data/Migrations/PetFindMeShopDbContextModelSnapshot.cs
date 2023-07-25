@@ -167,9 +167,7 @@ namespace PetFindMeShop.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of creation");
 
                     b.Property<string>("Name")
@@ -179,9 +177,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("Name of the Category");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of updation");
 
                     b.HasKey("Id");
@@ -189,113 +185,6 @@ namespace PetFindMeShop.Data.Migrations
                     b.ToTable("Categories");
 
                     b.HasComment("Category");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Купи и диспенсъри за храна и вода",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Гребени и четки",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Сухи храни за кучета",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Консервирани храни за кучета",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Нашийници, нагръдници, поводи",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Легла за куче",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Играчки за кучета",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Шампоани за кучета",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Сухи храни за котки",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Консервирани храни за котки",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Транспортни клетки",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Катерушки и легла",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Котешки тоалетни и консумативи",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Играчки за катки",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Шампоани за котки",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.Customer", b =>
@@ -312,9 +201,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of creation");
 
                     b.Property<string>("Email")
@@ -354,9 +241,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of updation");
 
                     b.Property<string>("UserName")
@@ -376,62 +261,6 @@ namespace PetFindMeShop.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
 
                     b.HasComment("Customer");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("98c666ac-9aee-80c3-5686-08db7fbb6666"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "ffc7bb00-b000-4c61-b41b-e34f908c34c1",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "customer@abv.bg",
-                            EmailConfirmed = true,
-                            LockoutEnabled = true,
-                            NormalizedEmail = "CUSTOMER@ABV.BG",
-                            NormalizedUserName = "CUSTOMER",
-                            PasswordHash = "AQAAAAEAACcQAAAAELhEjbSIfCkhGNJ7d5s280DOXxzjDCXbq/Z+Vv3j+vXpbAYq5xKbewpC8437GZ/FdA==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "LUTV3ZFEY6XFBCSJEGW3JIA62BBWBETZ",
-                            TwoFactorEnabled = false,
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserName = "customer"
-                        },
-                        new
-                        {
-                            Id = new Guid("811c2b9d-b754-44ef-783b-08db7fbc8275"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "4300bc13-f79a-42fb-abce-a54c520bbac5",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "maneger@abv.bg",
-                            EmailConfirmed = true,
-                            LockoutEnabled = true,
-                            NormalizedEmail = "MANAGER@ABV.BG",
-                            NormalizedUserName = "MANAGER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGHe5VpU7YcGJEl2cW2YKNOZH2Tham+ppx4D/445+1UrE01UxPPDbvr6BYsJ2+boQQ==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "JZDXAYLLGTFDW2QPGEWCOEMNS2XMOHE5",
-                            TwoFactorEnabled = false,
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserName = "maneger"
-                        },
-                        new
-                        {
-                            Id = new Guid("6dcf663d-7cc9-4249-73fc-08db7fe046b6"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "ab1755fa-4ea8-47e8-aa13-c57fae13a4a9",
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "admin@petfindmeshop.bg",
-                            EmailConfirmed = true,
-                            LockoutEnabled = true,
-                            NormalizedEmail = "ADMIN@PETFINDME.BG",
-                            NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIQgYMg7O5kz2TFizJcIHhbWWZ/WKDk9wnYC8ZUqKkATg0O4cM5tpqm/MeC0akVuYg==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "KAKHTVIWBHSUI4ESCAVXXEFC2UZ2JX44",
-                            TwoFactorEnabled = false,
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.LikedProduct", b =>
@@ -596,9 +425,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("ForeignKey to Category");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of creation");
 
                     b.Property<DateTime>("DeletedAt")
@@ -618,9 +445,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("Image name of the product");
 
                     b.Property<bool>("IsAvailable")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
-                        .HasDefaultValue(true)
                         .HasComment("Is the product in stock");
 
                     b.Property<decimal>("Price")
@@ -638,9 +463,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("Title of the product");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of updation");
 
                     b.HasKey("Id");
@@ -652,53 +475,6 @@ namespace PetFindMeShop.Data.Migrations
                     b.ToTable("Products");
 
                     b.HasComment("Product");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            AvailableQuantity = 1000,
-                            CategoryId = 3,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Advance Veterinary Diets Hypoallergenic е диетична храна за кучета с алергичен дерматит и гастрит или пък с непоносимости към определени храни. В състава на храната се влагат само внимателно подбрани източници на протеини и въглехидрати, което я прави много добре поносима. Advance Veterinary Diets Hypoallergenic може да подпомогне оздравителния процес при последващи заболявания като лимфангиектазия или възпаление на червата. Като източник на протеини е използван хидролизиран соев протеин. Той няма антигенен потенциал и съответно няма как да отключи алергична реакция. Изключително високата смилаемост на тази храна е фактор с основно значение при терапията на ентеропатии и стомашно-чревни смущения.",
-                            ImageName = "https://www.petshop.bg/media/t46s-4/183.webp",
-                            IsAvailable = false,
-                            Price = 16.50m,
-                            ShopId = 1,
-                            Title = "Advance Dog VET DIETS HYPOALLERGENIC 2.5кг",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2,
-                            AvailableQuantity = 1000,
-                            CategoryId = 9,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Вашата котка е предразположена към образуване на топки косми? Специфична храна може да бъде полезна за този проблем. Natural Trainer Hairball with Chicken е разработена за тази цел, нейната адаптирана формула с високо съдържание на фибри може да помогне за намаляване на образуването на топки косми в стомаха и естествено елиминиране на погълнатите косми.\r\n\r\nТази суха храна за котки е формулирана със специфични компоненти от естествен произход, за да осигури пълноценна и балансирана диета. Освен това Natural Trainer Hairball с пиле се откроява с контролираното си минерално съдържание, което, заедно с корен от цикория и екстракт от червена боровинка, помага за поддържане на правилното функциониране на пикочните пътища през целия живот на котката. Съставът също подкрепя здравето на кожата и блясъка на козината, благодарение на есенциалните мастни киселини, биотин и цинк. Natural Trainer Hairball с пиле е разработена за възрастни котки, над една година.",
-                            ImageName = "https://www.petshop.bg/media/t46s-4/436.webp",
-                            IsAvailable = false,
-                            Price = 23.50m,
-                            ShopId = 1,
-                            Title = "Natural TRAINER Cat Hairball Chicken 1.5 кг – с пиле",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 3,
-                            AvailableQuantity = 1000,
-                            CategoryId = 6,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Меко двулицево легълце, със зимна страна от пухкава имитация на овча вълна и лятна страна от гладка найлонова тъкан с правоъгълна форма, нисък борд, може да се пере, подходящо за кучета",
-                            ImageName = "https://s13emagst.akamaized.net/products/28760/28759268/images/res_15a701aad0f1906034a15c9bf3423014.jpg?width=450&height=450&hash=6252F38AE44582D99492052092FAA02F",
-                            IsAvailable = false,
-                            Price = 43.44m,
-                            ShopId = 1,
-                            Title = "Легло кучета с лапичка",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.Shop", b =>
@@ -711,9 +487,7 @@ namespace PetFindMeShop.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of creation");
 
                     b.Property<string>("Description")
@@ -735,9 +509,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("Shop image name");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of updation");
 
                     b.HasKey("Id");
@@ -745,17 +517,6 @@ namespace PetFindMeShop.Data.Migrations
                     b.ToTable("Shops");
 
                     b.HasComment("Shop");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Very cool Pet Shop",
-                            Name = "NikPetShop",
-                            ShopImageName = "https://www.petshop.bg/media/t46s-10/1603.webp",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.ShopManager", b =>
@@ -766,9 +527,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("Primery key");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of creation");
 
                     b.Property<Guid>("CustomerId")
@@ -794,9 +553,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("ShopManager PhoneNumber");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of updation");
 
                     b.HasKey("Id");
@@ -806,18 +563,6 @@ namespace PetFindMeShop.Data.Migrations
                     b.ToTable("ShopManager");
 
                     b.HasComment("ShopManager");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("98c929ac-9aee-40c3-5691-08db7fbb6193"),
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CustomerId = new Guid("811c2b9d-b754-44ef-783b-08db7fbc8275"),
-                            FirstName = "Shop",
-                            LastName = "Manager",
-                            PhoneNumber = "+359888888888",
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.ShoppingCart", b =>
@@ -902,9 +647,7 @@ namespace PetFindMeShop.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of creation");
 
                     b.Property<int>("ShopId")
@@ -916,9 +659,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasComment("ForeignKey to ShopManager");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of updation");
 
                     b.HasKey("Id");
@@ -930,16 +671,6 @@ namespace PetFindMeShop.Data.Migrations
                     b.ToTable("ShopsManagers");
 
                     b.HasComment("Shops Manager");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ShopId = 1,
-                            ShopManagerId = new Guid("98c929ac-9aee-40c3-5691-08db7fbb6193"),
-                            UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
