@@ -14,14 +14,12 @@
         public int Id { get; set; }
 
         [Comment("ForeignKey to Product")]
-        [Required]
         public int ProductId { get; set; }
 
         [ForeignKey(nameof(ProductId))]
         public Product Product { get; set; } = null!;
 
         [Comment("ForeignKey to Order")]
-        [Required]
         public Guid OrderId { get; set; }
 
         [ForeignKey(nameof(OrderId))]

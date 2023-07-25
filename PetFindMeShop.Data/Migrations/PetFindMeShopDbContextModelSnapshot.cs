@@ -11,7 +11,7 @@ using PetFindMeShop.Data;
 namespace PetFindMeShop.Data.Migrations
 {
     [DbContext(typeof(PetFindMeShopDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    partial class PetFindMeShopDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

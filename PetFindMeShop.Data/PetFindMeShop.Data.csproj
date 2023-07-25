@@ -19,4 +19,8 @@
     <ProjectReference Include="..\PetFindMeShop.Data.Models\PetFindMeShop.Data.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

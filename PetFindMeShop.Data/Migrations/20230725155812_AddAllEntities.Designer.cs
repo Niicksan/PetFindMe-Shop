@@ -12,7 +12,7 @@ using PetFindMeShop.Data;
 namespace PetFindMeShop.Data.Migrations
 {
     [DbContext(typeof(PetFindMeShopDbContext))]
-    [Migration("20230724191201_AddAllEntities")]
+    [Migration("20230725155812_AddAllEntities")]
     partial class AddAllEntities
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
