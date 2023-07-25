@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PetFindMeShop.Data;
 using PetFindMeShop.Data.Models;
+using PetFindMeShop.Web.Infrastructure.Extensions;
+
+using static PetFindMeShop.Common.GeneralApplicationConstants;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +57,11 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+if (app.Environment.IsDevelopment())
+{
+    app.SeedAdministrator(DevelopmentAdminEmail);
+}
 
 app.MapControllerRoute(
     name: "default",

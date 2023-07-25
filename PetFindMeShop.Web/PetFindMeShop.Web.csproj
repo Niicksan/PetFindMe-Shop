@@ -20,8 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PetFindMeShop.Common\PetFindMeShop.Common.csproj" />
     <ProjectReference Include="..\PetFindMeShop.Data\PetFindMeShop.Data.csproj" />
     <ProjectReference Include="..\PetFindMeShop.ViewModels\PetFindMeShop.ViewModels.csproj" />
+    <ProjectReference Include="..\PetFindMeShop.Web.Infrastructure\PetFindMeShop.Web.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
