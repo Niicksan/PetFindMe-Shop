@@ -12,7 +12,7 @@
         {
             this.ShopManagers = new HashSet<ShopsManagers>();
             this.ShopProducts = new HashSet<Product>();
-            this.Orders = new HashSet<Order>();
+            this.Orders = new HashSet<OrderItem>();
         }
 
         [Comment("Primery key")]
@@ -46,6 +46,6 @@
 
         public virtual ICollection<Product> ShopProducts { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<OrderItem> Orders { get; set; }
     }
 }

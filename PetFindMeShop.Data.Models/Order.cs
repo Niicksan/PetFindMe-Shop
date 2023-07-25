@@ -26,18 +26,17 @@
         [ForeignKey(nameof(CustomerId))]
         public Customer Customer { get; set; } = null!;
 
-        [Comment("ForeignKey to Shop")]
+        [Comment("Customer's First Name")]
         [Required]
-        public int ShopId { get; set; }
+        [MinLength(NameMinLength)]
+        [MaxLength(NameMaxLength)]
+        public string FisrtName { get; set; } = null!;
 
-        [ForeignKey(nameof(ShopId))]
-        public Shop Shop { get; set; } = null!;
-
-        [Comment("Customer's Full Name")]
+        [Comment("Customer's Last Name")]
         [Required]
-        [MinLength(FullNameMinLength)]
-        [MaxLength(FullNameMaxLength)]
-        public string FullName { get; set; } = null!;
+        [MinLength(NameMinLength)]
+        [MaxLength(NameMaxLength)]
+        public string LastName { get; set; } = null!;
 
         [Comment("Customer's City for delivery")]
         [Required]
@@ -56,10 +55,8 @@
         [StringLength(PhoneNumberLength, MinimumLength = PhoneNumberLength)]
         public string Phone { get; set; } = null!;
 
-        [Comment("Total number of ordered")]
-        [Required]
-        [Range(1, 100)]
-        public int OrderedProducts { get; set; }
+        [Comment("Total Products Price")]
+        public decimal TotalProductsPrice { get; set; }
 
         [Comment("Date and time of creation")]
         public DateTime CreatedAt { get; set; }

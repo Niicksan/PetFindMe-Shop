@@ -25,6 +25,13 @@
         [ForeignKey(nameof(OrderId))]
         public Order Order { get; set; } = null!;
 
+        [Comment("ForeignKey to Shop")]
+        [Required]
+        public int ShopId { get; set; }
+
+        [ForeignKey(nameof(ShopId))]
+        public Shop Shop { get; set; } = null!;
+
         [Comment("Bought Quantity of the Product")]
         [Required]
         [Range(typeof(decimal), OnSiteQuantityMinValue, OnSiteQuantityMaxValue)]

@@ -25,7 +25,7 @@
         public Customer Customer { get; set; } = null!;
 
         [Comment("Total Products Price")]
-        public int TotalProductsPrice { get; set; }
+        public decimal TotalProductsPrice { get; set; }
 
         [Comment("Date and time of creation")]
         public DateTime CreatedAt { get; set; }

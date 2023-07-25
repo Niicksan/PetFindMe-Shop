@@ -191,6 +191,33 @@ namespace PetFindMeShop.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Order",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "Primery key"),
+                    CustomerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "ForeignKey to Customer"),
+                    FisrtName = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false, comment: "Customer's First Name"),
+                    LastName = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false, comment: "Customer's Last Name"),
+                    City = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false, comment: "Customer's City for delivery"),
+                    Address = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false, comment: "Customer's Address for delivery"),
+                    Phone = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false, comment: "Customer's Phone"),
+                    TotalProductsPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false, comment: "Total Products Price"),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of creation"),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of updation")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Order", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Order_AspNetUsers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                },
+                comment: "Order");
+
+            migrationBuilder.CreateTable(
                 name: "ShopManager",
                 columns: table => new
                 {
@@ -215,37 +242,26 @@ namespace PetFindMeShop.Data.Migrations
                 comment: "ShopManager");
 
             migrationBuilder.CreateTable(
-                name: "Order",
+                name: "ShoppingCarts",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "Primery key"),
                     CustomerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "ForeignKey to Customer"),
-                    ShopId = table.Column<int>(type: "int", nullable: false, comment: "ForeignKey to Shop"),
-                    FullName = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false, comment: "Customer's Full Name"),
-                    City = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false, comment: "Customer's City for delivery"),
-                    Address = table.Column<string>(type: "nvarchar(450)", maxLength: 450, nullable: false, comment: "Customer's Address for delivery"),
-                    Phone = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false, comment: "Customer's Phone"),
-                    OrderedProducts = table.Column<int>(type: "int", nullable: false, comment: "Total number of ordered"),
+                    TotalProductsPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false, comment: "Total Products Price"),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of creation"),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of updation")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Order", x => x.Id);
+                    table.PrimaryKey("PK_ShoppingCarts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Order_AspNetUsers_CustomerId",
+                        name: "FK_ShoppingCarts_AspNetUsers_CustomerId",
                         column: x => x.CustomerId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Order_Shops_ShopId",
-                        column: x => x.ShopId,
-                        principalTable: "Shops",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 },
-                comment: "Order");
+                comment: "Shopping Cart");
 
             migrationBuilder.CreateTable(
                 name: "Products",
@@ -349,6 +365,7 @@ namespace PetFindMeShop.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductId = table.Column<int>(type: "int", nullable: false, comment: "ForeignKey to Product"),
                     OrderId = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "ForeignKey to Order"),
+                    ShopId = table.Column<int>(type: "int", nullable: false, comment: "ForeignKey to Shop"),
                     BoughtQuantity = table.Column<int>(type: "int", nullable: false, comment: "Bought Quantity of the Product"),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of creation"),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of updation")
@@ -367,9 +384,45 @@ namespace PetFindMeShop.Data.Migrations
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OrderItem_Shops_ShopId",
+                        column: x => x.ShopId,
+                        principalTable: "Shops",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                 },
                 comment: "Order Item");
+
+            migrationBuilder.CreateTable(
+                name: "ShoppingCartItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false, comment: "Primery key")
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductId = table.Column<int>(type: "int", nullable: false, comment: "ForeignKey to Product"),
+                    ShoppingCartId = table.Column<Guid>(type: "uniqueidentifier", nullable: false, comment: "ForeignKey to Shopping Cart"),
+                    BoughtQuantity = table.Column<int>(type: "int", nullable: false, comment: "Bought Quantity of the Product"),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of creation"),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, comment: "Date and time of updation")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ShoppingCartItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ShoppingCartItems_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ShoppingCartItems_ShoppingCarts_ShoppingCartId",
+                        column: x => x.ShoppingCartId,
+                        principalTable: "ShoppingCarts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                },
+                comment: "Shopping Cart Item");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -426,11 +479,6 @@ namespace PetFindMeShop.Data.Migrations
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Order_ShopId",
-                table: "Order",
-                column: "ShopId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OrderItem_OrderId",
                 table: "OrderItem",
                 column: "OrderId");
@@ -439,6 +487,11 @@ namespace PetFindMeShop.Data.Migrations
                 name: "IX_OrderItem_ProductId",
                 table: "OrderItem",
                 column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderItem_ShopId",
+                table: "OrderItem",
+                column: "ShopId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CategoryId",
@@ -453,6 +506,21 @@ namespace PetFindMeShop.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_ShopManager_CustomerId",
                 table: "ShopManager",
+                column: "CustomerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShoppingCartItems_ProductId",
+                table: "ShoppingCartItems",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShoppingCartItems_ShoppingCartId",
+                table: "ShoppingCartItems",
+                column: "ShoppingCartId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ShoppingCarts_CustomerId",
+                table: "ShoppingCarts",
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
@@ -490,6 +558,9 @@ namespace PetFindMeShop.Data.Migrations
                 name: "OrderItem");
 
             migrationBuilder.DropTable(
+                name: "ShoppingCartItems");
+
+            migrationBuilder.DropTable(
                 name: "ShopsManagers");
 
             migrationBuilder.DropTable(
@@ -500,6 +571,9 @@ namespace PetFindMeShop.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Products");
+
+            migrationBuilder.DropTable(
+                name: "ShoppingCarts");
 
             migrationBuilder.DropTable(
                 name: "ShopManager");

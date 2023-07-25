@@ -41,8 +41,8 @@
 
         public static class Order
         {
-            public const int FullNameMinLength = 2;
-            public const int FullNameMaxLength = 500;
+            public const int NameMinLength = 2;
+            public const int NameMaxLength = 500;
 
             public const int CityMinLength = 2;
             public const int CityMaxLength = 200;

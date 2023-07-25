@@ -22,7 +22,7 @@
 
         [Comment("ForeignKey to Shopping Cart")]
         [Required]
-        public int ShoppingCartId { get; set; }
+        public Guid ShoppingCartId { get; set; }
 
         [ForeignKey(nameof(ShoppingCartId))]
         public ShoppingCart ShoppingCart { get; set; } = null!;

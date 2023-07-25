@@ -326,15 +326,17 @@ namespace PetFindMeShop.Data.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasComment("ForeignKey to Customer");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("FisrtName")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)")
-                        .HasComment("Customer's Full Name");
+                        .HasComment("Customer's First Name");
 
-                    b.Property<int>("OrderedProducts")
-                        .HasColumnType("int")
-                        .HasComment("Total number of ordered");
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasComment("Customer's Last Name");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -342,9 +344,9 @@ namespace PetFindMeShop.Data.Migrations
                         .HasColumnType("nvarchar(10)")
                         .HasComment("Customer's Phone");
 
-                    b.Property<int>("ShopId")
-                        .HasColumnType("int")
-                        .HasComment("ForeignKey to Shop");
+                    b.Property<decimal>("TotalProductsPrice")
+                        .HasColumnType("decimal(18,2)")
+                        .HasComment("Total Products Price");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2")
@@ -353,8 +355,6 @@ namespace PetFindMeShop.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
-
-                    b.HasIndex("ShopId");
 
                     b.ToTable("Order");
 
@@ -386,6 +386,10 @@ namespace PetFindMeShop.Data.Migrations
                         .HasColumnType("int")
                         .HasComment("ForeignKey to Product");
 
+                    b.Property<int>("ShopId")
+                        .HasColumnType("int")
+                        .HasComment("ForeignKey to Shop");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2")
                         .HasComment("Date and time of updation");
@@ -395,6 +399,8 @@ namespace PetFindMeShop.Data.Migrations
                     b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("ShopId");
 
                     b.ToTable("OrderItem");
 
@@ -559,6 +565,78 @@ namespace PetFindMeShop.Data.Migrations
                     b.HasComment("ShopManager");
                 });
 
+            modelBuilder.Entity("PetFindMeShop.Data.Models.ShoppingCart", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasComment("Primery key");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasComment("Date and time of creation");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasComment("ForeignKey to Customer");
+
+                    b.Property<decimal>("TotalProductsPrice")
+                        .HasColumnType("decimal(18,2)")
+                        .HasComment("Total Products Price");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasComment("Date and time of updation");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("ShoppingCarts");
+
+                    b.HasComment("Shopping Cart");
+                });
+
+            modelBuilder.Entity("PetFindMeShop.Data.Models.ShoppingCartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasComment("Primery key");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BoughtQuantity")
+                        .HasColumnType("int")
+                        .HasComment("Bought Quantity of the Product");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasComment("Date and time of creation");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int")
+                        .HasComment("ForeignKey to Product");
+
+                    b.Property<Guid>("ShoppingCartId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasComment("ForeignKey to Shopping Cart");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasComment("Date and time of updation");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("ShoppingCartId");
+
+                    b.ToTable("ShoppingCartItems");
+
+                    b.HasComment("Shopping Cart Item");
+                });
+
             modelBuilder.Entity("PetFindMeShop.Data.Models.ShopsManagers", b =>
                 {
                     b.Property<int>("Id")
@@ -673,15 +751,7 @@ namespace PetFindMeShop.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PetFindMeShop.Data.Models.Shop", "Shop")
-                        .WithMany("Orders")
-                        .HasForeignKey("ShopId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Customer");
-
-                    b.Navigation("Shop");
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.OrderItem", b =>
@@ -698,9 +768,17 @@ namespace PetFindMeShop.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("PetFindMeShop.Data.Models.Shop", "Shop")
+                        .WithMany("Orders")
+                        .HasForeignKey("ShopId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Order");
 
                     b.Navigation("Product");
+
+                    b.Navigation("Shop");
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.Product", b =>
@@ -731,6 +809,36 @@ namespace PetFindMeShop.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("PetFindMeShop.Data.Models.ShoppingCart", b =>
+                {
+                    b.HasOne("PetFindMeShop.Data.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+                });
+
+            modelBuilder.Entity("PetFindMeShop.Data.Models.ShoppingCartItem", b =>
+                {
+                    b.HasOne("PetFindMeShop.Data.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PetFindMeShop.Data.Models.ShoppingCart", "ShoppingCart")
+                        .WithMany("ShoppingCardItems")
+                        .HasForeignKey("ShoppingCartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("ShoppingCart");
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.ShopsManagers", b =>
@@ -781,6 +889,11 @@ namespace PetFindMeShop.Data.Migrations
             modelBuilder.Entity("PetFindMeShop.Data.Models.ShopManager", b =>
                 {
                     b.Navigation("Shops");
+                });
+
+            modelBuilder.Entity("PetFindMeShop.Data.Models.ShoppingCart", b =>
+                {
+                    b.Navigation("ShoppingCardItems");
                 });
 #pragma warning restore 612, 618
         }
