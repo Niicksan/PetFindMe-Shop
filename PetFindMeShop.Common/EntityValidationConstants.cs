@@ -50,10 +50,11 @@
             public const int AddressMinLength = 2;
             public const int AddressMaxLength = 450;
 
-            public const int PhoneNumberLength = 10;
+            public const int MinPhoneNumberLength = 10;
+            public const int MaxPhoneNumberLength = 13;
         }
 
-        public static class Shopmanager
+        public static class ShopManager
         {
             public const int FirstNameMinLength = 2;
             public const int FirstNameMaxLength = 100;
@@ -61,7 +62,8 @@
             public const int LastNameMinLength = 2;
             public const int LastNameMaxLength = 100;
 
-            public const int PhoneNumberLength = 10;
+            public const int MinPhoneNumberLength = 10;
+            public const int MaxPhoneNumberLength = 13;
         }
     }
 }

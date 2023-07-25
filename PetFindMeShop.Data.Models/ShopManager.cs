@@ -4,7 +4,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    using static PetFindMeShop.Common.EntityValidationConstants.Shopmanager;
+    using static PetFindMeShop.Common.EntityValidationConstants.ShopManager;
 
     [Comment("ShopManager")]
     public class ShopManager
@@ -33,7 +33,8 @@
 
         [Comment("ShopManager PhoneNumber")]
         [Required]
-        [StringLength(PhoneNumberLength, MinimumLength = PhoneNumberLength)]
+        [MinLength(MinPhoneNumberLength)]
+        [MaxLength(MaxPhoneNumberLength)]
         public string PhoneNumber { get; set; } = null!;
 
         [Comment("ForeignKey to Customer")]

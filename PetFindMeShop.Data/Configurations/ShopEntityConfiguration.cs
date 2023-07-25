@@ -27,6 +27,7 @@
             {
                 Id = 1,
                 Name = "NikPetShop",
+                ShopImageName = "https://www.petshop.bg/media/t46s-10/1603.webp",
                 Description = "Very cool Pet Shop",
             };
             shops.Add(shop);

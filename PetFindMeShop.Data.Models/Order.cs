@@ -52,7 +52,8 @@
 
         [Comment("Customer's Phone")]
         [Required]
-        [StringLength(PhoneNumberLength, MinimumLength = PhoneNumberLength)]
+        [MinLength(MinPhoneNumberLength)]
+        [MaxLength(MaxPhoneNumberLength)]
         public string Phone { get; set; } = null!;
 
         [Comment("Total Products Price")]

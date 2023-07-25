@@ -4,6 +4,7 @@
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
     using PetFindMeShop.Data.Models;
+    using System.Reflection;
 
     public class PetFindMeShopDbContext : IdentityDbContext<Customer, IdentityRole<Guid>, Guid>
     {
@@ -30,6 +31,10 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            Assembly configAssembly = Assembly.GetAssembly(typeof(PetFindMeShopDbContext)) ??
+                                      Assembly.GetExecutingAssembly();
+            modelBuilder.ApplyConfigurationsFromAssembly(configAssembly);
+
             base.OnModelCreating(modelBuilder);
         }
     }
