@@ -32,7 +32,7 @@
             {
                 Id = Guid.Parse("98C666AC-9AEE-80C3-5686-08DB7FBB6666"),
                 UserName = "customer@abv.bg",
-                NormalizedUserName = "CUSTOMER",
+                NormalizedUserName = "CUSTOMER@ABV.BG",
                 Email = "customer@abv.bg",
                 NormalizedEmail = "CUSTOMER@ABV.BG",
                 EmailConfirmed = true,
@@ -70,9 +70,9 @@
             {
                 Id = Guid.Parse("6DCF663D-7CC9-4249-73FC-08DB7FE046B6"),
                 UserName = "admin@petfindmeshop.bg",
-                NormalizedUserName = "ADMIN@PETFINDME.BG",
+                NormalizedUserName = "ADMIN@PETFINDMESHOP.BG",
                 Email = "admin@petfindmeshop.bg",
-                NormalizedEmail = "ADMIN@PETFINDME.BG",
+                NormalizedEmail = "ADMIN@PETFINDMESHOP.BG",
                 EmailConfirmed = true,
                 SecurityStamp = "KAKHTVIWBHSUI4ESCAVXXEFC2UZ2JX44",
                 ConcurrencyStamp = "ab1755fa-4ea8-47e8-aa13-c57fae13a4a9",

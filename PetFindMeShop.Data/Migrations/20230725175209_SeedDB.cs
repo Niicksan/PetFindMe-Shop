@@ -157,9 +157,9 @@ namespace PetFindMeShop.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { new Guid("6dcf663d-7cc9-4249-73fc-08db7fe046b6"), 0, "ab1755fa-4ea8-47e8-aa13-c57fae13a4a9", "admin@petfindmeshop.bg", true, true, null, "ADMIN@PETFINDME.BG", "ADMIN", "AQAAAAEAACcQAAAAEAWQi3fwl9yqk3ATPnMmQc39RMkcLopu1Zn3nbhBJYe4NoxVMEZTPYE9stUKniMm0Q==", null, false, "KAKHTVIWBHSUI4ESCAVXXEFC2UZ2JX44", false, "admin" },
-                    { new Guid("811c2b9d-b754-44ef-783b-08db7fbc8275"), 0, "4300bc13-f79a-42fb-abce-a54c520bbac5", "maneger@abv.bg", true, true, null, "MANAGER@ABV.BG", "MANAGER", "AQAAAAEAACcQAAAAEFuPOJ5mdKMDB9I0+/vVJNkgMB1twju+giCSwqmKrtM1Ve7mms5GZ4lanT29Gc0hKQ==", null, false, "JZDXAYLLGTFDW2QPGEWCOEMNS2XMOHE5", false, "maneger" },
-                    { new Guid("98c666ac-9aee-80c3-5686-08db7fbb6666"), 0, "ffc7bb00-b000-4c61-b41b-e34f908c34c1", "customer@abv.bg", true, true, null, "CUSTOMER@ABV.BG", "CUSTOMER", "AQAAAAEAACcQAAAAEM70SESpMVjM15PnlBngqGO9FL7bTPV/zNSzBqtJ6p6OV1PfLKo4bmNRyVE2uQhVMg==", null, false, "LUTV3ZFEY6XFBCSJEGW3JIA62BBWBETZ", false, "customer" }
+                    { new Guid("6dcf663d-7cc9-4249-73fc-08db7fe046b6"), 0, "ab1755fa-4ea8-47e8-aa13-c57fae13a4a9", "admin@petfindmeshop.bg", true, true, null, "ADMIN@PETFINDME.BG", "ADMIN@PETFINDME.BG", "AQAAAAEAACcQAAAAEHwyqdwgblJCp7yHU3+rj9r+tk53PZKil//ZzfeoGpAwCmWFJVNT1TPOKioKhLsnmQ==", null, false, "KAKHTVIWBHSUI4ESCAVXXEFC2UZ2JX44", false, "admin@petfindmeshop.bg" },
+                    { new Guid("811c2b9d-b754-44ef-783b-08db7fbc8275"), 0, "4300bc13-f79a-42fb-abce-a54c520bbac5", "manager@abv.bg", true, true, null, "MANAGER@ABV.BG", "MANAGER@ABV.BG", "AQAAAAEAACcQAAAAEIx982Dr4YQ2TwVeccxTQk8ISJLnUo4dnurJZYdNGvgqGC+Wg8kScJnSgPXTyIGCaw==", null, false, "JZDXAYLLGTFDW2QPGEWCOEMNS2XMOHE5", false, "manager@abv.bg" },
+                    { new Guid("98c666ac-9aee-80c3-5686-08db7fbb6666"), 0, "ffc7bb00-b000-4c61-b41b-e34f908c34c1", "customer@abv.bg", true, true, null, "CUSTOMER@ABV.BG", "CUSTOMER", "AQAAAAEAACcQAAAAEEIfD2PfMO0LwnhFOFi+Mn6mGWSfLw0C/U1mB59jTCF/RUmC2Qv07HQFjIzq1Q2Tng==", null, false, "LUTV3ZFEY6XFBCSJEGW3JIA62BBWBETZ", false, "customer@abv.bg" }
                 });
 
             migrationBuilder.InsertData(

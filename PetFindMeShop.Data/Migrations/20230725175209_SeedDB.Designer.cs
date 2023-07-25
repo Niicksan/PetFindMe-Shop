@@ -12,7 +12,7 @@ using PetFindMeShop.Data;
 namespace PetFindMeShop.Data.Migrations
 {
     [DbContext(typeof(PetFindMeShopDbContext))]
-    [Migration("20230725173105_SeedDB")]
+    [Migration("20230725175209_SeedDB")]
     partial class SeedDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -391,12 +391,12 @@ namespace PetFindMeShop.Data.Migrations
                             LockoutEnabled = true,
                             NormalizedEmail = "CUSTOMER@ABV.BG",
                             NormalizedUserName = "CUSTOMER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEM70SESpMVjM15PnlBngqGO9FL7bTPV/zNSzBqtJ6p6OV1PfLKo4bmNRyVE2uQhVMg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEIfD2PfMO0LwnhFOFi+Mn6mGWSfLw0C/U1mB59jTCF/RUmC2Qv07HQFjIzq1Q2Tng==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "LUTV3ZFEY6XFBCSJEGW3JIA62BBWBETZ",
                             TwoFactorEnabled = false,
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserName = "customer"
+                            UserName = "customer@abv.bg"
                         },
                         new
                         {
@@ -404,17 +404,17 @@ namespace PetFindMeShop.Data.Migrations
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "4300bc13-f79a-42fb-abce-a54c520bbac5",
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "maneger@abv.bg",
+                            Email = "manager@abv.bg",
                             EmailConfirmed = true,
                             LockoutEnabled = true,
                             NormalizedEmail = "MANAGER@ABV.BG",
-                            NormalizedUserName = "MANAGER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEFuPOJ5mdKMDB9I0+/vVJNkgMB1twju+giCSwqmKrtM1Ve7mms5GZ4lanT29Gc0hKQ==",
+                            NormalizedUserName = "MANAGER@ABV.BG",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIx982Dr4YQ2TwVeccxTQk8ISJLnUo4dnurJZYdNGvgqGC+Wg8kScJnSgPXTyIGCaw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "JZDXAYLLGTFDW2QPGEWCOEMNS2XMOHE5",
                             TwoFactorEnabled = false,
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserName = "maneger"
+                            UserName = "manager@abv.bg"
                         },
                         new
                         {
@@ -426,13 +426,13 @@ namespace PetFindMeShop.Data.Migrations
                             EmailConfirmed = true,
                             LockoutEnabled = true,
                             NormalizedEmail = "ADMIN@PETFINDME.BG",
-                            NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAWQi3fwl9yqk3ATPnMmQc39RMkcLopu1Zn3nbhBJYe4NoxVMEZTPYE9stUKniMm0Q==",
+                            NormalizedUserName = "ADMIN@PETFINDME.BG",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHwyqdwgblJCp7yHU3+rj9r+tk53PZKil//ZzfeoGpAwCmWFJVNT1TPOKioKhLsnmQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "KAKHTVIWBHSUI4ESCAVXXEFC2UZ2JX44",
                             TwoFactorEnabled = false,
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserName = "admin"
+                            UserName = "admin@petfindmeshop.bg"
                         });
                 });
 
