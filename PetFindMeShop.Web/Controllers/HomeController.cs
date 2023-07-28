@@ -1,21 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PetFindMeShop.ViewModels;
-using System.Diagnostics;
+using PetFindMeShop.Services.Interfaces;
+using PetFindMeShop.ViewModels.Home;
 
 namespace PetFindMeShop.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IProductService productService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IProductService productService)
         {
-            _logger = logger;
+            this.productService = productService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            IEnumerable<IndexViewModel> indexViewModel =
+                await productService.LastestProductAsync();
+
+            return View(indexViewModel);
         }
 
         public IActionResult Privacy()
@@ -24,9 +27,19 @@ namespace PetFindMeShop.Web.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int statusCode)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (statusCode == 400 || statusCode == 404)
+            {
+                return View("Error404");
+            }
+
+            if (statusCode == 401)
+            {
+                return View("Error401");
+            }
+
+            return View();
         }
     }
 }

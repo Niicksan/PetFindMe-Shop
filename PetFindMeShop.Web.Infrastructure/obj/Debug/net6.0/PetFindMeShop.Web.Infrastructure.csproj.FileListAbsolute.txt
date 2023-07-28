@@ -17,3 +17,7 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\obj\Debug\
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\obj\Debug\net6.0\refint\PetFindMeShop.Web.Infrastructure.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\obj\Debug\net6.0\PetFindMeShop.Web.Infrastructure.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\obj\Debug\net6.0\ref\PetFindMeShop.Web.Infrastructure.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.Data.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.ViewModels.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.Data.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.ViewModels.pdb

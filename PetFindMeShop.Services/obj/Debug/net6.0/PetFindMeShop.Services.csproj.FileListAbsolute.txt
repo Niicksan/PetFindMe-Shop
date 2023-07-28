@@ -10,3 +10,12 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\obj\Debug\net6.0\Pet
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\obj\Debug\net6.0\refint\PetFindMeShop.Services.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\obj\Debug\net6.0\PetFindMeShop.Services.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\obj\Debug\net6.0\ref\PetFindMeShop.Services.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Common.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Data.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Data.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.ViewModels.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Data.Models.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Data.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.ViewModels.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Common.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\obj\Debug\net6.0\PetFindMeShop.Services.csproj.CopyComplete

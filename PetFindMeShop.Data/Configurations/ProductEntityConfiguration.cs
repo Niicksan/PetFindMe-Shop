@@ -76,7 +76,7 @@ namespace PetFindMeShop.Data.Configurations
             product = new Product()
             {
                 Id = 3,
-                Title = "Легло кучета с лапичка",
+                Title = "Легло за кучета с лапичка",
                 ImageName = "https://s13emagst.akamaized.net/products/28760/28759268/images/res_15a701aad0f1906034a15c9bf3423014.jpg?width=450&height=450&hash=6252F38AE44582D99492052092FAA02F",
                 Description = "Меко двулицево легълце, със зимна страна от пухкава имитация на овча вълна и лятна страна " +
                 "от гладка найлонова тъкан с правоъгълна форма, нисък борд, може да се пере, подходящо за кучета",

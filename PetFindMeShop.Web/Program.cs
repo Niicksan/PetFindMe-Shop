@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PetFindMeShop.Data;
 using PetFindMeShop.Data.Models;
+using PetFindMeShop.Services;
+using PetFindMeShop.Services.Interfaces;
 using PetFindMeShop.Web.Infrastructure.Extensions;
 
 using static PetFindMeShop.Common.GeneralApplicationConstants;
@@ -17,6 +19,7 @@ builder.Services.AddDbContext<PetFindMeShopDbContext>(options =>
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+// Add Identity
 builder.Services.AddDefaultIdentity<Customer>(options =>
 {
     options.SignIn.RequireConfirmedAccount =
@@ -34,6 +37,10 @@ builder.Services.AddDefaultIdentity<Customer>(options =>
 .AddEntityFrameworkStores<PetFindMeShopDbContext>();
 
 builder.Services.AddControllersWithViews();
+
+// Register Services
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IManagerService, ManagerService>();
 
 var app = builder.Build();
 
