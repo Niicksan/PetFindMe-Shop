@@ -51,6 +51,8 @@
         {
             ShopManager manager = new ShopManager()
             {
+                FirstName = model.FirstName,
+                LastName = model.LastName,
                 PhoneNumber = model.PhoneNumber,
                 CustomerId = Guid.Parse(userId)
             };
