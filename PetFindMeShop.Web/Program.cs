@@ -62,7 +62,7 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Home/Error");
-    app.UseStatusCodePagesWithRedirects("/Home/Error?statusCode={0}");
+    app.UseStatusCodePagesWithRedirects("/Home/Error{0}");
 
     app.UseHsts();
 }
