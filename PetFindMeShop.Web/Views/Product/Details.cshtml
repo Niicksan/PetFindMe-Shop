@@ -1,0 +1,31 @@
+﻿@model ProductDetailsViewModel
+
+@{
+    ViewBag.Title = "Детайли за Продукт" + @Model.Title;
+}
+
+<h2 class="text-center">@Model.Title</h2>
+
+<div class="container" style="display:inline">
+    <div class="row">
+        <div class="col-6 d-flex align-items-center justify-content-center">
+            <img src="@Model.Image" alt="@ViewBag.Title" class="card-img-top mb-4" style="width: 20rem;">
+        </div>
+        <div class="card col-6 align-items-center justify-content-center border-0 mb-4">
+            <div class="product-info w-90">
+                <p><b>Категория: </b>@Model.Category</p>
+                <p><b>Предлаган от: </b>@Model.ShopProviderName</p>
+                <p><b>Цена: @($"{Model.Price:f2}") лв.</b></p>
+                <p><i>@Model.Status</i></p>
+            </div>
+            <div class="product-buttons d-flex flex-column flex-column align-items-center justify-content-center w-100">
+                <a class="btn btn-primary w-90 mb-2">Добави в количката </a>
+                <a class="btn btn-outline-primary w-90 mb-2">Добави в Любими</a>
+            </div>
+        </div>
+        <div class="product-description w-90" style="margin: 0 auto;">
+            <h4 class="text-left">Описание</h4>
+            <p>@Model.Description</p>
+        </div>
+    </div>
+</div>

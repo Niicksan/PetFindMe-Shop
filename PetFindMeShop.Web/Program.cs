@@ -1,14 +1,16 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PetFindMeShop.Data;
 using PetFindMeShop.Data.Models;
 using PetFindMeShop.Services;
 using PetFindMeShop.Services.Interfaces;
 using PetFindMeShop.Web.Infrastructure.Extensions;
+using PetFindMeShop.Web.Infrastructure.ModelBinders;
 
 using static PetFindMeShop.Common.GeneralApplicationConstants;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add Default connectionString.
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -36,13 +38,19 @@ builder.Services.AddDefaultIdentity<Customer>(options =>
 .AddRoles<IdentityRole<Guid>>()
 .AddEntityFrameworkStores<PetFindMeShopDbContext>();
 
-builder.Services.AddControllersWithViews();
-
 // Register Services
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IManagerService, ManagerService>();
 
-var app = builder.Build();
+builder.Services
+    .AddControllersWithViews()
+    .AddMvcOptions(options =>
+    {
+        options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
+        options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
+    });
+
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -53,7 +61,8 @@ if (app.Environment.IsDevelopment())
 else
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseStatusCodePagesWithRedirects("/Home/Error?statusCode={0}");
+
     app.UseHsts();
 }
 
@@ -73,6 +82,7 @@ if (app.Environment.IsDevelopment())
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.MapRazorPages();
 
 app.Run();
