@@ -39,7 +39,7 @@ builder.Services.AddDefaultIdentity<Customer>(options =>
 .AddEntityFrameworkStores<PetFindMeShopDbContext>();
 
 // Register Services
-builder.Services.AddScoped<IManagerService, ManagerService>();
+builder.Services.AddScoped<IShopManagerService, ShopManagerService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 

@@ -2,18 +2,16 @@
 @using PetFindMeShop.Web.Infrastructure.Extensions
 @model IEnumerable<ProductViewModel>
 
-@inject IManagerService AgentService
 @{
     ViewData["Title"] = "Добре дошли!";
 
     var products = Model.ToList();
-    bool isUserManager = await AgentService.AgentExistsByUserIdAsync(User.GetId()!);
 }
 
 <div class="mb-4">
     <div class="p-5 bg-light text-center">
         <h1 class="display-4">Добре дошли в магазина на PetFindMe!</h1>
-        @if (!products.Any())
+        @if (!Model.Any())
         {
             <p class="lead">
                 Все още няма добавени продукти
@@ -26,7 +24,7 @@
     </div>
 
     <div class="row row-cols-4 row-cols-md-4">
-        @foreach (var product in products)
+        @foreach (var product in Model)
         {
             <partial name="_ProductIdexPartial" model="@product" />
         }

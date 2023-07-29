@@ -1,0 +1,45 @@
+﻿@model ShopManagerFormModel
+
+@{
+    ViewBag.Title = "Стани мениджър";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+
+@if (!ViewData.ModelState.IsValid && ViewData.ModelState["Error"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewData.ModelState["Error"].Errors.First().ErrorMessage
+    </div>
+}
+
+<div class="row">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <form method="post">
+            <div class="form-group mb-2">
+                <label asp-for="FirstName" class="mb-1"></label>
+                <input asp-for="FirstName" class="form-control" placeholder="Иван">
+                <span asp-validation-for="FirstName" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="LastName" class="mb-1"></label>
+                <input asp-for="LastName" class="form-control" placeholder="Петров">
+                <span asp-validation-for="LastName" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="PhoneNumber" class="mb-1"></label>
+                <input asp-for="PhoneNumber" class="form-control" placeholder="+359888888888">
+                <span asp-validation-for="PhoneNumber" class="small text-danger"></span>
+            </div>
+            <div class="text-center">
+                <input class="btn btn-primary px-4 mt-3" type="submit" value="Изпрати" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

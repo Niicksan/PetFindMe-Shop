@@ -18,7 +18,7 @@ namespace PetFindMeShop.Web.Controllers
             IEnumerable<ProductViewModel> indexViewModel =
                 await productService.LastestProductAsync();
 
-            return View(indexViewModel);
+            return View(indexViewModel.ToList());
         }
 
         [Route("/error-400")]
