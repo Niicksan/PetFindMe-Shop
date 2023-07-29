@@ -43,7 +43,7 @@
             {
                 TempData[ErrorMessage] = "Несъществуващ продукт";
 
-                return RedirectToRoute("AllProducts");
+                return RedirectToAction("AllProducts");
             }
 
             try
