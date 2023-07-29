@@ -21,27 +21,29 @@ namespace PetFindMeShop.Web.Controllers
             return View(indexViewModel);
         }
 
-        public IActionResult Privacy()
+        [Route("/error-400")]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error400()
         {
-            return View();
+            return View("Error400");
         }
 
+        [Route("/error-403")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error(int statusCode)
+        public IActionResult Error403()
         {
-            if (statusCode == 400)
-            {
-                return View("Error400");
-            }
-            else if (statusCode == 403)
-            {
-                return View("Error403");
-            }
-            else if (statusCode == 404)
-            {
-                return View("Error404");
-            }
+            return View("Error403");
+        }
 
+        [Route("/error-404")]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error404()
+        {
+            return View("Error404");
+        }
+
+        public IActionResult Privacy()
+        {
             return View();
         }
     }

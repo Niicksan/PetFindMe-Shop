@@ -4,13 +4,13 @@
 
 @inject IManagerService AgentService
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Добре дошли!";
 
     var products = Model.ToList();
     bool isUserManager = await AgentService.AgentExistsByUserIdAsync(User.GetId()!);
 }
 
-<div class="mt-4 mb-4">
+<div class="mb-4">
     <div class="p-5 bg-light text-center">
         <h1 class="display-4">Добре дошли в магазина на PetFindMe!</h1>
         @if (!products.Any())

@@ -21,6 +21,7 @@
 
         [HttpGet]
         [AllowAnonymous]
+        [Route("/products/all")]
         public async Task<IActionResult> AllProducts([FromQuery] AllProductsQueryModel queryModel)
         {
             AllProductsFilteredAndPagedServiceModel serviceModel =
@@ -35,6 +36,7 @@
 
         [HttpGet]
         [AllowAnonymous]
+        [Route("/products/details/{id?}")]
         public async Task<IActionResult> Details(int id)
         {
             bool productExists = await productService.ExistsByIdAsync(id);
@@ -43,7 +45,7 @@
             {
                 TempData[ErrorMessage] = "Несъществуващ продукт";
 
-                return RedirectToAction("AllProducts");
+                return RedirectToAction("Error404", "Home");
             }
 
             try
