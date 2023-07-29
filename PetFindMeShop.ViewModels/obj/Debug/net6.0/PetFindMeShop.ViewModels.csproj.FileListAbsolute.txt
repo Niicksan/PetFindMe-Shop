@@ -10,3 +10,6 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\obj\Debug\net6.0\P
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\obj\Debug\net6.0\refint\PetFindMeShop.ViewModels.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\obj\Debug\net6.0\PetFindMeShop.ViewModels.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\obj\Debug\net6.0\ref\PetFindMeShop.ViewModels.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Common.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Common.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\obj\Debug\net6.0\PetFindMeShop.ViewModels.csproj.CopyComplete

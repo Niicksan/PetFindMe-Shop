@@ -1,6 +1,6 @@
 ﻿﻿@using PetFindMeShop.Services.Interfaces
 @using PetFindMeShop.Web.Infrastructure.Extensions
-@model IEnumerable<IndexViewModel>
+@model IEnumerable<ProductViewModel>
 
 @inject IManagerService AgentService
 @{
@@ -28,7 +28,7 @@
     <div class="row row-cols-4 row-cols-md-4">
         @foreach (var product in products)
         {
-            <partial name="_ProductPartial" model="@product" />
+            <partial name="_ProductIdexPartial" model="@product" />
         }
     </div>
 

@@ -273,3 +273,5 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindM
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Web.Infrastructure.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Web.Infrastructure.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Services.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Services.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Services.Models.pdb

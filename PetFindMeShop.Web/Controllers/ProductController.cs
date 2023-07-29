@@ -3,6 +3,7 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using PetFindMeShop.Services.Interfaces;
+    using PetFindMeShop.Services.Models;
     using PetFindMeShop.ViewModels.Product;
     using static Common.NotificationMessagesConstants;
 
@@ -10,25 +11,26 @@
     public class ProductController : Controller
     {
         private readonly IProductService productService;
+        private readonly ICategoryService categoryService;
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, ICategoryService categoryService)
         {
             this.productService = productService;
+            this.categoryService = categoryService;
         }
 
         [HttpGet]
         [AllowAnonymous]
-        public IActionResult AllProducts()
+        public async Task<IActionResult> AllProducts([FromQuery] AllProductsQueryModel queryModel)
         {
-            //AllHousesFilteredAndPagedServiceModel serviceModel =
-            //    await houseService.AllAsync(queryModel);
+            AllProductsFilteredAndPagedServiceModel serviceModel =
+                await productService.AllAsync(queryModel);
 
-            //queryModel.Houses = serviceModel.Houses;
-            //queryModel.TotalHouses = serviceModel.TotalHousesCount;
-            //queryModel.Categories = await categoryService.AllCategoryNamesAsync();
+            queryModel.Products = serviceModel.Products;
+            queryModel.TotalProducts = serviceModel.TotalProductsCount;
+            queryModel.Categories = await categoryService.AllCategoryNamesAsync();
 
-            //return View(queryModel);
-            return View();
+            return View(queryModel);
         }
 
         [HttpGet]

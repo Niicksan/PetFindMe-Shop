@@ -15,7 +15,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 // Add Default connectionString.
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-// Add services to the container.
+// Add DbContext to the container.
 builder.Services.AddDbContext<PetFindMeShopDbContext>(options =>
     options.UseSqlServer(connectionString));
 
@@ -39,8 +39,9 @@ builder.Services.AddDefaultIdentity<Customer>(options =>
 .AddEntityFrameworkStores<PetFindMeShopDbContext>();
 
 // Register Services
-builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IManagerService, ManagerService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services
     .AddControllersWithViews()

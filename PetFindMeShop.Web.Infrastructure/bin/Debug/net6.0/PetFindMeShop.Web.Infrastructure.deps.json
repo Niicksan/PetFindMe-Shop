@@ -2067,13 +2067,25 @@
         "dependencies": {
           "PetFindMeShop.Data": "1.0.0",
           "PetFindMeShop.Data.Models": "1.0.0",
+          "PetFindMeShop.Services.Models": "1.0.0",
           "PetFindMeShop.ViewModels": "1.0.0"
         },
         "runtime": {
           "PetFindMeShop.Services.dll": {}
         }
       },
+      "PetFindMeShop.Services.Models/1.0.0": {
+        "dependencies": {
+          "PetFindMeShop.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "PetFindMeShop.Services.Models.dll": {}
+        }
+      },
       "PetFindMeShop.ViewModels/1.0.0": {
+        "dependencies": {
+          "PetFindMeShop.Common": "1.0.0"
+        },
         "runtime": {
           "PetFindMeShop.ViewModels.dll": {}
         }
@@ -3404,6 +3416,11 @@
       "sha512": ""
     },
     "PetFindMeShop.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetFindMeShop.Services.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

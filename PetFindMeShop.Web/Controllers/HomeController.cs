@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PetFindMeShop.Services.Interfaces;
-using PetFindMeShop.ViewModels.Home;
+using PetFindMeShop.ViewModels.Product;
 
 namespace PetFindMeShop.Web.Controllers
 {
@@ -15,7 +15,7 @@ namespace PetFindMeShop.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<IndexViewModel> indexViewModel =
+            IEnumerable<ProductViewModel> indexViewModel =
                 await productService.LastestProductAsync();
 
             return View(indexViewModel);

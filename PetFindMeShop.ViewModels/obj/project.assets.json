@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "PetFindMeShop.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/PetFindMeShop.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetFindMeShop.Common.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PetFindMeShop.Common/1.0.0": {
+      "type": "project",
+      "path": "../PetFindMeShop.Common/PetFindMeShop.Common.csproj",
+      "msbuildProject": "../PetFindMeShop.Common/PetFindMeShop.Common.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "PetFindMeShop.Common >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Nik\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Common\\PetFindMeShop.Common.csproj": {
+              "projectPath": "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Common\\PetFindMeShop.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

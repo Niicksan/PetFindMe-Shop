@@ -21,3 +21,5 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.ViewModels.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.Data.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.ViewModels.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.Services.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web.Infrastructure\bin\Debug\net6.0\PetFindMeShop.Services.Models.pdb

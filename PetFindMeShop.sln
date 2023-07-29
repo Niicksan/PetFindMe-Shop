@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Web", "PetFindMeShop.Web\PetFindMeShop.Web.csproj", "{943F3749-CA8C-4DFD-8E7F-E1958572A1E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.Web", "PetFindMeShop.Web\PetFindMeShop.Web.csproj", "{943F3749-CA8C-4DFD-8E7F-E1958572A1E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Data", "PetFindMeShop.Data\PetFindMeShop.Data.csproj", "{F4586525-F36E-421F-A48B-77C494EAD0ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.Data", "PetFindMeShop.Data\PetFindMeShop.Data.csproj", "{F4586525-F36E-421F-A48B-77C494EAD0ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Data.Models", "PetFindMeShop.Data.Models\PetFindMeShop.Data.Models.csproj", "{3391EB8D-F7FE-409C-B916-03CF8E4E8E53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.Data.Models", "PetFindMeShop.Data.Models\PetFindMeShop.Data.Models.csproj", "{3391EB8D-F7FE-409C-B916-03CF8E4E8E53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.ViewModels", "PetFindMeShop.ViewModels\PetFindMeShop.ViewModels.csproj", "{A633BD66-CDA0-4530-81E3-8F7122CDDCEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.ViewModels", "PetFindMeShop.ViewModels\PetFindMeShop.ViewModels.csproj", "{A633BD66-CDA0-4530-81E3-8F7122CDDCEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Common", "PetFindMeShop.Common\PetFindMeShop.Common.csproj", "{3603BBE3-9305-49BF-8A6B-A80ACE8C11B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.Common", "PetFindMeShop.Common\PetFindMeShop.Common.csproj", "{3603BBE3-9305-49BF-8A6B-A80ACE8C11B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Services", "PetFindMeShop.Services\PetFindMeShop.Services.csproj", "{1332232C-3214-42EC-921C-FD843BA9A15D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.Services", "PetFindMeShop.Services\PetFindMeShop.Services.csproj", "{1332232C-3214-42EC-921C-FD843BA9A15D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Web.Infrastructure", "PetFindMeShop.Web.Infrastructure\PetFindMeShop.Web.Infrastructure.csproj", "{D8DA7F84-CAC0-4882-AB52-5B74647D8331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.Web.Infrastructure", "PetFindMeShop.Web.Infrastructure\PetFindMeShop.Web.Infrastructure.csproj", "{D8DA7F84-CAC0-4882-AB52-5B74647D8331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Services.Models", "PetFindMeShop.Services.Models\PetFindMeShop.Services.Models.csproj", "{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{D8DA7F84-CAC0-4882-AB52-5B74647D8331}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8DA7F84-CAC0-4882-AB52-5B74647D8331}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8DA7F84-CAC0-4882-AB52-5B74647D8331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

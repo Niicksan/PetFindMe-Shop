@@ -1,0 +1,20 @@
+﻿<div class="col-md-4 all-product-container mb-4">
+    <div class="card mb-3 product-item-container">
+        <div class="product-content">
+            <img class="card-img-top product-img img-height-60" src="@Model.ImageUrl" alt="@Model.Title">
+            <div class="card-body text-center index-product-info">
+                <h4 style="min-height: 3rem; font-weight:400; font-size: 1.2rem;">@Model.Title</h4>
+                <h6>
+                    <b>Цена: @($"{Model.Price:f2}") лв.</b>
+                </h6>
+                <br />
+            </div>
+            <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id" class="stretched-link"></a>
+        </div>
+        <div class="w-100 add-to-cart-container">
+            @*<a asp-controller="House" asp-action="Details" asp-route-id="@Model.Id"
+                class="btn btn-success">Details</a>*@
+                <a class="btn btn-primary w-100" style="padding-bottom:0.5rem">Добави в количката</a>
+        </div>
+    </div>
+</div>

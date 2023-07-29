@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "PetFindMeShop.ViewModels/1.0.0": {
+        "dependencies": {
+          "PetFindMeShop.Common": "1.0.0"
+        },
         "runtime": {
           "PetFindMeShop.ViewModels.dll": {}
+        }
+      },
+      "PetFindMeShop.Common/1.0.0": {
+        "runtime": {
+          "PetFindMeShop.Common.dll": {}
         }
       }
     }
   },
   "libraries": {
     "PetFindMeShop.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetFindMeShop.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,11 +1,13 @@
 ﻿namespace PetFindMeShop.Services.Interfaces
 {
-    using PetFindMeShop.ViewModels.Home;
+    using PetFindMeShop.Services.Models;
     using PetFindMeShop.ViewModels.Product;
 
     public interface IProductService
     {
-        Task<IEnumerable<IndexViewModel>> LastestProductAsync();
+        Task<IEnumerable<ProductViewModel>> LastestProductAsync();
+
+        Task<AllProductsFilteredAndPagedServiceModel> AllAsync(AllProductsQueryModel queryModel);
 
         Task<bool> ExistsByIdAsync(int productId);
 
