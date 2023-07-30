@@ -5,9 +5,11 @@ using PetFindMeShop.Data;
 using PetFindMeShop.Data.Models;
 using PetFindMeShop.Services;
 using PetFindMeShop.Services.Interfaces;
+using PetFindMeShop.Services.Mapping;
+using PetFindMeShop.ViewModels;
 using PetFindMeShop.Web.Infrastructure.Extensions;
 using PetFindMeShop.Web.Infrastructure.ModelBinders;
-
+using System.Reflection;
 using static PetFindMeShop.Common.GeneralApplicationConstants;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -52,6 +54,9 @@ builder.Services
     });
 
 WebApplication app = builder.Build();
+
+// Add Custom Auto Mapper
+AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).GetTypeInfo().Assembly);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

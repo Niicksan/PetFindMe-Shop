@@ -21,3 +21,5 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\Pet
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\obj\Debug\net6.0\PetFindMeShop.Services.csproj.CopyComplete
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Services.Models.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Services.Models.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.pdb

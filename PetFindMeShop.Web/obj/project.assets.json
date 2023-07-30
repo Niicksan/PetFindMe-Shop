@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "AutoMapper/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -1942,7 +1958,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -4874,7 +4890,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.15",
-          "PetFindMeShop.Data.Models": "1.0.0"
+          "PetFindMeShop.Data.Models": "1.0.0",
+          "PetFindMeShop.Services.Mapping": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PetFindMeShop.Data.dll": {}
@@ -4903,6 +4920,7 @@
         "dependencies": {
           "PetFindMeShop.Data": "1.0.0",
           "PetFindMeShop.Data.Models": "1.0.0",
+          "PetFindMeShop.Services.Mapping": "1.0.0",
           "PetFindMeShop.Services.Models": "1.0.0",
           "PetFindMeShop.ViewModels": "1.0.0"
         },
@@ -4911,6 +4929,19 @@
         },
         "runtime": {
           "bin/placeholder/PetFindMeShop.Services.dll": {}
+        }
+      },
+      "PetFindMeShop.Services.Mapping/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1"
+        },
+        "compile": {
+          "bin/placeholder/PetFindMeShop.Services.Mapping.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetFindMeShop.Services.Mapping.dll": {}
         }
       },
       "PetFindMeShop.Services.Models/1.0.0": {
@@ -4930,7 +4961,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "PetFindMeShop.Common": "1.0.0"
+          "PetFindMeShop.Common": "1.0.0",
+          "PetFindMeShop.Data.Models": "1.0.0",
+          "PetFindMeShop.Services.Mapping": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PetFindMeShop.ViewModels.dll": {}
@@ -4959,6 +4992,21 @@
     }
   },
   "libraries": {
+    "AutoMapper/12.0.1": {
+      "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "type": "package",
+      "path": "automapper/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.12.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.dll",
+        "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
     "Humanizer/2.14.1": {
       "sha512": "/FUTD3cEceAAmJSCPN9+J+VhGwmL/C12jvwlyM1DFXShEMsBzvLzLqSrJ2rb+k/W2znKw7JyflZgZpyE+tI7lA==",
       "type": "package",
@@ -7004,10 +7052,10 @@
         "microsoft.codeanalysis.workspaces.common.nuspec"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7020,6 +7068,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -7029,7 +7078,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -13085,6 +13134,11 @@
       "path": "../PetFindMeShop.Services/PetFindMeShop.Services.csproj",
       "msbuildProject": "../PetFindMeShop.Services/PetFindMeShop.Services.csproj"
     },
+    "PetFindMeShop.Services.Mapping/1.0.0": {
+      "type": "project",
+      "path": "../PetFindMeShop.Services.Mapping/PetFindMeShop.Services.Mapping.csproj",
+      "msbuildProject": "../PetFindMeShop.Services.Mapping/PetFindMeShop.Services.Mapping.csproj"
+    },
     "PetFindMeShop.Services.Models/1.0.0": {
       "type": "project",
       "path": "../PetFindMeShop.Services.Models/PetFindMeShop.Services.Models.csproj",
@@ -13111,6 +13165,7 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.15",
       "PetFindMeShop.Common >= 1.0.0",
       "PetFindMeShop.Data >= 1.0.0",
+      "PetFindMeShop.Services.Mapping >= 1.0.0",
       "PetFindMeShop.Services.Models >= 1.0.0",
       "PetFindMeShop.ViewModels >= 1.0.0",
       "PetFindMeShop.Web.Infrastructure >= 1.0.0"
@@ -13149,6 +13204,9 @@
             },
             "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Data\\PetFindMeShop.Data.csproj": {
               "projectPath": "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Data\\PetFindMeShop.Data.csproj"
+            },
+            "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Services.Mapping\\PetFindMeShop.Services.Mapping.csproj": {
+              "projectPath": "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Services.Mapping\\PetFindMeShop.Services.Mapping.csproj"
             },
             "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Services.Models\\PetFindMeShop.Services.Models.csproj": {
               "projectPath": "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Services.Models\\PetFindMeShop.Services.Models.csproj"

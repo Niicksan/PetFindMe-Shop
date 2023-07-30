@@ -4,6 +4,7 @@
     using PetFindMeShop.Data;
     using PetFindMeShop.Data.Models;
     using PetFindMeShop.Services.Interfaces;
+    using PetFindMeShop.Services.Mapping;
     using PetFindMeShop.Services.Models;
     using PetFindMeShop.ViewModels.Product;
     using PetFindMeShop.ViewModels.Product.Enums;
@@ -24,13 +25,7 @@
                 .Where(p => p.IsAvailable)
                 .OrderByDescending(p => p.CreatedAt)
                 .Take(16)
-                .Select(p => new ProductViewModel()
-                {
-                    Id = p.Id,
-                    Title = p.Title,
-                    ImageUrl = p.ImageName,
-                    Price = p.Price
-                })
+                .To<ProductViewModel>()
                 .ToArrayAsync();
 
             return lastestProducts;
@@ -72,13 +67,7 @@
             IEnumerable<ProductViewModel> allProducts = await productsQuery
                 .Skip((queryModel.CurrentPage - 1) * queryModel.ProductsPerPage)
                 .Take(queryModel.ProductsPerPage)
-                .Select(p => new ProductViewModel
-                {
-                    Id = p.Id,
-                    Title = p.Title,
-                    ImageUrl = p.ImageName,
-                    Price = p.Price
-                })
+                .To<ProductViewModel>()
                 .ToArrayAsync();
             int totalproducts = productsQuery.Count();
 

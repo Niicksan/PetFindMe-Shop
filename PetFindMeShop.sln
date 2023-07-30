@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetFindMeShop.Web.Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Services.Models", "PetFindMeShop.Services.Models\PetFindMeShop.Services.Models.csproj", "{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetFindMeShop.Services.Mapping", "PetFindMeShop.Services.Mapping\PetFindMeShop.Services.Mapping.csproj", "{61A62F90-692F-4D6D-AB71-016D779DCD4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{275D6BAF-AF94-4B2F-9DCE-F4D72AEBFE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A62F90-692F-4D6D-AB71-016D779DCD4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A62F90-692F-4D6D-AB71-016D779DCD4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A62F90-692F-4D6D-AB71-016D779DCD4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A62F90-692F-4D6D-AB71-016D779DCD4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

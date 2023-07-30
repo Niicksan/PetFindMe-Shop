@@ -15,3 +15,7 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\obj\Debug\net
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\obj\Debug\net6.0\refint\PetFindMeShop.Services.Models.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\obj\Debug\net6.0\PetFindMeShop.Services.Models.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\obj\Debug\net6.0\ref\PetFindMeShop.Services.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\bin\Debug\net6.0\PetFindMeShop.Data.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Models\bin\Debug\net6.0\PetFindMeShop.Data.Models.pdb

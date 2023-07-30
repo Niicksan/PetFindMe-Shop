@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "sQe+RHUH8INt3lcQMdZ3fz2rY8EcpPN+fdCboejWWHGS3duhQs/0ftDre+3StTY1ypAYWJMIM6yW5eivHIHTpQ==",
+  "dgSpecHash": "6itwy1OhAKrdVpZ7EQZECmuhlr4AuaUYPTg/mPyOUNyWMXgXE4kmhIKgyjg40UJ4NtIQ8XoSgirFsPZAVkljZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nik\\Documents\\PetFindMeShop\\PetFindMeShop.Services\\PetFindMeShop.Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Nik\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Nik\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.15\\microsoft.aspnetcore.cryptography.internal.6.0.15.nupkg.sha512",
     "C:\\Users\\Nik\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.15\\microsoft.aspnetcore.cryptography.keyderivation.6.0.15.nupkg.sha512",
     "C:\\Users\\Nik\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.15\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.15.nupkg.sha512",
-    "C:\\Users\\Nik\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Nik\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Nik\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Nik\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Nik\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.15\\microsoft.entityframeworkcore.6.0.15.nupkg.sha512",

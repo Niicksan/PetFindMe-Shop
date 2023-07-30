@@ -1,6 +1,9 @@
 ﻿namespace PetFindMeShop.ViewModels.Home
 {
-    public class IndexViewModel
+    using PetFindMeShop.Data.Models;
+    using PetFindMeShop.Services.Mapping;
+
+    public class IndexViewModel : IMapFrom<Product>
     {
         public int Id { get; set; }
 

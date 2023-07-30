@@ -13,3 +13,7 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\obj\Debug\net6.0\r
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Common.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Common.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\obj\Debug\net6.0\PetFindMeShop.ViewModels.csproj.CopyComplete
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Data.Models.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Data.Models.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.ViewModels\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.pdb

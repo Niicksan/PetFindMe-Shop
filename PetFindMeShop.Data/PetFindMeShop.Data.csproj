@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PetFindMeShop.Data.Models\PetFindMeShop.Data.Models.csproj" />
+    <ProjectReference Include="..\PetFindMeShop.Services.Mapping\PetFindMeShop.Services.Mapping.csproj" />
   </ItemGroup>
 
   <ItemGroup>

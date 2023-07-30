@@ -1,0 +1,12 @@
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.deps.json
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\PetFindMeShop.Services.Mapping.csproj.AssemblyReference.cache
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\PetFindMeShop.Services.Mapping.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\PetFindMeShop.Services.Mapping.AssemblyInfoInputs.cache
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\PetFindMeShop.Services.Mapping.AssemblyInfo.cs
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\PetFindMeShop.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\PetFindMeShop.Services.Mapping.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\refint\PetFindMeShop.Services.Mapping.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\PetFindMeShop.Services.Mapping.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Services.Mapping\obj\Debug\net6.0\ref\PetFindMeShop.Services.Mapping.dll
