@@ -23,6 +23,7 @@
         {
             string? userId = User.GetId();
             bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+
             if (isShopManager)
             {
                 TempData[ErrorMessage] = "Вече сте мениджър!";
@@ -66,10 +67,78 @@
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] =
-                    "Възникна грешка! Моля опитайте отново по-късно.";
+                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Error400", "Home");
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit()
+        {
+            string? userId = User.GetId();
+            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+
+            if (!isShopManager)
+            {
+                TempData[ErrorMessage] = "Не сте мениджър!";
+
+                return RedirectToAction("Create");
+            }
+
+            try
+            {
+                ShopManagerFormModel formModel = await shopManagerService.GetManagerForEditByIdAsync(userId!);
+
+                return View(formModel);
+            }
+            catch (Exception)
+            {
+                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
+
+                return RedirectToAction("Error400", "Home");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(ShopManagerFormModel model)
+        {
+            string? userId = User.GetId();
+            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+
+            if (!isShopManager)
+            {
+                TempData[ErrorMessage] = "Не сте мениджър!";
+
+                return RedirectToAction("Create");
+            }
+
+            bool isPhoneNumberTaken = await shopManagerService.ManagerExistsByOtherPhoneNumberAsync(userId!, model.PhoneNumber);
+
+            if (isPhoneNumberTaken)
+            {
+                ModelState.AddModelError(nameof(model.PhoneNumber), "Мениджър с този телефон вече съществува!");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            try
+            {
+                await shopManagerService.Edit(userId!, model);
+
+                TempData[SuccessMessage] = "Успешно редактиране!";
+
+            }
+            catch (Exception)
+            {
+                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
+
+                return RedirectToAction("Error400", "Home");
             }
 
             return RedirectToAction("Index", "Home");

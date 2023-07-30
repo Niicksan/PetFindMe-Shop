@@ -39,12 +39,37 @@
             ShopManager? manager = await dbContext
                .ShopManager
                .FirstOrDefaultAsync(m => m.CustomerId.ToString() == userId);
+
             if (manager == null)
             {
                 return null;
             }
 
             return manager.Id.ToString();
+        }
+
+        public async Task<bool> ManagerExistsByOtherPhoneNumberAsync(string userId, string phoneNumber)
+        {
+            bool result = await dbContext
+                 .ShopManager
+                 .Where(m => m.CustomerId.ToString() != userId.ToString() && m.PhoneNumber == phoneNumber)
+                 .AnyAsync();
+
+            return result;
+        }
+
+        public async Task<ShopManagerFormModel> GetManagerForEditByIdAsync(string userId)
+        {
+            ShopManager manager = await dbContext
+                .ShopManager
+                .FirstAsync(m => m.CustomerId.ToString() == userId);
+
+            return new ShopManagerFormModel
+            {
+                FirstName = manager.FirstName,
+                LastName = manager.LastName,
+                PhoneNumber = manager.PhoneNumber,
+            };
         }
 
         public async Task Create(string userId, ShopManagerFormModel model)
@@ -59,6 +84,20 @@
 
             await dbContext.ShopManager.AddAsync(manager);
             await dbContext.SaveChangesAsync();
+        }
+
+        public async Task Edit(string userId, ShopManagerFormModel model)
+        {
+            ShopManager manager = await dbContext
+                .ShopManager
+                .FirstAsync(m => m.CustomerId.ToString() == userId);
+
+            manager.FirstName = model.FirstName;
+            manager.LastName = model.LastName;
+            manager.PhoneNumber = model.PhoneNumber;
+            manager.UpdatedAt = DateTime.Now;
+
+            await this.dbContext.SaveChangesAsync();
         }
     }
 }
