@@ -35,7 +35,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ShopManagerFormModel model)
+        public async Task<IActionResult> Create(ShopManagerFormViewModel model)
         {
             string? userId = User.GetId();
             bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
@@ -90,7 +90,7 @@
 
             try
             {
-                ShopManagerFormModel formModel = await shopManagerService.GetManagerForEditByIdAsync(userId!);
+                ShopManagerFormViewModel formModel = await shopManagerService.GetManagerForEditByIdAsync(userId!);
 
                 return View(formModel);
             }
@@ -103,7 +103,7 @@
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(ShopManagerFormModel model)
+        public async Task<IActionResult> Edit(ShopManagerFormViewModel model)
         {
             string? userId = User.GetId();
             bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);

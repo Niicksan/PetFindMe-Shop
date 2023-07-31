@@ -58,13 +58,13 @@
             return result;
         }
 
-        public async Task<ShopManagerFormModel> GetManagerForEditByIdAsync(string userId)
+        public async Task<ShopManagerFormViewModel> GetManagerForEditByIdAsync(string userId)
         {
             ShopManager manager = await dbContext
                 .ShopManager
                 .FirstAsync(m => m.CustomerId.ToString() == userId);
 
-            return new ShopManagerFormModel
+            return new ShopManagerFormViewModel
             {
                 FirstName = manager.FirstName,
                 LastName = manager.LastName,
@@ -72,7 +72,7 @@
             };
         }
 
-        public async Task Create(string userId, ShopManagerFormModel model)
+        public async Task Create(string userId, ShopManagerFormViewModel model)
         {
             ShopManager manager = new ShopManager()
             {
@@ -86,7 +86,7 @@
             await dbContext.SaveChangesAsync();
         }
 
-        public async Task Edit(string userId, ShopManagerFormModel model)
+        public async Task Edit(string userId, ShopManagerFormViewModel model)
         {
             ShopManager manager = await dbContext
                 .ShopManager

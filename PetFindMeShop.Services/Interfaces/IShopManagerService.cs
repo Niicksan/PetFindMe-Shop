@@ -12,11 +12,11 @@
 
         Task<string?> GetManagerIdByUserIdAsync(string userId);
 
-        Task<ShopManagerFormModel> GetManagerForEditByIdAsync(string userId);
+        Task<ShopManagerFormViewModel> GetManagerForEditByIdAsync(string userId);
 
-        Task Create(string userId, ShopManagerFormModel model);
+        Task Create(string userId, ShopManagerFormViewModel model);
 
-        Task Edit(string userId, ShopManagerFormModel model);
+        Task Edit(string userId, ShopManagerFormViewModel model);
 
     }
 }

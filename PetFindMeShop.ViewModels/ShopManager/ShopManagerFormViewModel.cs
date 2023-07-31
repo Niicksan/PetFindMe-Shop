@@ -3,7 +3,7 @@
     using System.ComponentModel.DataAnnotations;
     using static PetFindMeShop.Common.EntityValidationConstants.ShopManager;
 
-    public class ShopManagerFormModel
+    public class ShopManagerFormViewModel
     {
         [Required]
         [Display(Name = "Вашето име")]
