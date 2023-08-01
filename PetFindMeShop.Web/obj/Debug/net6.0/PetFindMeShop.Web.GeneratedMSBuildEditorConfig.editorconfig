@@ -128,8 +128,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_AddToCartPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRUb0NhcnRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_EditDeleteProductPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FZGl0RGVsZXRlUHJvZHVjdFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_MyShopsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeVNob3BzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_NotificationsPartial.cshtml]
@@ -144,8 +156,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0SW5kZXhQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_ProductPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_ShopManagerFormPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaG9wTWFuYWdlckZvcm1QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_ShopManagerProductPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaG9wTWFuYWdlclByb2R1Y3RQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -160,8 +180,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcE1hbmFnZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/ShopManager/MyShops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcE1hbmFnZXJcTXlTaG9wcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/ShoppingCart/MyShoppingCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcHBpbmdDYXJ0XE15U2hvcHBpbmdDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shop/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/_ViewImports.cshtml]

@@ -1,5 +1,6 @@
 ﻿namespace PetFindMeShop.Services.Interfaces
 {
+    using PetFindMeShop.ViewModels.Shop;
     using PetFindMeShop.ViewModels.ShopManager;
 
     public interface IShopManagerService
@@ -13,6 +14,8 @@
         Task<string?> GetManagerIdByUserIdAsync(string userId);
 
         Task<ShopManagerFormViewModel> GetManagerForEditByIdAsync(string userId);
+
+        Task<IEnumerable<ShopViewModel>> GetAllManagerShopsByManagerIdAsync(string userId);
 
         Task Create(string userId, ShopManagerFormViewModel model);
 

@@ -10,6 +10,8 @@
 
         Task<ShopFormViewModel> GetShopForEditByIdAsync(int shopId);
 
+        Task<ShopDetailsViewModel> GetShopDetailsByIdAsync(int shopId);
+
         Task Create(ShopFormViewModel model);
 
         Task Edit(int shopId, ShopFormViewModel model);

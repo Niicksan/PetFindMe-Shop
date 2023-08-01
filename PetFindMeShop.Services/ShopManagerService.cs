@@ -4,6 +4,8 @@
     using PetFindMeShop.Data;
     using PetFindMeShop.Data.Models;
     using PetFindMeShop.Services.Interfaces;
+    using PetFindMeShop.Services.Mapping;
+    using PetFindMeShop.ViewModels.Shop;
     using PetFindMeShop.ViewModels.ShopManager;
     using System.Threading.Tasks;
 
@@ -70,6 +72,14 @@
                 LastName = manager.LastName,
                 PhoneNumber = manager.PhoneNumber,
             };
+        }
+
+        public async Task<IEnumerable<ShopViewModel>> GetAllManagerShopsByManagerIdAsync(string userId)
+        {
+            return await dbContext.ShopsManagers
+                .Where(sm => sm.ShopManagerId.ToString() == userId)
+                .To<ShopViewModel>()
+                .ToListAsync();
         }
 
         public async Task Create(string userId, ShopManagerFormViewModel model)

@@ -39,9 +39,9 @@
         [Route("/products/details/{id?}")]
         public async Task<IActionResult> Details(int id)
         {
-            bool productExists = await productService.ExistsByIdAsync(id);
+            bool isProductExists = await productService.ExistsByIdAsync(id);
 
-            if (!productExists)
+            if (!isProductExists)
             {
                 TempData[ErrorMessage] = "Несъществуващ продукт";
 

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ShopViewModel>
+
+@{
+    ViewData["Title"] = "Моите магазини";
+}
+
+<div class="mb-4">
+    <div class="p-5 bg-light text-center mb-4">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+        @if (!Model.Any())
+        {
+            <p class="lead">
+                Все още няма създаден магазин. Създай магазин.
+            </p>
+        }
+    </div>
+
+    <div class="row row-cols-4 row-cols-md-4">
+        @foreach (var shop in Model)
+        {
+            <partial name="_MyShopsPartial" model="@shop" />
+        }
+    </div>
+</div>

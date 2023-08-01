@@ -1,0 +1,11 @@
+﻿<div class="product-content">
+    <img class="card-img-top product-img img-height-60" src="@Model.ImageName" alt="@Model.Title">
+    <div class="card-body text-center index-product-info">
+        <h4 style="min-height: 3rem; font-weight:400; font-size: 1.2rem;">@Model.Title</h4>
+        <h6>
+            <b>Цена: @($"{Model.Price:f2}") лв.</b>
+        </h6>
+        <br />
+    </div>
+    <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id" class="stretched-link"></a>
+</div>

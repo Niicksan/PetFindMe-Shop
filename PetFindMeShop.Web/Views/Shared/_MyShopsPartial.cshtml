@@ -1,0 +1,11 @@
+﻿<div class="col-md-4 all-product-container mb-4">
+    <div class="card mb-3 product-item-container">
+        <div class="product-content">
+            <img class="card-img-top object-fit-fill" style="height:80%;" src="@Model.ShopImageName" alt="@Model.Name">
+            <div class="text-center p-0">
+                <h4 style="min-height: 3rem; font-weight:400; font-size: 1.5rem; margin-bottom: 0; padding-top: 0.5rem">@Model.Name</h4>
+            </div>
+            <a asp-controller="Shop" asp-action="Details" asp-route-id="@Model.Id" class="stretched-link"></a>
+        </div>
+    </div>
+</div>

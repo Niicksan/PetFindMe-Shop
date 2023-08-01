@@ -3,6 +3,7 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using PetFindMeShop.Services.Interfaces;
+    using PetFindMeShop.ViewModels.Shop;
     using PetFindMeShop.ViewModels.ShopManager;
     using PetFindMeShop.Web.Infrastructure.Extensions;
 
@@ -142,6 +143,36 @@
             }
 
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        [Route("/manager/shops")]
+        public async Task<IActionResult> MyShops()
+        {
+            string? userId = User.GetId();
+            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+
+            if (!isShopManager)
+            {
+                TempData[ErrorMessage] = "Не сте мениджър!";
+
+                return RedirectToAction("Error403", "Home");
+            }
+
+            try
+            {
+                string? managerId = await shopManagerService.GetManagerIdByUserIdAsync(userId!);
+
+                IEnumerable<ShopViewModel> viewmodel = await shopManagerService.GetAllManagerShopsByManagerIdAsync(managerId!);
+
+                return View(viewmodel);
+            }
+            catch (Exception)
+            {
+                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
+
+                return RedirectToAction("Error400", "Home");
+            }
         }
     }
 }

@@ -4,8 +4,9 @@
     using PetFindMeShop.Data;
     using PetFindMeShop.Data.Models;
     using PetFindMeShop.Services.Interfaces;
+    using PetFindMeShop.Services.Mapping;
+    using PetFindMeShop.ViewModels.Product;
     using PetFindMeShop.ViewModels.Shop;
-    using System.Threading.Tasks;
 
     public class ShopService : IShopService
     {
@@ -45,6 +46,30 @@
                 Name = shop.Name,
                 ShopImageName = shop.ShopImageName,
                 Description = shop.Description,
+            };
+        }
+
+        public async Task<ShopDetailsViewModel> GetShopDetailsByIdAsync(int shopId)
+        {
+            IEnumerable<ProductViewModel> products = await dbContext
+                .Products
+                .Where(p => p.ShopId == shopId)
+                .OrderByDescending(p => p.CreatedAt)
+                .To<ProductViewModel>()
+                .ToArrayAsync();
+
+            Shop shop = await dbContext
+               .Shops
+               .FirstAsync(s => s.Id == shopId);
+
+
+            return new ShopDetailsViewModel
+            {
+                Id = shopId,
+                Name = shop.Name,
+                ShopImageName = shop.ShopImageName,
+                Description = shop.Description,
+                Products = products
             };
         }
 

@@ -43,6 +43,7 @@ builder.Services.AddDefaultIdentity<Customer>(options =>
 // Register Services
 builder.Services.AddScoped<IShopManagerService, ShopManagerService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IShopService, ShopService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services
