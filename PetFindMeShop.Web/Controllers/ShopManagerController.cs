@@ -20,6 +20,7 @@
         }
 
         [HttpGet]
+        [Route("/manager/create")]
         public async Task<IActionResult> Create()
         {
             string? userId = User.GetId();
@@ -36,6 +37,7 @@
         }
 
         [HttpPost]
+        [Route("/manager/create")]
         public async Task<IActionResult> Create(ShopManagerFormViewModel model)
         {
             string? userId = User.GetId();
@@ -77,6 +79,7 @@
         }
 
         [HttpGet]
+        [Route("/manager/edit")]
         public async Task<IActionResult> Edit()
         {
             string? userId = User.GetId();
@@ -104,6 +107,7 @@
         }
 
         [HttpPost]
+        [Route("/manager/edit")]
         public async Task<IActionResult> Edit(ShopManagerFormViewModel model)
         {
             string? userId = User.GetId();
