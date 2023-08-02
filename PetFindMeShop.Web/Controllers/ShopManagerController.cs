@@ -86,7 +86,7 @@
             {
                 TempData[ErrorMessage] = "Не сте мениджър!";
 
-                return RedirectToAction("Create");
+                return RedirectToAction("Error403", "Home");
             }
 
             try
@@ -113,7 +113,7 @@
             {
                 TempData[ErrorMessage] = "Не сте мениджър!";
 
-                return RedirectToAction("Create");
+                return RedirectToAction("Error403", "Home");
             }
 
             bool isPhoneNumberTaken = await shopManagerService.ManagerExistsByOtherPhoneNumberAsync(userId!, model.PhoneNumber);
