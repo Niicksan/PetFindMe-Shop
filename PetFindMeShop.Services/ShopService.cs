@@ -73,14 +73,28 @@
             };
         }
 
-        public Task Create(ShopFormViewModel model)
+        public async Task<int> CreateAndReturnShopIdAsync(ShopFormViewModel model)
         {
-            throw new NotImplementedException();
+            Shop shop = AutoMapperConfig.MapperInstance.Map<Shop>(model);
+
+            await dbContext.Shops.AddAsync(shop);
+            await dbContext.SaveChangesAsync();
+
+            return shop.Id;
         }
 
-        public Task Edit(int shopId, ShopFormViewModel model)
+        public async Task Edit(int shopId, ShopFormViewModel model)
         {
-            throw new NotImplementedException();
+            Shop shop = await dbContext
+               .Shops
+               .FirstAsync(s => s.Id == shopId);
+
+            shop.Name = model.Name;
+            shop.ShopImageName = model.ShopImageName;
+            shop.Description = model.Description;
+            shop.UpdatedAt = DateTime.Now;
+
+            await this.dbContext.SaveChangesAsync();
         }
     }
 }

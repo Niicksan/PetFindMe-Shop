@@ -1,10 +1,12 @@
 ﻿namespace PetFindMeShop.ViewModels.Shop
 {
+    using PetFindMeShop.Data.Models;
+    using PetFindMeShop.Services.Mapping;
     using System.ComponentModel.DataAnnotations;
 
     using static PetFindMeShop.Common.EntityValidationConstants.Shop;
 
-    public class ShopFormViewModel : ShopViewModel
+    public class ShopFormViewModel : ShopViewModel, IMapTo<Shop>
     {
         [Required]
         [Display(Name = "Описание на магазина")]

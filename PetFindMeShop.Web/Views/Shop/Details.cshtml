@@ -10,8 +10,8 @@
     </div>
 
     <div class="border rounded mb-4">
-        <div>
-            <img src="@Model.ShopImageName" class="img-fluid" alt="Responsive image">
+        <div style="height: 60%">
+            <img src="@Model.ShopImageName" class="img-fluid object-fit-contain h-75" alt="@Model.Name">
         </div>
 
         <div class="p-4">
@@ -23,9 +23,9 @@
     <div class="row row-cols-4 row-cols-md-4">
         @if (!Model.Products.Any())
         {
-            <p class="lead">
-                Все още няма добавени продукти. Добави продукт.
-            </p>
+            <h4 class="lead w-100 text-center">
+                Все още няма добавени продукти.
+            </h4>
         }
         else {
             @foreach (var product in Model.Products)

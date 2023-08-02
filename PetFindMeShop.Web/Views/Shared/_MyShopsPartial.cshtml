@@ -1,9 +1,15 @@
-﻿<div class="col-md-4 all-product-container mb-4">
+﻿<div class="col-md-4 all-shops-container mb-4">
     <div class="card mb-3 product-item-container">
-        <div class="product-content">
-            <img class="card-img-top object-fit-fill" style="height:80%;" src="@Model.ShopImageName" alt="@Model.Name">
+        <div style="height: 100%">
+            <div style="height: 62%">
+                <img class="card-img-top object-fit-fill" style="height:100%;" src="@Model.ShopImageName" alt="@Model.Name">
+            </div>
             <div class="text-center p-0">
                 <h4 style="min-height: 3rem; font-weight:400; font-size: 1.5rem; margin-bottom: 0; padding-top: 0.5rem">@Model.Name</h4>
+            </div>
+            <div class="w-100 d-flex justify-content-center">
+                <a asp-controller="Shop" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary" style="margin-right: 0.5rem; padding: 0.2rem 0.5rem;">Редактирай</a>
+                <a asp-controller="Shop" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-primary" style="padding: 0.2rem 0.5rem;">Преглед</a>
             </div>
             <a asp-controller="Shop" asp-action="Details" asp-route-id="@Model.Id" class="stretched-link"></a>
         </div>

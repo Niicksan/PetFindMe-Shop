@@ -5,20 +5,26 @@
 }
 
 <div class="mb-4">
-    <div class="p-5 bg-light text-center mb-4">
+    <div class="p-5 bg-light text-center">
         <h1 class="display-4">@ViewData["Title"]</h1>
-        @if (!Model.Any())
-        {
-            <p class="lead">
-                Все още няма създаден магазин. Създай магазин.
-            </p>
-        }
     </div>
 
-    <div class="row row-cols-4 row-cols-md-4">
-        @foreach (var shop in Model)
+    <div class="row-cols-6 d-flex justify-content-end mt-4 mb-4">
+        <a asp-controller="Shop" asp-action="Create" class="btn btn-success">Създай Mагазин</a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4">
+        @if (!Model.Any())
         {
-            <partial name="_MyShopsPartial" model="@shop" />
+            <h3 class="lead w-100 text-center">
+                Все още нямате създаден магазин.
+            </h3>
+        }
+        else {
+            @foreach (var shop in Model)
+            {
+                <partial name="_MyShopsPartial" model="@shop" />
+            }
         }
     </div>
 </div>

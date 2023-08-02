@@ -82,6 +82,20 @@
                 .ToListAsync();
         }
 
+        public async Task CreateRelationBetweenShopAndManager(int shopId, string userId)
+        {
+            string? managerId = await this.GetManagerIdByUserIdAsync(userId!);
+
+            ShopsManagers shopsManagers = new ShopsManagers()
+            {
+                ShopId = shopId,
+                ShopManagerId = Guid.Parse(managerId!)
+            };
+
+            await dbContext.ShopsManagers.AddAsync(shopsManagers);
+            await dbContext.SaveChangesAsync();
+        }
+
         public async Task Create(string userId, ShopManagerFormViewModel model)
         {
             ShopManager manager = new ShopManager()

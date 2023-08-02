@@ -1,5 +1,5 @@
 ﻿<div class="col-md-4 index-product-container">
-    <div class="card mb-3 product-item-container">
+    <div class="card mb-3 product-item-container product-item-container-space-between">
         <div class="product-content">
             <img class="card-img-top product-img img-height-75" src="@Model.ImageName" alt="@Model.Title">
             <div class="card-body text-center index-product-info">
@@ -12,8 +12,6 @@
             <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id" class="stretched-link"></a>
         </div>
         <div class="w-100 add-to-cart-container">
-            @*<a asp-controller="House" asp-action="Details" asp-route-id="@Model.Id"
-                class="btn btn-success">Details</a>*@
                 <a class="btn btn-primary w-100" style="padding-bottom:0.5rem">Добави в количката</a>
         </div>
     </div>

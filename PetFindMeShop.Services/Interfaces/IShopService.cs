@@ -12,7 +12,7 @@
 
         Task<ShopDetailsViewModel> GetShopDetailsByIdAsync(int shopId);
 
-        Task Create(ShopFormViewModel model);
+        Task<int> CreateAndReturnShopIdAsync(ShopFormViewModel model);
 
         Task Edit(int shopId, ShopFormViewModel model);
     }

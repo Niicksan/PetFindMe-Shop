@@ -17,9 +17,10 @@
 
         Task<IEnumerable<ShopViewModel>> GetAllManagerShopsByManagerIdAsync(string userId);
 
+        Task CreateRelationBetweenShopAndManager(int shopId, string managerId);
+
         Task Create(string userId, ShopManagerFormViewModel model);
 
         Task Edit(string userId, ShopManagerFormViewModel model);
-
     }
 }
