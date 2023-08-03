@@ -98,13 +98,8 @@
 
         public async Task Create(string userId, ShopManagerFormViewModel model)
         {
-            ShopManager manager = new ShopManager()
-            {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                PhoneNumber = model.PhoneNumber,
-                CustomerId = Guid.Parse(userId)
-            };
+            ShopManager manager = AutoMapperConfig.MapperInstance.Map<ShopManager>(model);
+            manager.CustomerId = Guid.Parse(userId);
 
             await dbContext.ShopManager.AddAsync(manager);
             await dbContext.SaveChangesAsync();
