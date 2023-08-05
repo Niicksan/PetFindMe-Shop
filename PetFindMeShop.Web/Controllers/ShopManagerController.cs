@@ -10,7 +10,7 @@
     using static Common.NotificationMessagesConstants;
 
     [Authorize]
-    public class ShopManagerController : Controller
+    public class ShopManagerController : ErrorController
     {
         private readonly IShopManagerService shopManagerService;
 
@@ -30,7 +30,7 @@
             {
                 TempData[ErrorMessage] = "Вече сте мениджър!";
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("MyShops");
             }
 
             return View();
@@ -47,7 +47,7 @@
             {
                 TempData[ErrorMessage] = "Вече сте мениджър!";
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("MyShops");
             }
 
             bool isPhoneNumberTaken = await shopManagerService.ManagerExistsByPhoneNumberAsync(model.PhoneNumber);
@@ -65,17 +65,15 @@
             try
             {
                 await shopManagerService.Create(userId!, model);
+
                 TempData[SuccessMessage] = "Успешно създаване!";
 
+                return RedirectToAction("Index", "Home");
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
-
-                return RedirectToAction("Error400", "Home");
+                return GeneralError();
             }
-
-            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -87,9 +85,7 @@
 
             if (!isShopManager)
             {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
+                return ForbiddenError();
             }
 
             try
@@ -100,9 +96,7 @@
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
-
-                return RedirectToAction("Error400", "Home");
+                return GeneralError();
             }
         }
 
@@ -115,9 +109,7 @@
 
             if (!isShopManager)
             {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
+                return ForbiddenError();
             }
 
             bool isPhoneNumberTaken = await shopManagerService.ManagerExistsByOtherPhoneNumberAsync(userId!, model.PhoneNumber);
@@ -138,15 +130,13 @@
 
                 TempData[SuccessMessage] = "Успешно редактиране!";
 
+                return RedirectToAction("Index", "Home");
+
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
-
-                return RedirectToAction("Error400", "Home");
+                return GeneralError();
             }
-
-            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -154,13 +144,12 @@
         public async Task<IActionResult> MyShops()
         {
             string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
             bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
 
-            if (!isShopManager)
+            if (!isShopManager && !isAdmin)
             {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
+                return ForbiddenError();
             }
 
             try
@@ -173,9 +162,7 @@
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
-
-                return RedirectToAction("Error400", "Home");
+                return GeneralError();
             }
         }
     }
