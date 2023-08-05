@@ -5,6 +5,7 @@
     using PetFindMeShop.Services.Interfaces;
     using PetFindMeShop.ViewModels.Shop;
     using PetFindMeShop.Web.Infrastructure.Extensions;
+
     using static Common.NotificationMessagesConstants;
 
     [Authorize]
