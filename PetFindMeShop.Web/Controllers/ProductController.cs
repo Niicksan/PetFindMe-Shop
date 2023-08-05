@@ -69,8 +69,8 @@
         public async Task<IActionResult> Create(int id)
         {
             string? userId = User.GetId();
-            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(id, userId!);
             bool isAdmin = User.IsAdmin();
+            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(id, userId!);
 
             if (!isShopOwner && !isAdmin)
             {
@@ -97,8 +97,8 @@
         public async Task<IActionResult> Create(int id, ProductFormViewModel formModel)
         {
             string? userId = User.GetId();
-            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(id, userId!);
             bool isAdmin = User.IsAdmin();
+            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(id, userId!);
 
             if (!isShopOwner && !isAdmin)
             {
@@ -145,9 +145,9 @@
             }
 
             string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
             int shopId = await productService.GetProductShopIdAsync(id);
             bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(shopId, userId!);
-            bool isAdmin = User.IsAdmin();
 
             if (!isShopOwner && !isAdmin)
             {
@@ -179,9 +179,9 @@
             }
 
             string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
             int shopId = await productService.GetProductShopIdAsync(id);
             bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(shopId, userId!);
-            bool isAdmin = User.IsAdmin();
 
             if (!isShopOwner && !isAdmin)
             {
