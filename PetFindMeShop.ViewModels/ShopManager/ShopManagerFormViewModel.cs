@@ -20,8 +20,6 @@
 
         [Required]
         [Display(Name = "Вашият телефон")]
-        [MinLength(MinPhoneNumberLength)]
-        [MaxLength(MaxPhoneNumberLength)]
         [StringLength(MaxPhoneNumberLength, MinimumLength = MinPhoneNumberLength, ErrorMessage = "Телефома трябва да е с дължина между 10 и 12 цифри")]
         public string PhoneNumber { get; set; } = null!;
 

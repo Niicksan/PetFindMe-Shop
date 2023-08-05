@@ -11,6 +11,8 @@
 
         Task<bool> ManagerExistsByOtherPhoneNumberAsync(string userId, string phoneNumber);
 
+        Task<bool> ManagerAllowedToAccess(int shopId, string userId);
+
         Task<string?> GetManagerIdByUserIdAsync(string userId);
 
         Task<ShopManagerFormViewModel> GetManagerForEditByIdAsync(string userId);

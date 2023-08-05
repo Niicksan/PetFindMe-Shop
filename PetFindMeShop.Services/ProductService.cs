@@ -88,6 +88,15 @@
             return result;
         }
 
+        public async Task<int> GetProductShopIdAsync(int productId)
+        {
+            Product product = await dbContext
+               .Products
+               .FirstAsync(p => p.Id == productId);
+
+            return product.ShopId;
+        }
+
         public async Task<ProductDetailsViewModel> GetDetailsByIdAsync(int productId)
         {
             Product product = await dbContext
@@ -100,13 +109,56 @@
             {
                 Id = product.Id,
                 Title = product.Title,
-                Image = product.ImageName,
+                ImageName = product.ImageName,
                 Price = product.Price,
                 Category = product.Category.Name,
                 ShopProviderName = product.Shop.Name,
                 Status = product.IsAvailable ? "В наличност" : "Изчерпан",
                 Description = product.Description,
             };
+        }
+
+        public async Task<ProductFormViewModel> GetProductForEditByIdAsync(int productId)
+        {
+            Product product = await dbContext
+                .Products
+                .FirstAsync(s => s.Id == productId);
+
+            return new ProductFormViewModel
+            {
+                Title = product.Title,
+                ImageName = product.ImageName,
+                CategoryId = product.CategoryId,
+                AvailableQuantity = product.AvailableQuantity,
+                Price = product.Price,
+                Description = product.Description
+            };
+        }
+
+        public async Task Create(int shopId, ProductFormViewModel formModel)
+        {
+            Product product = AutoMapperConfig.MapperInstance.Map<Product>(formModel);
+            product.ShopId = shopId;
+
+            await dbContext.Products.AddAsync(product);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task Edit(int productId, ProductFormViewModel formModel)
+        {
+            Product product = await dbContext
+                .Products
+                .FirstAsync(p => p.Id == productId);
+
+            product.Title = formModel.Title;
+            product.ImageName = formModel.ImageName;
+            product.CategoryId = formModel.CategoryId;
+            product.AvailableQuantity = formModel.AvailableQuantity;
+            product.Price = formModel.Price;
+            product.Description = formModel.Description;
+            product.UpdatedAt = DateTime.Now;
+
+            await dbContext.SaveChangesAsync();
         }
     }
 }

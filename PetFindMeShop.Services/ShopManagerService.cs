@@ -36,6 +36,28 @@
             return result;
         }
 
+        public async Task<bool> ManagerExistsByOtherPhoneNumberAsync(string userId, string phoneNumber)
+        {
+            bool result = await dbContext
+                 .ShopManager
+                 .Where(m => m.CustomerId.ToString() != userId.ToString() && m.PhoneNumber == phoneNumber)
+                 .AnyAsync();
+
+            return result;
+        }
+
+        public async Task<bool> ManagerAllowedToAccess(int shopId, string userId)
+        {
+            string? managerId = await this.GetManagerIdByUserIdAsync(userId!);
+
+            bool result = await dbContext
+                .ShopsManagers
+                .Where(sm => sm.ShopId == shopId && sm.ShopManagerId.ToString() == managerId!)
+                .AnyAsync();
+
+            return result;
+        }
+
         public async Task<string?> GetManagerIdByUserIdAsync(string userId)
         {
             ShopManager? manager = await dbContext
@@ -48,16 +70,6 @@
             }
 
             return manager.Id.ToString();
-        }
-
-        public async Task<bool> ManagerExistsByOtherPhoneNumberAsync(string userId, string phoneNumber)
-        {
-            bool result = await dbContext
-                 .ShopManager
-                 .Where(m => m.CustomerId.ToString() != userId.ToString() && m.PhoneNumber == phoneNumber)
-                 .AnyAsync();
-
-            return result;
         }
 
         public async Task<ShopManagerFormViewModel> GetManagerForEditByIdAsync(string userId)

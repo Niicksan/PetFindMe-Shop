@@ -3,6 +3,8 @@
     using Microsoft.EntityFrameworkCore;
     using PetFindMeShop.Data;
     using PetFindMeShop.Services.Interfaces;
+    using PetFindMeShop.Services.Mapping;
+    using PetFindMeShop.ViewModels.Category;
 
     public class CategoryService : ICategoryService
     {
@@ -30,6 +32,17 @@
                  .ToArrayAsync();
 
             return allNames;
+        }
+
+        public async Task<IEnumerable<ProductSelectCategoryFormModel>> AllCategoriesAsync()
+        {
+            IEnumerable<ProductSelectCategoryFormModel> allCategories = await dbContext
+                 .Categories
+                 .AsNoTracking()
+                 .To<ProductSelectCategoryFormModel>()
+                 .ToArrayAsync();
+
+            return allCategories;
         }
     }
 }
