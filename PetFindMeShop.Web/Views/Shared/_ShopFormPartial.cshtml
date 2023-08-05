@@ -21,7 +21,14 @@
                 <span asp-validation-for="Description" class="small text-danger"></span>
             </div>
             <div class="text-center">
-                <input class="btn btn-primary px-4 mt-3" type="submit" value="Създай" />
+                @if (Model.Name == null)
+                {
+                    <input class="btn btn-primary px-4 mt-3" type="submit" value="Добави" />
+                }
+                else
+                {
+                    <input class="btn btn-primary px-4 mt-3" type="submit" value="Редактирай" />
+                }
             </div>
         </form>
     </div>
