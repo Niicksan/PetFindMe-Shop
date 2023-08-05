@@ -8,7 +8,7 @@
     using static Common.NotificationMessagesConstants;
 
     [Authorize]
-    public class ShopController : Controller
+    public class ShopController : ErrorController
     {
         private readonly IShopService shopService;
         private readonly IShopManagerService shopManagerService;
@@ -21,17 +21,48 @@
         }
 
         [HttpGet]
+        [Route("/manager/shops/details/{id?}")]
+        public async Task<IActionResult> Details(int id)
+        {
+            string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
+            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+
+            if (!isShopManager && !isAdmin)
+            {
+                return ForbiddenError();
+            }
+
+            bool isShopExists = await shopService.ShopExistsByIdAsync(id);
+
+            if (!isShopExists)
+            {
+                return NotFoundError();
+            }
+
+            try
+            {
+                ShopDetailsViewModel shopModel = await shopService.GetShopDetailsByIdAsync(id);
+
+                return View(shopModel);
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
+        }
+
+        [HttpGet]
         [Route("/manager/shops/create")]
         public async Task<IActionResult> Create()
         {
             string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
             bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
 
-            if (!isShopManager)
+            if (!isShopManager && !isAdmin)
             {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
+                return ForbiddenError();
             }
 
             return View();
@@ -42,13 +73,12 @@
         public async Task<IActionResult> Create(ShopFormViewModel model)
         {
             string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
             bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
 
-            if (!isShopManager)
+            if (!isShopManager && !isAdmin)
             {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
+                return ForbiddenError();
             }
 
             if (!ModelState.IsValid)
@@ -63,15 +93,12 @@
 
                 TempData[SuccessMessage] = "Успешно създаване!";
 
+                return RedirectToAction("MyShops", "ShopManager");
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно.";
-
-                return RedirectToAction("Error400", "Home");
+                return GeneralError();
             }
-
-            return RedirectToAction("MyShops", "ShopManager");
         }
 
         [HttpGet]
@@ -79,22 +106,19 @@
         public async Task<IActionResult> Edit(int id)
         {
             string? userId = User.GetId();
-            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+            bool isAdmin = User.IsAdmin();
+            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(id, userId!);
 
-            if (!isShopManager)
+            if (!isShopOwner && !isAdmin)
             {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
+                return ForbiddenError();
             }
 
             bool isShopExists = await shopService.ShopExistsByIdAsync(id);
 
             if (!isShopExists)
             {
-                TempData[ErrorMessage] = "Несъществуващ магазин!";
-
-                return RedirectToAction("Error404", "Home");
+                return NotFoundError();
             }
 
             try
@@ -105,9 +129,7 @@
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно!";
-
-                return RedirectToAction("Error400", "Home");
+                return GeneralError();
             }
         }
 
@@ -116,22 +138,19 @@
         public async Task<IActionResult> Edit(int id, ShopFormViewModel model)
         {
             string? userId = User.GetId();
-            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+            bool isAdmin = User.IsAdmin();
+            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(id, userId!);
 
-            if (!isShopManager)
+            if (!isShopOwner && !isAdmin)
             {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
+                return ForbiddenError();
             }
 
             bool isShopExists = await shopService.ShopExistsByIdAsync(id);
 
             if (!isShopExists)
             {
-                TempData[ErrorMessage] = "Несъществуващ магазин!";
-
-                return RedirectToAction("Error404", "Home");
+                return NotFoundError();
             }
 
             if (!ModelState.IsValid)
@@ -145,51 +164,11 @@
 
                 TempData[SuccessMessage] = "Успешно редактиране!";
 
+                return RedirectToAction("MyShops", "ShopManager");
             }
             catch (Exception)
             {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно!";
-
-                return RedirectToAction("Error400", "Home");
-            }
-
-            return RedirectToAction("MyShops", "ShopManager");
-        }
-
-        [HttpGet]
-        [Route("/manager/shops/details/{id?}")]
-        public async Task<IActionResult> Details(int id)
-        {
-            string? userId = User.GetId();
-            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
-
-            if (!isShopManager)
-            {
-                TempData[ErrorMessage] = "Не сте мениджър!";
-
-                return RedirectToAction("Error403", "Home");
-            }
-
-            bool isShopExists = await shopService.ShopExistsByIdAsync(id);
-
-            if (!isShopExists)
-            {
-                TempData[ErrorMessage] = "Несъществуващ магазин!";
-
-                return RedirectToAction("Error404", "Home");
-            }
-
-            try
-            {
-                ShopDetailsViewModel shopModel = await shopService.GetShopDetailsByIdAsync(id);
-
-                return View(shopModel);
-            }
-            catch (Exception)
-            {
-                TempData[ErrorMessage] = "Възникна грешка! Моля опитайте отново по-късно!";
-
-                return RedirectToAction("Error400", "Home");
+                return GeneralError();
             }
         }
     }
