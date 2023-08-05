@@ -24,7 +24,7 @@
                 .Products
                 .Where(p => p.IsAvailable)
                 .OrderByDescending(p => p.CreatedAt)
-                .Take(16)
+                .Take(6)
                 .To<ProductViewModel>()
                 .ToArrayAsync();
 
