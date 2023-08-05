@@ -68,7 +68,7 @@
 
                 TempData[SuccessMessage] = "Успешно създаване!";
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("MyShops");
             }
             catch (Exception)
             {
