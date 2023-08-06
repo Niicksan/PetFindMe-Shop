@@ -16,11 +16,40 @@
                 <p><b>Категория: </b>@Model.Category</p>
                 <p><b>Предлаган от: </b>@Model.ShopProviderName</p>
                 <p><b>Цена: @($"{Model.Price:f2}") лв.</b></p>
-                <p><i>@Model.Status</i></p>
+                <p class="@(Model.IsAvailable ? "text-success" : "text-danger")" "><i>@Model.Status</i></p>
             </div>
             <div class="product-buttons d-flex flex-column flex-column align-items-center justify-content-center w-100">
-                <a class="btn btn-primary w-90 mb-2">Добави в количката </a>
-                <a class="btn btn-outline-primary w-90 mb-2">Добави в Любими</a>
+                @if (!@Model.IsDeleted)
+                {
+                    <a class="btn btn-primary w-90 mb-2 @(Model.IsAvailable ? "" : "disabled")">Добави в количката</a>
+                                    
+                    @if (!@Model.IsLiked)
+                    {
+                        @using (Html.BeginForm("AddToLikedCollection", "Product", new { id = @Model.Id }, FormMethod.Post, true,  new { @style = "width: 100%;" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="flex-column d-flex flex-column align-items-center justify-content-center w-100">
+                                <input type="submit" class="btn btn-outline-primary w-90 mb-2" value="Добави в Любими" />
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        @using (Html.BeginForm("RemoveFromLikedCollection", "Product", new { id = @Model.Id }, FormMethod.Post, true, new { @style = "width: 100%;" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="flex-column d-flex flex-column align-items-center justify-content-center w-100">
+                                <input type="submit" class="btn btn-outline-primary w-90 mb-2" value="Премахни от Любими" />
+                            </div>
+                        }
+                    }
+                }
+                else
+                {
+                    <p class="text-danger">Продуктът не е наличен</p>
+                }
             </div>
         </div>
         <div class="product-description w-90" style="margin: 0 auto;">

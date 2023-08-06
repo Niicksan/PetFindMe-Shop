@@ -9,7 +9,7 @@
         public Customer()
         {
             this.Id = Guid.NewGuid();
-            this.LikedProducts = new HashSet<LikedProduct>();
+            this.LikedProducts = new HashSet<LikedProducts>();
             this.BoughtProducts = new HashSet<Order>();
         }
 
@@ -19,7 +19,7 @@
         [Comment("Date and time of updation")]
         public DateTime UpdatedAt { get; set; }
 
-        public virtual ICollection<LikedProduct> LikedProducts { get; set; }
+        public virtual ICollection<LikedProducts> LikedProducts { get; set; }
 
         public virtual ICollection<Order> BoughtProducts { get; set; }
     }

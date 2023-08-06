@@ -1,0 +1,42 @@
+﻿<div class="card d-flex align-items-stretch mb-4">
+    <div class="row justify-content-md-evenly">
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+            <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id">
+                <img class="img-thumbnail border-0" src="@Model.ImageName" alt="@Model.Title">
+            </a>
+        </div>
+
+        <div class="col-md-6 mx-md-0 mx-sm-4">
+            <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id" style="color: black; text-decoration: none;">
+                <div class="cad-body">
+                    <h4 style="min-height: 3rem; font-weight:600; font-size: 1.2rem; margin-top: 1rem;">@Model.Title</h4>
+                    <p class="@(Model.IsAvailable ? "text-success" : "text-danger")"><i>@Model.Status</i></p>
+
+                    @if (Model.IsDeleted)
+                    {
+                        <p class="text-danger">Продуктът не е наличен</p>
+                    }
+
+                    <p>
+                        <b>Цена: @($"{Model.Price:f2}") лв.</b>
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-3 col-sm-12 flex-column d-flex flex-column justify-content-center align-items-center">
+            <form class="flex-column d-flex flex-column align-items-center justify-content-center w-100">
+                <input type="submit" class="btn btn-primary w-100 mb-2 @(Model.IsAvailable ? "" : "disabled")" value="Добави в количката" />
+            </form>
+
+            @using (Html.BeginForm("RemoveFromLikedCollection", "Product", new { id = @Model.Id }, FormMethod.Post, true, new { @style = "width: 100%;" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="flex-column d-flex flex-column align-items-center justify-content-center w-100">
+                    <input type="submit" class="btn btn-outline-primary w-100 mb-2" value="Премахни от Любими" />
+                </div>
+            }
+        </div>
+    </div>
+</div>

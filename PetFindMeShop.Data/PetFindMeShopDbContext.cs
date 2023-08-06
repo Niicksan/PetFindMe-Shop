@@ -25,6 +25,8 @@
 
         public DbSet<Product> Products { get; set; } = null!;
 
+        public DbSet<LikedProducts> LikedProducts { get; set; } = null!;
+
         public DbSet<ShoppingCart> ShoppingCarts { get; set; } = null!;
 
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; } = null!;

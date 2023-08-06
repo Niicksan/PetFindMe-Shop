@@ -20,6 +20,10 @@ namespace PetFindMeShop.Data.Configurations
                .Property(p => p.UpdatedAt)
                .HasDefaultValueSql("GETDATE()");
 
+            builder
+               .Property(p => p.DeletedAt)
+               .HasDefaultValueSql(null);
+
             builder.HasData(this.GenerateProducts());
         }
 

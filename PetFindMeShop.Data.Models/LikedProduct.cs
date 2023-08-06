@@ -4,8 +4,8 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    [Comment("Liked Product")]
-    public class LikedProduct
+    [Comment("Liked Products")]
+    public class LikedProducts
     {
         [Comment("Primery key")]
         [Key]

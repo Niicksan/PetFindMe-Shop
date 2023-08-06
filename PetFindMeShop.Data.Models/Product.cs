@@ -65,6 +65,6 @@
         public DateTime UpdatedAt { get; set; }
 
         [Comment("Date and time of deletion")]
-        public DateTime DeletedAt { get; set; }
+        public DateTime? DeletedAt { get; set; } = null;
     }
 }

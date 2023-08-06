@@ -52,9 +52,11 @@
                 return NotFoundError();
             }
 
+            string? userId = User.GetId();
+
             try
             {
-                ProductDetailsViewModel viewModel = await productService.GetDetailsByIdAsync(id);
+                ProductDetailsViewModel viewModel = await productService.GetDetailsByIdAsync(id, userId!);
 
                 return View(viewModel);
             }
@@ -195,6 +197,76 @@
                 TempData[SuccessMessage] = "Успешно редактиране!";
 
                 return RedirectToAction("Details", "Shop", new { id = shopId });
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddToLikedCollection(int id)
+        {
+            bool isProductExists = await productService.ExistsByIdAsync(id);
+
+            if (!isProductExists)
+            {
+                TempData[ErrorMessage] = "Продуктът не съществува!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+
+            string? userId = User.GetId();
+            bool isLiked = await productService.ProductAlreadyAddedToCustomerLikedCollection(userId!, id);
+
+            if (isLiked)
+            {
+                TempData[ErrorMessage] = "Продуктът вече е добавен в любими!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+
+            try
+            {
+                await productService.AddProductToLikedCollectionAsync(userId!, id);
+
+                TempData[SuccessMessage] = "Продуктът беше добавен в любими!";
+
+                return RedirectToAction("Details", "Product", new { id });
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveFromLikedCollection(int id)
+        {
+            bool isProductExists = await productService.ExistsByIdAsync(id);
+
+            if (!isProductExists)
+            {
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+
+            string? userId = User.GetId();
+            bool isLiked = await productService.ProductAlreadyAddedToCustomerLikedCollection(userId!, id);
+
+            if (!isLiked)
+            {
+                TempData[ErrorMessage] = "Продуктът не е добавен в любими!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+
+            try
+            {
+                await productService.RemoveProductFromLikedCollectionAsync(userId!, id);
+
+                TempData[SuccessMessage] = "Продуктът беше премахнат от списъка с любими!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
             }
             catch (Exception)
             {

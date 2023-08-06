@@ -17,7 +17,7 @@ namespace PetFindMeShop.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.18")
+                .HasAnnotation("ProductVersion", "6.0.20")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -388,8 +388,8 @@ namespace PetFindMeShop.Data.Migrations
                             EmailConfirmed = true,
                             LockoutEnabled = true,
                             NormalizedEmail = "CUSTOMER@ABV.BG",
-                            NormalizedUserName = "CUSTOMER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEEIfD2PfMO0LwnhFOFi+Mn6mGWSfLw0C/U1mB59jTCF/RUmC2Qv07HQFjIzq1Q2Tng==",
+                            NormalizedUserName = "CUSTOMER@ABV.BG",
+                            PasswordHash = "AQAAAAEAACcQAAAAECw7JCrlezCoBJZUpi325vizU6PaMcunOtJj3hIOQkzTS+Sa4YMWKbqQyLDmSMXwlA==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "LUTV3ZFEY6XFBCSJEGW3JIA62BBWBETZ",
                             TwoFactorEnabled = false,
@@ -407,7 +407,7 @@ namespace PetFindMeShop.Data.Migrations
                             LockoutEnabled = true,
                             NormalizedEmail = "MANAGER@ABV.BG",
                             NormalizedUserName = "MANAGER@ABV.BG",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIx982Dr4YQ2TwVeccxTQk8ISJLnUo4dnurJZYdNGvgqGC+Wg8kScJnSgPXTyIGCaw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJOXzIb3Nicaq6a6rWkJxmePbuzVaqJV/EkBarf52jxr658AufmqSsm9aMVEeqtz1A==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "JZDXAYLLGTFDW2QPGEWCOEMNS2XMOHE5",
                             TwoFactorEnabled = false,
@@ -423,9 +423,9 @@ namespace PetFindMeShop.Data.Migrations
                             Email = "admin@petfindmeshop.bg",
                             EmailConfirmed = true,
                             LockoutEnabled = true,
-                            NormalizedEmail = "ADMIN@PETFINDME.BG",
-                            NormalizedUserName = "ADMIN@PETFINDME.BG",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHwyqdwgblJCp7yHU3+rj9r+tk53PZKil//ZzfeoGpAwCmWFJVNT1TPOKioKhLsnmQ==",
+                            NormalizedEmail = "ADMIN@PETFINDMESHOP.BG",
+                            NormalizedUserName = "ADMIN@PETFINDMESHOP.BG",
+                            PasswordHash = "AQAAAAEAACcQAAAAELIB5k91ZCJFpZJS8MBtXQpivf+i7vJSVKHn6XxWt6ZMOND1jJ+u1Jj+4GMhIzcwMQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "KAKHTVIWBHSUI4ESCAVXXEFC2UZ2JX44",
                             TwoFactorEnabled = false,
@@ -434,7 +434,7 @@ namespace PetFindMeShop.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("PetFindMeShop.Data.Models.LikedProduct", b =>
+            modelBuilder.Entity("PetFindMeShop.Data.Models.LikedProducts", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -465,9 +465,9 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("LikedProduct");
+                    b.ToTable("LikedProducts");
 
-                    b.HasComment("Liked Product");
+                    b.HasComment("Liked Products");
                 });
 
             modelBuilder.Entity("PetFindMeShop.Data.Models.Order", b =>
@@ -601,7 +601,7 @@ namespace PetFindMeShop.Data.Migrations
                         .HasDefaultValueSql("GETDATE()")
                         .HasComment("Date and time of creation");
 
-                    b.Property<DateTime>("DeletedAt")
+                    b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2")
                         .HasComment("Date and time of deletion");
 
@@ -660,7 +660,6 @@ namespace PetFindMeShop.Data.Migrations
                             AvailableQuantity = 1000,
                             CategoryId = 3,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Advance Veterinary Diets Hypoallergenic е диетична храна за кучета с алергичен дерматит и гастрит или пък с непоносимости към определени храни. В състава на храната се влагат само внимателно подбрани източници на протеини и въглехидрати, което я прави много добре поносима. Advance Veterinary Diets Hypoallergenic може да подпомогне оздравителния процес при последващи заболявания като лимфангиектазия или възпаление на червата. Като източник на протеини е използван хидролизиран соев протеин. Той няма антигенен потенциал и съответно няма как да отключи алергична реакция. Изключително високата смилаемост на тази храна е фактор с основно значение при терапията на ентеропатии и стомашно-чревни смущения.",
                             ImageName = "https://www.petshop.bg/media/t46s-4/183.webp",
                             IsAvailable = false,
@@ -675,7 +674,6 @@ namespace PetFindMeShop.Data.Migrations
                             AvailableQuantity = 1000,
                             CategoryId = 9,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Вашата котка е предразположена към образуване на топки косми? Специфична храна може да бъде полезна за този проблем. Natural Trainer Hairball with Chicken е разработена за тази цел, нейната адаптирана формула с високо съдържание на фибри може да помогне за намаляване на образуването на топки косми в стомаха и естествено елиминиране на погълнатите косми.\r\n\r\nТази суха храна за котки е формулирана със специфични компоненти от естествен произход, за да осигури пълноценна и балансирана диета. Освен това Natural Trainer Hairball с пиле се откроява с контролираното си минерално съдържание, което, заедно с корен от цикория и екстракт от червена боровинка, помага за поддържане на правилното функциониране на пикочните пътища през целия живот на котката. Съставът също подкрепя здравето на кожата и блясъка на козината, благодарение на есенциалните мастни киселини, биотин и цинк. Natural Trainer Hairball с пиле е разработена за възрастни котки, над една година.",
                             ImageName = "https://www.petshop.bg/media/t46s-4/436.webp",
                             IsAvailable = false,
@@ -690,13 +688,12 @@ namespace PetFindMeShop.Data.Migrations
                             AvailableQuantity = 1000,
                             CategoryId = 6,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Меко двулицево легълце, със зимна страна от пухкава имитация на овча вълна и лятна страна от гладка найлонова тъкан с правоъгълна форма, нисък борд, може да се пере, подходящо за кучета",
                             ImageName = "https://s13emagst.akamaized.net/products/28760/28759268/images/res_15a701aad0f1906034a15c9bf3423014.jpg?width=450&height=450&hash=6252F38AE44582D99492052092FAA02F",
                             IsAvailable = false,
                             Price = 43.44m,
                             ShopId = 1,
-                            Title = "Легло кучета с лапичка",
+                            Title = "Легло за кучета с лапичка",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -751,8 +748,8 @@ namespace PetFindMeShop.Data.Migrations
                         {
                             Id = 1,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Very cool Pet Shop",
-                            Name = "NikPetShop",
+                            Description = "Нашата мисия е да предоставим на родителите на кучета и котки всичко необходимо, за да гарантират дълъг и щастлив живот на домашния си любимец. Обичаме да говорим за домашни любимци от всякакъв вид и се вълнуваме още повече, когато доведете косматия си член на семейството в магазина, за да се срещне с нас! Ние непрекъснато проучваме и научаваме нови продукти, които могат да направят живота на нашите домашни любимци по-добър. Нашата цел е да осигурим чист магазин, подходящ за домашни любимци, който разполага с всичко, от което се нуждае вашето куче или котка. Въпреки че нашият магазин не е много голям, ние предлагаме изживяване, което е бързо, приятелско, местно и по-евтино от магазините за домашни любимци „PetShop.BG“.",
+                            Name = "PetShop.BG",
                             ShopImageName = "https://www.petshop.bg/media/t46s-10/1603.webp",
                             UpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -993,7 +990,7 @@ namespace PetFindMeShop.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PetFindMeShop.Data.Models.LikedProduct", b =>
+            modelBuilder.Entity("PetFindMeShop.Data.Models.LikedProducts", b =>
                 {
                     b.HasOne("PetFindMeShop.Data.Models.Customer", "Customer")
                         .WithMany("LikedProducts")

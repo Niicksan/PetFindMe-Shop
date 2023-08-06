@@ -69,6 +69,7 @@
                 .Take(queryModel.ProductsPerPage)
                 .To<ProductViewModel>()
                 .ToArrayAsync();
+
             int totalproducts = productsQuery.Count();
 
             return new AllProductsFilteredAndPagedServiceModel()
@@ -97,13 +98,15 @@
             return product.ShopId;
         }
 
-        public async Task<ProductDetailsViewModel> GetDetailsByIdAsync(int productId)
+        public async Task<ProductDetailsViewModel> GetDetailsByIdAsync(int productId, string userId)
         {
             Product product = await dbContext
                 .Products
                 .Include(p => p.Category)
                 .Include(p => p.Shop)
                 .FirstAsync(p => p.Id == productId);
+
+            bool isLiked = await this.ProductAlreadyAddedToCustomerLikedCollection(userId!, productId);
 
             return new ProductDetailsViewModel
             {
@@ -113,7 +116,10 @@
                 Price = product.Price,
                 Category = product.Category.Name,
                 ShopProviderName = product.Shop.Name,
+                IsAvailable = product.IsAvailable,
                 Status = product.IsAvailable ? "В наличност" : "Изчерпан",
+                IsLiked = isLiked ? true : false,
+                IsDeleted = product.DeletedAt != null ? true : false,
                 Description = product.Description,
             };
         }
@@ -159,6 +165,61 @@
             product.UpdatedAt = DateTime.Now;
 
             await dbContext.SaveChangesAsync();
+        }
+
+        public async Task<bool> ProductAlreadyAddedToCustomerLikedCollection(string userId, int productId)
+        {
+            bool result = await dbContext
+                 .LikedProducts
+                 .AnyAsync(lp => lp.CustomerId.ToString() == userId && lp.ProductId == productId);
+
+            return result;
+        }
+
+        public async Task AddProductToLikedCollectionAsync(string userId, int productId)
+        {
+            bool alreadyAdded = await this.ProductAlreadyAddedToCustomerLikedCollection(userId, productId);
+
+            if (alreadyAdded == false)
+            {
+                var userBook = new LikedProducts
+                {
+                    CustomerId = Guid.Parse(userId),
+                    ProductId = productId
+                };
+
+                await dbContext.LikedProducts.AddAsync(userBook);
+                await dbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task RemoveProductFromLikedCollectionAsync(string userId, int productId)
+        {
+            var likedProduct = await dbContext.LikedProducts
+                    .FirstOrDefaultAsync(lp => lp.CustomerId.ToString() == userId && lp.ProductId == productId);
+
+            if (likedProduct != null)
+            {
+                dbContext.LikedProducts.Remove(likedProduct);
+                await dbContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task<IEnumerable<LikedProductViewModel>> GetLikedProducts(string userId)
+        {
+            return await dbContext.LikedProducts
+                .Where(lp => lp.CustomerId.ToString() == userId)
+                .Select(p => new LikedProductViewModel
+                {
+                    Id = p.Product.Id,
+                    Title = p.Product.Title,
+                    ImageName = p.Product.ImageName,
+                    IsAvailable = p.Product.IsAvailable,
+                    Price = p.Product.Price,
+                    Status = p.Product.IsAvailable ? "В наличност" : "Изчерпан",
+                    IsLiked = true,
+                    IsDeleted = p.Product.DeletedAt != null ? true : false,
+                }).ToListAsync();
         }
     }
 }
