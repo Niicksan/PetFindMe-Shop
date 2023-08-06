@@ -8,24 +8,24 @@
 
 ## There are 3 types of users
 
-### Customer - Can producuts to Favourites, buy products, see orders
+### Customer - Can add producuts to Favourites, can buy products and can see alll his orders
 
-### Shop Manager - Can create shops, add products and see all orders of the his shops
+### Shop Manager - Can create shops, add products and see all orders of them
 
 ### Admin - Have full access over the application
 
 ## Seeded Users
 
 ### Customer
-email: `customer@abv.bg`
+email: `customer@abv.bg`<br>
 password: `customer123`
 
 ### Shop Manager
-email: `manager@abv.bg`
+email: `manager@abv.bg`<br>
 password: `manager123`
 
 ### Admin
-email: `admin@petfindmeshop.bg`
+email: `admin@petfindmeshop.bg`<br>
 password: `admin123`
 
 ## Create Migration
