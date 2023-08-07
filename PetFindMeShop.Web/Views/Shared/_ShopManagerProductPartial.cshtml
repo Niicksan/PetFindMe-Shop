@@ -1,7 +1,16 @@
 ﻿<div class="col-md-4 all-product-container mb-4">
-    <div class="card mb-3 product-item-container">
-        <partial name="_ProductPartial" model="@Model" />
-
+    <div class="product-content shadow bg-white rounded">
+        <a asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id" style="color: black; text-decoration: none;">
+            <div class="d-flex justify-content-center align-items-center">
+                <img class="product-img" src="@Model.ImageName" alt="@Model.Title">
+            </div>
+            <div class="card-body text-center index-product-info">
+                <h4 style="min-height: 3rem; font-weight:400; font-size: 1.2rem;">@Model.Title</h4>
+                <h6>
+                    <b>Цена: @($"{Model.Price:f2}") лв.</b>
+                </h6>
+            </div>
+        </a>
         <partial name="_EditDeleteProductPartial" model="@Model" />
     </div>
 </div>

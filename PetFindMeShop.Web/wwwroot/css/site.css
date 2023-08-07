@@ -38,17 +38,21 @@ body {
 }
 
 .product-content {
-    min-height: 88%;
-    max-height: 88%;
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    height: 100%;
 }
 
 .product-img {
+    width: 15vw;
+    height: 15vw;
     object-fit: contain;
-    max-height: 75%;
 }
 
 .img-height-75 {
-    height: 75%;
+    height: 20vw;
+    width: 20vw;
 }
 
 .index-product-info {
@@ -89,4 +93,11 @@ body {
 .shop-img {
     object-fit: contain;
     max-height: 68%;
+}
+
+@media (max-width: 768px) {
+    .product-img {
+        width: 33vw !important;
+        height: 33vw !important;
+    }
 }
