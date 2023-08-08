@@ -35,6 +35,7 @@
         {
             IQueryable<Product> productsQuery = dbContext
                 .Products
+                .Where(p => p.DeletedAt == null)
                 .AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(queryModel.Category))
