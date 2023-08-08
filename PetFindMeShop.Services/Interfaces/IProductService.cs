@@ -17,9 +17,15 @@
 
         Task<ProductFormViewModel> GetProductForEditByIdAsync(int productId);
 
+        Task<bool> ProductAlreadyArchived(int productId);
+
         Task Create(int shopId, ProductFormViewModel formModel);
 
         Task Edit(int productId, ProductFormViewModel formModel);
+
+        Task Archive(int productId);
+
+        Task Activate(int productId);
 
         Task<bool> ProductAlreadyAddedToCustomerLikedCollection(string userId, int productId);
 

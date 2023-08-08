@@ -1,0 +1,26 @@
+﻿ <!-- Modal -->
+<div class="modal fade" id="@("deleteModal-"+@Model.Id)" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteModalLabel">Архивиране на продукт</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Ако архивирате продукт, той спира да бъде видим на сайта.
+                Сигурни ли сте, че искате да архивирате продукта <br>
+                <b>@Model.Title</b>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Затвори</button>
+
+                @using (Html.BeginForm("Archive", "Product", new { id = @Model.Id }, FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <input type="submit" value="Архивирай" class="btn btn-danger">
+                }
+            </div>
+        </div>
+    </div>
+</div>

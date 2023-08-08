@@ -22,7 +22,7 @@
         {
             IEnumerable<ProductViewModel> lastestProducts = await dbContext
                 .Products
-                .Where(p => p.IsAvailable)
+                .Where(p => p.DeletedAt == null)
                 .OrderByDescending(p => p.CreatedAt)
                 .Take(6)
                 .To<ProductViewModel>()
@@ -40,7 +40,8 @@
             if (!string.IsNullOrWhiteSpace(queryModel.Category))
             {
                 productsQuery = productsQuery
-                    .Where(h => h.Category.Name == queryModel.Category);
+                    .Where(p => p.Category.Name == queryModel.Category)
+                    .Where(p => p.DeletedAt == null);
             }
 
             if (!string.IsNullOrWhiteSpace(queryModel.SearchString))
@@ -83,7 +84,6 @@
         {
             bool result = await dbContext
                  .Products
-                 .Where(p => p.IsAvailable)
                  .AnyAsync(p => p.Id == productId);
 
             return result;
@@ -141,6 +141,16 @@
             };
         }
 
+        public async Task<bool> ProductAlreadyArchived(int productId)
+        {
+            bool result = await dbContext
+                 .Products
+                 .Where(p => p.DeletedAt != null)
+                 .AnyAsync(p => p.Id == productId);
+
+            return result;
+        }
+
         public async Task Create(int shopId, ProductFormViewModel formModel)
         {
             Product product = AutoMapperConfig.MapperInstance.Map<Product>(formModel);
@@ -163,6 +173,30 @@
             product.Price = formModel.Price;
             product.Description = formModel.Description;
             product.UpdatedAt = DateTime.Now;
+
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task Archive(int productId)
+        {
+            Product productToDelete = await dbContext
+                .Products
+                .FirstAsync(p => p.Id == productId);
+
+            productToDelete.IsAvailable = false;
+            productToDelete.DeletedAt = DateTime.Now;
+
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task Activate(int productId)
+        {
+            Product productToDelete = await dbContext
+                .Products
+                .FirstAsync(p => p.Id == productId);
+
+            productToDelete.IsAvailable = true;
+            productToDelete.DeletedAt = null;
 
             await dbContext.SaveChangesAsync();
         }

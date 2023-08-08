@@ -4,7 +4,7 @@
     ViewData["Title"] = "Детайли за магазин";
 }
 
-<div class="mb-4">
+<div class="container mb-4">
     <div class="text-center mb-4">
         <h1 class="display-4">@Model.Name</h1>
     </div>
@@ -22,7 +22,7 @@
         <a asp-controller="Product" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-success">Добави продукт</a>
     </div>
 
-    <div class="row row-cols-4 row-cols-md-2">
+    <div class="row w-100">
         @if (!Model.Products.Any())
         {
             <h4 class="lead w-100 text-center">
@@ -33,6 +33,7 @@
             @foreach (var product in Model.Products)
             {
                 <partial name="_ShopManagerProductPartial" model="@product" />
+                <partial name="_DeleteModalPartial" model="@product" />
             }
         }
     </div>

@@ -144,6 +144,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRUb0NhcnRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_DeleteModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZWxldGVNb2RhbFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nik/Documents/PetFindMeShop/PetFindMeShop.Web/Views/Shared/_EditDeleteProductPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FZGl0RGVsZXRlUHJvZHVjdFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

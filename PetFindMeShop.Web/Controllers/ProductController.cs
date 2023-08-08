@@ -205,6 +205,92 @@
         }
 
         [HttpPost]
+        public async Task<IActionResult> Archive(int id)
+        {
+            bool isProductExists = await productService.ExistsByIdAsync(id);
+
+            if (!isProductExists)
+            {
+                return NotFoundError();
+            }
+
+            string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
+            int shopId = await productService.GetProductShopIdAsync(id);
+            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(shopId, userId!);
+
+            if (!isShopOwner && !isAdmin)
+            {
+                return ForbiddenError();
+            }
+
+            bool isProductActivated = await productService.ProductAlreadyArchived(id);
+
+            if (isProductActivated)
+            {
+                TempData[SuccessMessage] = "Продуктът вече e архивиран!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+
+            try
+            {
+                await productService.Archive(id);
+
+                TempData[SuccessMessage] = "Продуктът е архивиране!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Activate(int id)
+        {
+            bool isProductExists = await productService.ExistsByIdAsync(id);
+
+            if (!isProductExists)
+            {
+                return NotFoundError();
+            }
+
+            string? userId = User.GetId();
+            bool isAdmin = User.IsAdmin();
+            int shopId = await productService.GetProductShopIdAsync(id);
+            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(shopId, userId!);
+
+            if (!isShopOwner && !isAdmin)
+            {
+                return ForbiddenError();
+            }
+
+            bool isProductActivated = await productService.ProductAlreadyArchived(id);
+
+            if (!isProductActivated)
+            {
+                TempData[SuccessMessage] = "Продуктът вече e активен!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+
+            try
+            {
+                await productService.Activate(id);
+
+                TempData[SuccessMessage] = "Продуктът е активиран!";
+
+                return Redirect(Request.Headers["Referer"].ToString());
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
+        }
+
+        [HttpPost]
         public async Task<IActionResult> AddToLikedCollection(int id)
         {
             bool isProductExists = await productService.ExistsByIdAsync(id);

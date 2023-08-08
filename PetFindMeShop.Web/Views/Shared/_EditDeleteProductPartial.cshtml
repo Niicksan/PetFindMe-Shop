@@ -1,4 +1,23 @@
-﻿<div class="w-100 d-flex justify-content-center" style="position: relative; bottom: 1rem;">
-    <a class="btn btn-danger" style="margin-right: 0.5rem; padding: 0.2rem 0.5rem;">Изтрий</a>
-    <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary" style="padding: 0.2rem 0.5rem;">Редактирай</a>
+﻿﻿@using PetFindMeShop.Services.Interfaces
+
+@inject IProductService Productservice
+@{
+    bool isDeleted = await Productservice.ProductAlreadyArchived(Model.Id);
+}
+
+<div class="w-100 h-100 d-flex justify-content-center" style="position: relative; bottom: 0.5rem">
+    <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary" style="margin-right: 0.5rem; padding: 0.2rem 0.5rem;">Редактирай</a>
+    @if (!isDeleted)
+    {
+        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="@("#deleteModal-" + @Model.Id)" style="padding: 0.2rem 0.5rem;">Архивирай</a>
+    }
+    else
+    {
+        @using (Html.BeginForm("Activate", "Product", new { id = @Model.Id }, FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <input type="submit" value="Възтанови" class="btn btn-success w-100"/>
+        }
+    }
 </div>
