@@ -8,9 +8,17 @@
 
     public class PetFindMeShopDbContext : IdentityDbContext<Customer, IdentityRole<Guid>, Guid>
     {
-        public PetFindMeShopDbContext(DbContextOptions<PetFindMeShopDbContext> options)
+        public PetFindMeShopDbContext(DbContextOptions<PetFindMeShopDbContext> options, bool seed = true)
             : base(options)
         {
+            if (Database.IsRelational())
+            {
+                Database.Migrate();
+            }
+            else
+            {
+                Database.EnsureCreated();
+            }
         }
 
         public DbSet<Category> Categories { get; set; } = null!;
