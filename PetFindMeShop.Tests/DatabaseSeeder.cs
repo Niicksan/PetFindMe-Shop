@@ -20,6 +20,7 @@
         public static Product? DogFood;
         public static Product? CatFood;
         public static Product? DogBed;
+        public static LikedProducts? DogFoodLikedProduct;
 
         public static void SeedDatabase(PetFindMeShopDbContext dbContext)
         {
@@ -157,9 +158,11 @@
                 ImageName = "https://www.petshop.bg/media/t46s-4/183.webp",
                 Description = "Advance Veterinary Diets Hypoallergenic е диетична храна за кучета с алергичен дерматит.",
                 Price = 16.50m,
+                IsAvailable = true,
                 AvailableQuantity = 1000,
                 CategoryId = 20,
-                ShopId = 10
+                ShopId = 10,
+                DeletedAt = null
             };
 
             CatFood = new Product()
@@ -169,9 +172,11 @@
                 ImageName = "https://www.petshop.bg/media/t46s-4/436.webp",
                 Description = "Вашата котка е предразположена към образуване на топки косми? Специфична храна може да бъде.",
                 Price = 23.50m,
+                IsAvailable = true,
                 AvailableQuantity = 1000,
                 CategoryId = 21,
-                ShopId = 10
+                ShopId = 10,
+                DeletedAt = null
             };
 
             DogBed = new Product()
@@ -181,9 +186,19 @@
                 ImageName = "https://s13emagst.akamaized.net/products/28760/28759268/images/res_15a701aad0f1906034a15c9bf3423014.jpg?width=450&height=450&hash=6252F38AE44582D99492052092FAA02F",
                 Description = "Меко двулицево легълце, със зимна страна от пухкава имитация на овча вълна и лятна страна.",
                 Price = 43.44m,
+                IsAvailable = true,
                 AvailableQuantity = 1000,
                 CategoryId = 22,
-                ShopId = 20
+                ShopId = 20,
+                DeletedAt = DateTime.Parse("2023-08-02 22:51:03.2598126")
+            };
+
+            // Add Liked Product
+            DogFoodLikedProduct = new LikedProducts()
+            {
+                Id = 12,
+                ProductId = 10,
+                CustomerId = Guid.Parse("98C666AC-9AEE-80C3-5686-09DB7FBB6556")
             };
 
             // Add Customers
@@ -212,6 +227,9 @@
             dbContext.Products.Add(DogFood);
             dbContext.Products.Add(CatFood);
             dbContext.Products.Add(DogBed);
+
+            // Add Liked Product
+            dbContext.LikedProducts.Add(DogFoodLikedProduct);
 
             dbContext.SaveChanges();
         }

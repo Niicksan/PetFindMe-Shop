@@ -161,3 +161,4 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Tests\obj\Debug\net6.0\refint
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Tests\obj\Debug\net6.0\PetFindMeShop.Tests.pdb
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Tests\obj\Debug\net6.0\PetFindMeShop.Tests.genruntimeconfig.cache
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Tests\obj\Debug\net6.0\ref\PetFindMeShop.Tests.dll
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Tests\bin\Debug\net6.0\FluentAssertions.dll

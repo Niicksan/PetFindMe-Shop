@@ -1,10 +1,12 @@
 namespace PetFindMeShop.Tests
 {
+    using FluentAssertions;
     using Microsoft.EntityFrameworkCore;
     using PetFindMeShop.Data;
     using PetFindMeShop.Services;
     using PetFindMeShop.Services.Interfaces;
     using PetFindMeShop.ViewModels.ShopManager;
+
     using static DatabaseSeeder;
 
     public class ShopManagerServiceTests
@@ -18,7 +20,7 @@ namespace PetFindMeShop.Tests
         public void OneTimeSetUp()
         {
             this.dbOptions = new DbContextOptionsBuilder<PetFindMeShopDbContext>()
-                .UseInMemoryDatabase("HouseRentingInMemory")
+                .UseInMemoryDatabase("PetFindMeShopInMemory")
                 .Options;
             this.dbContext = new PetFindMeShopDbContext(this.dbOptions, false);
 
@@ -39,7 +41,7 @@ namespace PetFindMeShop.Tests
         }
 
         [Test]
-        public async Task ManagerExistsByUserIdShouldReturnFalseWhenDoNotExists()
+        public async Task ManagerExistsByUserIdShouldReturnFalseWhenDoNotExist()
         {
             string notExistingShopManagerId = CustomerUser.Id.ToString();
 
@@ -117,9 +119,7 @@ namespace PetFindMeShop.Tests
 
             var result = await this.shopManagerService.GetManagerForEditByIdAsync(shopManagerUserId);
 
-            Assert.AreEqual(model.FirstName, result.FirstName);
-            Assert.AreEqual(model.LastName, result.LastName);
-            Assert.AreEqual(model.PhoneNumber, result.PhoneNumber);
+            result.Should().BeEquivalentTo(model);
         }
     }
 }
