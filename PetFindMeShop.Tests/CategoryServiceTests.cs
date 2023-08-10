@@ -49,12 +49,12 @@
         [Test]
         public async Task ReturnAllCategoryNames()
         {
-            IEnumerable<string> categoriesNmaes = new string[] { "Купи и диспенсъри за храна и вода", "Гребени и четки", "Сухи храни за кучета" };
-            int count = 18;
+            IEnumerable<string> categoriesNmaes = new string[] { "Сухи храни за кучета", "Сухи храни за котки", "Легла за куче" };
+            int count = categoriesNmaes.Count()
+                ;
             var result = await this.categoryService.AllCategoryNamesAsync();
 
-            Assert.That(result.First(), Is.EqualTo(categoriesNmaes.First()));
-            Assert.That(result.Skip(1).Take(1), Is.EqualTo(categoriesNmaes.Skip(1).Take(1)));
+            Assert.That(result, Is.EqualTo(categoriesNmaes));
             Assert.That(result.Count(), Is.EqualTo(count));
         }
     }

@@ -6,6 +6,7 @@
     using PetFindMeShop.Services;
     using PetFindMeShop.Services.Interfaces;
     using PetFindMeShop.ViewModels.Product;
+
     using static DatabaseSeeder;
 
     public class ProductServiceTests

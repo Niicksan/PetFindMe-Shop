@@ -102,7 +102,7 @@
             // Shops
             PetShopBg = new Shop()
             {
-                Id = 10,
+                Id = 1,
                 Name = "PetShop.BG",
                 ShopImageName = "https://www.petshop.bg/media/t46s-10/1603.webp",
                 Description = "Нашата мисия е да предоставим на родителите на кучета и котки всичко необходимо, за да."
@@ -110,7 +110,7 @@
 
             PetStoreBg = new Shop()
             {
-                Id = 20,
+                Id = 2,
                 Name = "PetStoreBG",
                 ShopImageName = "https://img.freepik.com/premium-vector/pet-shop-building-with-products-equipments-inside-store_281368-396.jpg?w=1380",
                 Description = "Нашата мисия е да предоставим на родителите на кучета и котки всичко необходимо, за да."
@@ -119,85 +119,85 @@
             // ShopsManagers
             PetShopBgShopManager = new ShopsManagers()
             {
-                Id = 10,
-                ShopId = 10,
+                Id = 1,
+                ShopId = 1,
                 ShopManagerId = Guid.Parse("98C929AC-9AEE-40C3-5691-08BB4FBB6193"),
             };
 
             PetStoreBgShopManager = new ShopsManagers()
             {
-                Id = 20,
-                ShopId = 20,
+                Id = 2,
+                ShopId = 2,
                 ShopManagerId = Guid.Parse("94CD29DC-9AEE-40C2-1491-08DB7FBB6193"),
             };
 
             // Categories
             DogFoodCategory = new Category()
             {
-                Id = 20,
+                Id = 1,
                 Name = "Сухи храни за кучета"
             };
 
             CatFoodCategory = new Category()
             {
-                Id = 21,
+                Id = 2,
                 Name = "Сухи храни за котки"
             };
 
             DogBedCategory = new Category()
             {
-                Id = 22,
+                Id = 3,
                 Name = "Легла за куче"
             };
 
             // Products
             DogFood = new Product()
             {
-                Id = 10,
+                Id = 1,
                 Title = "Advance Dog VET DIETS HYPOALLERGENIC 2.5кг",
                 ImageName = "https://www.petshop.bg/media/t46s-4/183.webp",
                 Description = "Advance Veterinary Diets Hypoallergenic е диетична храна за кучета с алергичен дерматит.",
                 Price = 16.50m,
                 IsAvailable = true,
                 AvailableQuantity = 1000,
-                CategoryId = 20,
-                ShopId = 10,
+                CategoryId = 1,
+                ShopId = 1,
                 DeletedAt = null
             };
 
             CatFood = new Product()
             {
-                Id = 20,
+                Id = 2,
                 Title = "Natural TRAINER Cat Hairball Chicken 1.5 кг – с пиле",
                 ImageName = "https://www.petshop.bg/media/t46s-4/436.webp",
                 Description = "Вашата котка е предразположена към образуване на топки косми? Специфична храна може да бъде.",
                 Price = 23.50m,
                 IsAvailable = true,
                 AvailableQuantity = 1000,
-                CategoryId = 21,
-                ShopId = 10,
+                CategoryId = 2,
+                ShopId = 1,
                 DeletedAt = null
             };
 
             DogBed = new Product()
             {
-                Id = 30,
+                Id = 3,
                 Title = "Легло за кучета с лапичка",
                 ImageName = "https://s13emagst.akamaized.net/products/28760/28759268/images/res_15a701aad0f1906034a15c9bf3423014.jpg?width=450&height=450&hash=6252F38AE44582D99492052092FAA02F",
                 Description = "Меко двулицево легълце, със зимна страна от пухкава имитация на овча вълна и лятна страна.",
                 Price = 43.44m,
                 IsAvailable = true,
                 AvailableQuantity = 1000,
-                CategoryId = 22,
-                ShopId = 20,
+                CategoryId = 3,
+                ShopId = 2,
                 DeletedAt = DateTime.Parse("2023-08-02 22:51:03.2598126")
             };
 
             // Add Liked Product
             DogFoodLikedProduct = new LikedProducts()
             {
-                Id = 12,
-                ProductId = 10,
+                Id = 1,
+                ProductId = 1,
                 CustomerId = Guid.Parse("98C666AC-9AEE-80C3-5686-09DB7FBB6556")
             };
 

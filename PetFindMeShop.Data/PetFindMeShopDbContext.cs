@@ -8,6 +8,8 @@
 
     public class PetFindMeShopDbContext : IdentityDbContext<Customer, IdentityRole<Guid>, Guid>
     {
+        private readonly bool seedDb;
+
         public PetFindMeShopDbContext(DbContextOptions<PetFindMeShopDbContext> options, bool seed = true)
             : base(options)
         {
@@ -19,6 +21,8 @@
             {
                 Database.EnsureCreated();
             }
+
+            this.seedDb = seed;
         }
 
         public DbSet<Category> Categories { get; set; } = null!;
@@ -41,9 +45,12 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            Assembly configAssembly = Assembly.GetAssembly(typeof(PetFindMeShopDbContext)) ??
+            if (this.seedDb)
+            {
+                Assembly configAssembly = Assembly.GetAssembly(typeof(PetFindMeShopDbContext)) ??
                                       Assembly.GetExecutingAssembly();
-            modelBuilder.ApplyConfigurationsFromAssembly(configAssembly);
+                modelBuilder.ApplyConfigurationsFromAssembly(configAssembly);
+            }
 
             base.OnModelCreating(modelBuilder);
         }
