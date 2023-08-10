@@ -155,5 +155,56 @@
 
             Assert.IsFalse(result);
         }
+
+        [Test]
+        public async Task ArhiveProduct()
+        {
+            var product = DogBed;
+
+            await this.productService.Archive(product.Id);
+
+            Assert.That(product.IsAvailable, Is.EqualTo(false));
+            Assert.That(product.DeletedAt, Is.Not.Null);
+        }
+
+        [Test]
+        public async Task ActivateProduct()
+        {
+            var product = DogBed;
+
+            await this.productService.Archive(product.Id);
+            await this.productService.Activate(product.Id);
+
+            Assert.That(product.IsAvailable, Is.EqualTo(true));
+            Assert.That(product.DeletedAt, Is.Null);
+        }
+
+        [Test]
+        public async Task AddProductToLikedCollection()
+        {
+            int productId = CatFood.Id;
+            string customerId = CustomerUser.Id.ToString();
+            var productsBeforeAdd = await this.productService.GetLikedProducts(customerId);
+
+            await this.productService.AddProductToLikedCollectionAsync(customerId, productId);
+
+            var productsAfterAdd = await this.productService.GetLikedProducts(customerId);
+
+            Assert.That(productsAfterAdd.Count(), Is.EqualTo(productsBeforeAdd.Count() + 1));
+        }
+
+        [Test]
+        public async Task RemoveProductFromLikedCollectionAsync()
+        {
+            int productId = DogFood.Id;
+            string customerId = CustomerUser.Id.ToString();
+            var productsBeforeRemove = await this.productService.GetLikedProducts(customerId);
+
+            await this.productService.RemoveProductFromLikedCollectionAsync(customerId, productId);
+
+            var productsAfterRemove = await this.productService.GetLikedProducts(customerId);
+
+            Assert.That(productsAfterRemove.Count(), Is.EqualTo(productsBeforeRemove.Count() - 1));
+        }
     }
 }
