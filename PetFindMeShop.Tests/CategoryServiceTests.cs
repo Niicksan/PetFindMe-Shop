@@ -28,7 +28,7 @@
             this.categoryService = new CategoryService(this.dbContext);
         }
 
-        [Test]
+        [Test, Order(1)]
         public async Task CategoryExistsByIdShouldReturnFalseWhenDoNotExist()
         {
             bool result = await this.categoryService.ExistsByIdAsync(33);
@@ -36,7 +36,7 @@
             Assert.IsFalse(result);
         }
 
-        [Test]
+        [Test, Order(2)]
         public async Task CategoryExistsByIdShouldReturnTrueWhenExists()
         {
             int existingCategoryId = DogBedCategory.Id;
@@ -46,7 +46,56 @@
             Assert.IsTrue(result);
         }
 
-        [Test]
+        [Test, Order(3)]
+        public async Task CategoryExistsByNameShouldReturnFalseWhenDoNotExist()
+        {
+            bool result = await this.categoryService.ExistsByNameAsync("New Category");
+
+            Assert.IsFalse(result);
+        }
+
+        [Test, Order(4)]
+        public async Task CategoryExistsByNameShouldReturnTrueWhenExists()
+        {
+            string categoryName = DogBedCategory.Name;
+
+            bool result = await this.categoryService.ExistsByNameAsync(categoryName);
+
+            Assert.IsTrue(result);
+        }
+
+        [Test, Order(5)]
+        public async Task CategoryExistsByOtherNameShouldReturnFalseWhenDoNotExist()
+        {
+            var dogBedCategory = DogBedCategory;
+
+            bool result = await this.categoryService.ExistsByOtherNameAsync(dogBedCategory.Id, "New Category");
+
+            Assert.IsFalse(result);
+        }
+
+        [Test, Order(6)]
+        public async Task CategoryExistsByOtherNameShoulsReturnTrueWhenExists()
+        {
+            var dogfoodCategory = DogFoodCategory;
+            var dogBedCategory = DogBedCategory;
+
+            bool result = await this.categoryService.ExistsByOtherNameAsync(dogfoodCategory.Id, dogBedCategory.Name);
+
+            Assert.IsTrue(result);
+        }
+
+        [Test, Order(7)]
+        public async Task EdditingCurrentCategoryShouldBePossible()
+        {
+            var dogBedCategory = DogBedCategory;
+
+            bool result = await this.categoryService.ExistsByOtherNameAsync(dogBedCategory.Id, dogBedCategory.Name);
+
+            Assert.IsFalse(result);
+        }
+
+        [Test, Order(8)]
         public async Task ReturnAllCategoryNames()
         {
             IEnumerable<string> categoriesNmaes = new string[] { "Сухи храни за кучета", "Сухи храни за котки", "Легла за куче" };
@@ -56,6 +105,20 @@
 
             Assert.That(result, Is.EqualTo(categoriesNmaes));
             Assert.That(result.Count(), Is.EqualTo(count));
+        }
+
+        [Test, Order(9)]
+        public async Task DeleteCategory()
+        {
+            var dogBedCategory = DogBedCategory;
+
+            await this.categoryService.Delete(dogBedCategory.Id);
+
+            bool isExistsById = await this.categoryService.ExistsByIdAsync(dogBedCategory.Id);
+            bool isExistsByName = await this.categoryService.ExistsByNameAsync(dogBedCategory.Name);
+
+            Assert.IsFalse(isExistsById);
+            Assert.IsFalse(isExistsByName);
         }
     }
 }
