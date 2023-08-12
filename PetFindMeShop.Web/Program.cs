@@ -7,6 +7,7 @@ using PetFindMeShop.Services;
 using PetFindMeShop.Services.Interfaces;
 using PetFindMeShop.Services.Mapping;
 using PetFindMeShop.ViewModels;
+using PetFindMeShop.Web.Areas.Admin.Services;
 using PetFindMeShop.Web.Infrastructure.Extensions;
 using PetFindMeShop.Web.Infrastructure.ModelBinders;
 using System.Reflection;
@@ -45,6 +46,16 @@ builder.Services.AddScoped<IShopManagerService, ShopManagerService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IShopService, ShopService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddMemoryCache();
+builder.Services.AddResponseCaching();
+
+builder.Services.ConfigureApplicationCookie(cfg =>
+{
+    cfg.LoginPath = "/User/Login";
+    cfg.AccessDeniedPath = "/Home/Error/401";
+});
 
 builder.Services
     .AddControllersWithViews()
@@ -86,9 +97,20 @@ if (app.Environment.IsDevelopment())
     app.SeedAdministrator(DevelopmentAdminEmail);
 }
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(config =>
+{
+    config.MapControllerRoute(
+        name: "Areas",
+        pattern: "/{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+
+    config.MapControllerRoute(
+         name: "default",
+         pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    config.MapDefaultControllerRoute();
+    config.MapRazorPages();
+});
 
 app.MapRazorPages();
 

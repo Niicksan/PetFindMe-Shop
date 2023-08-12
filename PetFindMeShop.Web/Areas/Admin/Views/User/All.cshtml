@@ -1,0 +1,39 @@
+﻿@model IEnumerable<UserViewModel>
+
+@{
+    ViewBag.Title = "Всички потребители";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><label>Имейл</label></th>
+            <th><label>Име</label></th>
+            <th><label>Телефон</label></th>
+            <th class="text-center"><label>Мениджър</label></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td><label>@user.Email</label></td>
+                <td><label>@user.FullName</label></td>
+                <td><label>@user.PhoneNumber</label></td>
+                <td class="text-center">
+                    @if (user.PhoneNumber != string.Empty)
+                    {
+                        <label class="text-center">✔</label>
+                    }
+                    else
+                    {
+                        <label class="text-center">❌</label>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

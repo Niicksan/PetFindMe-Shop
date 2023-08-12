@@ -10,7 +10,7 @@
     {
         public ProductFormViewModel()
         {
-            Categories = new HashSet<ProductSelectCategoryFormModel>();
+            Categories = new HashSet<CategoryViewModel>();
         }
 
         [Required]
@@ -42,6 +42,6 @@
         [StringLength(DescriptionMaxLength, MinimumLength = DescriptionMinLength, ErrorMessage = "Описанието трябва да е с дължина поне 10 символа")]
         public string Description { get; set; } = null!;
 
-        public IEnumerable<ProductSelectCategoryFormModel> Categories { get; set; }
+        public IEnumerable<CategoryViewModel> Categories { get; set; }
     }
 }

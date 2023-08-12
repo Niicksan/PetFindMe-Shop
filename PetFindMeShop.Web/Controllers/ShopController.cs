@@ -126,6 +126,8 @@
             {
                 ShopFormViewModel formModel = await shopService.GetShopForEditByIdAsync(id);
 
+                ViewData["id"] = id;
+
                 return View(formModel);
             }
             catch (Exception)
@@ -156,6 +158,8 @@
 
             if (!ModelState.IsValid)
             {
+                ViewData["id"] = id;
+
                 return View(model);
             }
 

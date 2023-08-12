@@ -161,6 +161,8 @@
                 ProductFormViewModel formModel = await productService.GetProductForEditByIdAsync(id);
                 formModel.Categories = await categoryService.AllCategoriesAsync();
 
+                ViewData["id"] = id;
+
                 return View(formModel);
             }
             catch (Exception)
@@ -188,6 +190,13 @@
             if (!isShopOwner && !isAdmin)
             {
                 return ForbiddenError();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                ViewData["id"] = id;
+
+                return View(formModel);
             }
 
             try

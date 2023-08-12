@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Администрация";
+}
+<div class="mt-4 p-5 bg-light text-center">
+    <h2 class="display-4">Добре дошъл, Админ!</h2>
+    <p class="lead mb-1 mt-3 mb-3">
+        Това е администраторската част, където можете да управлявате категории и потребители.
+    </p>
+
+    <a asp-area="Admin" asp-controller="Category" asp-action="All" class="btn btn-primary">Всички категории</a>
+    <a asp-area="Admin" asp-controller="User" asp-action="All" class="btn btn-primary">Всички потребители</a>
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CategoryViewModel>
+
+@{
+    ViewBag.Title = "Всички категории";
+}
+
+<div>
+    <h2 class="text-center">@ViewBag.Title</h2>
+    <hr />
+    <a class="btn btn-success" asp-area="Admin" asp-controller="Category" asp-action="Create">Добави категория</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th><label>Категория</label></th>
+                <th class="text-center"><label>Действия</label></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model)
+            {
+                <tr class="vertical-align: middle">
+                    <td><label>@category.Name</label></td>
+                    <td class="text-center">
+                        <a class="btn btn-primary" style="padding: 0.2rem 0.5rem;"  asp-area="Admin" asp-controller="Category" asp-action="Edit" asp-route-id="@category.Id">Редактирай</a>
+                        <a class="btn btn-danger" style="padding: 0.2rem 0.5rem;"  data-bs-toggle="modal" data-bs-target="@("#deleteCategoryModal-" + @category.Id)">Изтрий</a>
+                    </td>
+                </tr>
+
+                <partial name="_DeleteCategoryModalPartial" model="@category" />
+            }
+        </tbody>
+    </table>
+</div>

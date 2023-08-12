@@ -278,3 +278,4 @@ C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindM
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.dll
 C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\bin\Debug\net6.0\PetFindMeShop.Services.Mapping.pdb
+C:\Users\Nik\Documents\PetFindMeShop\PetFindMeShop.Web\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_AdminLayout.cshtml.rz.scp.css

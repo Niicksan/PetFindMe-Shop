@@ -25,6 +25,10 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <a class="nav-link text-dark" asp-area="Admin" asp-controller="Home" asp-action="Index">Админ панел </a>
+                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Product" asp-action="AllProducts">Продукти</a>
                         </li>

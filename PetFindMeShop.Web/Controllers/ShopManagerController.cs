@@ -92,6 +92,8 @@
             {
                 ShopManagerFormViewModel formModel = await shopManagerService.GetManagerForEditByIdAsync(userId!);
 
+                ViewData["userId"] = userId;
+
                 return View(formModel);
             }
             catch (Exception)
@@ -117,10 +119,14 @@
             if (isPhoneNumberTaken)
             {
                 ModelState.AddModelError(nameof(model.PhoneNumber), "Мениджър с този телефон вече съществува!");
+
+                ViewData["userId"] = userId;
             }
 
             if (!ModelState.IsValid)
             {
+                ViewData["userId"] = userId;
+
                 return View(model);
             }
 

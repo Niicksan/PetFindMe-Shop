@@ -28,6 +28,13 @@ namespace PetFindMeShop.Web.Controllers
             return View("Error400");
         }
 
+        [Route("Home/Error/401")]
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error401()
+        {
+            return View("Error401");
+        }
+
         [Route("/error-403")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error403()
