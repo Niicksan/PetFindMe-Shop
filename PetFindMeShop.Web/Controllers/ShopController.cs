@@ -27,9 +27,9 @@
         {
             string? userId = User.GetId();
             bool isAdmin = User.IsAdmin();
-            bool isShopManager = await shopManagerService.ManagerExistsByUserIdAsync(userId!);
+            bool isShopOwner = await shopManagerService.ManagerAllowedToAccess(id, userId!);
 
-            if (!isShopManager && !isAdmin)
+            if (!isShopOwner && !isAdmin)
             {
                 return ForbiddenError();
             }
