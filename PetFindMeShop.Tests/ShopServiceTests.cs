@@ -27,18 +27,18 @@
             this.shopService = new ShopService(this.dbContext);
         }
 
+        [OneTimeTearDown]
+        public void CleanUp()
+        {
+            this.dbContext.Database.EnsureDeleted();
+        }
+
         [Test]
         public async Task ShopExistsByIdReturnFalseWhenDoNotExist()
         {
             bool result = await this.shopService.ShopExistsByIdAsync(33);
 
             Assert.IsFalse(result);
-        }
-
-        [OneTimeTearDown]
-        public void CleanUp()
-        {
-            this.dbContext.Database.EnsureDeleted();
         }
 
         [Test]
