@@ -13,14 +13,14 @@
         public PetFindMeShopDbContext(DbContextOptions<PetFindMeShopDbContext> options, bool seed = true)
             : base(options)
         {
-            if (Database.IsRelational())
-            {
-                Database.Migrate();
-            }
-            else
-            {
-                Database.EnsureCreated();
-            }
+            //if (Database.IsRelational())
+            //{
+            //    Database.Migrate();
+            //}
+            //else
+            //{
+            //    Database.EnsureCreated();
+            //}
 
             this.seedDb = seed;
         }
