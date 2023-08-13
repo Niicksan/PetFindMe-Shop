@@ -30,6 +30,12 @@
             this.productService = new ProductService(this.dbContext);
         }
 
+        [OneTimeTearDown]
+        public void CleanUp()
+        {
+            this.dbContext.Database.EnsureDeleted();
+        }
+
         [Test]
         public async Task ProductExistsByIdShouldReturnFalseWhenDoNotExist()
         {

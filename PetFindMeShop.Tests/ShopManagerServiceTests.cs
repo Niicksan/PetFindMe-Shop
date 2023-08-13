@@ -30,6 +30,12 @@ namespace PetFindMeShop.Tests
             this.shopManagerService = new ShopManagerService(this.dbContext);
         }
 
+        [OneTimeTearDown]
+        public void CleanUp()
+        {
+            this.dbContext.Database.EnsureDeleted();
+        }
+
         [Test]
         public async Task ManagerExistsByUserIdShouldReturnTrueWhenExists()
         {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.2593" branch-rate="0.0363" version="1.9" timestamp="1691861526" lines-covered="376" lines-valid="1450" branches-covered="2" branches-valid="55">
+<coverage line-rate="0.5341" branch-rate="0.1818" version="1.9" timestamp="1691915248" lines-covered="781" lines-valid="1462" branches-covered="10" branches-valid="55">
   <sources>
     <source>C:\Users\Nik\</source>
   </sources>
@@ -23,27 +23,27 @@
             </method>
             <method name="get_ShopManager" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="32" hits="16" branch="False" />
+                <line number="32" hits="24" branch="False" />
               </lines>
             </method>
             <method name="get_Shops" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="34" hits="16" branch="False" />
+                <line number="34" hits="20" branch="False" />
               </lines>
             </method>
             <method name="get_ShopsManagers" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="36" hits="16" branch="False" />
+                <line number="36" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_Products" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="38" hits="20" branch="False" />
+                <line number="38" hits="30" branch="False" />
               </lines>
             </method>
             <method name="get_LikedProducts" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="40" hits="12" branch="False" />
+                <line number="40" hits="23" branch="False" />
               </lines>
             </method>
             <method name="get_ShoppingCarts" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -100,11 +100,11 @@
           <lines>
             <line number="28" hits="31" branch="False" />
             <line number="30" hits="20" branch="False" />
-            <line number="32" hits="16" branch="False" />
-            <line number="34" hits="16" branch="False" />
-            <line number="36" hits="16" branch="False" />
-            <line number="38" hits="20" branch="False" />
-            <line number="40" hits="12" branch="False" />
+            <line number="32" hits="24" branch="False" />
+            <line number="34" hits="20" branch="False" />
+            <line number="36" hits="18" branch="False" />
+            <line number="38" hits="30" branch="False" />
+            <line number="40" hits="23" branch="False" />
             <line number="42" hits="8" branch="False" />
             <line number="44" hits="8" branch="False" />
             <line number="47" hits="2" branch="False" />
@@ -846,7 +846,7 @@
             </method>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="28" branch="False" />
+                <line number="24" hits="29" branch="False" />
               </lines>
             </method>
             <method name="get_CreatedAt" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -875,7 +875,7 @@
           </methods>
           <lines>
             <line number="18" hits="18" branch="False" />
-            <line number="24" hits="28" branch="False" />
+            <line number="24" hits="29" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="30" hits="0" branch="False" />
             <line number="32" hits="12" branch="False" />
@@ -940,22 +940,22 @@
             </method>
             <method name="get_CustomerId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="4" branch="False" />
+                <line number="16" hits="5" branch="False" />
               </lines>
             </method>
             <method name="get_Customer" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="4" branch="False" />
+                <line number="19" hits="5" branch="False" />
               </lines>
             </method>
             <method name="get_ProductId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="23" hits="4" branch="False" />
+                <line number="23" hits="5" branch="False" />
               </lines>
             </method>
             <method name="get_Product" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="4" branch="False" />
+                <line number="26" hits="5" branch="False" />
               </lines>
             </method>
             <method name="get_CreatedAt" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -971,10 +971,10 @@
           </methods>
           <lines>
             <line number="12" hits="4" branch="False" />
-            <line number="16" hits="4" branch="False" />
-            <line number="19" hits="4" branch="False" />
-            <line number="23" hits="4" branch="False" />
-            <line number="26" hits="4" branch="False" />
+            <line number="16" hits="5" branch="False" />
+            <line number="19" hits="5" branch="False" />
+            <line number="23" hits="5" branch="False" />
+            <line number="26" hits="5" branch="False" />
             <line number="29" hits="0" branch="False" />
             <line number="32" hits="0" branch="False" />
           </lines>
@@ -1141,57 +1141,57 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="12" branch="False" />
+                <line number="14" hits="27" branch="False" />
               </lines>
             </method>
             <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="20" hits="24" branch="False" />
+                <line number="20" hits="28" branch="False" />
               </lines>
             </method>
             <method name="get_ImageName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="25" hits="24" branch="False" />
+                <line number="25" hits="28" branch="False" />
               </lines>
             </method>
             <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="31" hits="24" branch="False" />
+                <line number="31" hits="28" branch="False" />
               </lines>
             </method>
             <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="36" hits="12" branch="False" />
+                <line number="36" hits="16" branch="False" />
               </lines>
             </method>
             <method name="get_AvailableQuantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="41" hits="12" branch="False" />
+                <line number="41" hits="14" branch="False" />
               </lines>
             </method>
             <method name="get_IsAvailable" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="45" hits="12" branch="False" />
+                <line number="45" hits="20" branch="False" />
               </lines>
             </method>
             <method name="get_CategoryId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="49" hits="12" branch="False" />
+                <line number="49" hits="14" branch="False" />
               </lines>
             </method>
             <method name="get_Category" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="52" hits="12" branch="False" />
+                <line number="52" hits="13" branch="False" />
               </lines>
             </method>
             <method name="get_ShopId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="56" hits="12" branch="False" />
+                <line number="56" hits="13" branch="False" />
               </lines>
             </method>
             <method name="get_Shop" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="59" hits="12" branch="False" />
+                <line number="59" hits="13" branch="False" />
               </lines>
             </method>
             <method name="get_CreatedAt" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1206,37 +1206,37 @@
             </method>
             <method name="get_DeletedAt" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="68" hits="24" branch="False" />
+                <line number="68" hits="30" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="14" hits="12" branch="False" />
-            <line number="20" hits="24" branch="False" />
-            <line number="25" hits="24" branch="False" />
-            <line number="31" hits="24" branch="False" />
-            <line number="36" hits="12" branch="False" />
-            <line number="41" hits="12" branch="False" />
-            <line number="45" hits="12" branch="False" />
-            <line number="49" hits="12" branch="False" />
-            <line number="52" hits="12" branch="False" />
-            <line number="56" hits="12" branch="False" />
-            <line number="59" hits="12" branch="False" />
+            <line number="14" hits="27" branch="False" />
+            <line number="20" hits="28" branch="False" />
+            <line number="25" hits="28" branch="False" />
+            <line number="31" hits="28" branch="False" />
+            <line number="36" hits="16" branch="False" />
+            <line number="41" hits="14" branch="False" />
+            <line number="45" hits="20" branch="False" />
+            <line number="49" hits="14" branch="False" />
+            <line number="52" hits="13" branch="False" />
+            <line number="56" hits="13" branch="False" />
+            <line number="59" hits="13" branch="False" />
             <line number="62" hits="0" branch="False" />
             <line number="65" hits="0" branch="False" />
-            <line number="68" hits="24" branch="False" />
+            <line number="68" hits="30" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.Data.Models.Shop" filename="Documents\PetFindMeShop\PetFindMeShop.Data.Models\Shop.cs" line-rate="0.8665999999999999" branch-rate="1" complexity="10">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="20" hits="8" branch="False" />
+                <line number="20" hits="11" branch="False" />
               </lines>
             </method>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="16" branch="False" />
+                <line number="26" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_ShopImageName" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -1286,8 +1286,8 @@
             </method>
           </methods>
           <lines>
-            <line number="20" hits="8" branch="False" />
-            <line number="26" hits="16" branch="False" />
+            <line number="20" hits="11" branch="False" />
+            <line number="26" hits="18" branch="False" />
             <line number="31" hits="8" branch="False" />
             <line number="37" hits="16" branch="False" />
             <line number="40" hits="0" branch="False" />
@@ -1307,22 +1307,22 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="20" hits="16" branch="False" />
+                <line number="20" hits="21" branch="False" />
               </lines>
             </method>
             <method name="get_FirstName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="16" branch="False" />
+                <line number="26" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_LastName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="32" hits="16" branch="False" />
+                <line number="32" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_PhoneNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="38" hits="16" branch="False" />
+                <line number="38" hits="19" branch="False" />
               </lines>
             </method>
             <method name="get_CustomerId" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -1361,10 +1361,10 @@
             </method>
           </methods>
           <lines>
-            <line number="20" hits="16" branch="False" />
-            <line number="26" hits="16" branch="False" />
-            <line number="32" hits="16" branch="False" />
-            <line number="38" hits="16" branch="False" />
+            <line number="20" hits="21" branch="False" />
+            <line number="26" hits="18" branch="False" />
+            <line number="32" hits="18" branch="False" />
+            <line number="38" hits="19" branch="False" />
             <line number="42" hits="0" branch="False" />
             <line number="45" hits="16" branch="False" />
             <line number="48" hits="8" branch="False" />
@@ -1543,7 +1543,7 @@
         </class>
       </classes>
     </package>
-    <package name="PetFindMeShop.Services" line-rate="0.09269999999999999" branch-rate="0" complexity="60">
+    <package name="PetFindMeShop.Services" line-rate="0.5513" branch-rate="0.3809" complexity="60">
       <classes>
         <class name="PetFindMeShop.Services.CategoryService" filename="Documents\PetFindMeShop\PetFindMeShop.Services\CategoryService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
@@ -1777,92 +1777,92 @@
             <line number="78" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(PetFindMeShop.Data.PetFindMeShopDbContext)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(PetFindMeShop.Data.PetFindMeShopDbContext)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
+                <line number="19" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="19" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;Activate&gt;d__12" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;Activate&gt;d__12" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="194" hits="0" branch="False" />
-                <line number="195" hits="0" branch="False" />
-                <line number="196" hits="0" branch="False" />
-                <line number="197" hits="0" branch="False" />
-                <line number="199" hits="0" branch="False" />
-                <line number="200" hits="0" branch="False" />
-                <line number="202" hits="0" branch="False" />
-                <line number="203" hits="0" branch="False" />
+                <line number="194" hits="1" branch="False" />
+                <line number="195" hits="1" branch="False" />
+                <line number="196" hits="1" branch="False" />
+                <line number="197" hits="1" branch="False" />
+                <line number="199" hits="1" branch="False" />
+                <line number="200" hits="1" branch="False" />
+                <line number="202" hits="1" branch="False" />
+                <line number="203" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="194" hits="0" branch="False" />
-            <line number="195" hits="0" branch="False" />
-            <line number="196" hits="0" branch="False" />
-            <line number="197" hits="0" branch="False" />
-            <line number="199" hits="0" branch="False" />
-            <line number="200" hits="0" branch="False" />
-            <line number="202" hits="0" branch="False" />
-            <line number="203" hits="0" branch="False" />
+            <line number="194" hits="1" branch="False" />
+            <line number="195" hits="1" branch="False" />
+            <line number="196" hits="1" branch="False" />
+            <line number="197" hits="1" branch="False" />
+            <line number="199" hits="1" branch="False" />
+            <line number="200" hits="1" branch="False" />
+            <line number="202" hits="1" branch="False" />
+            <line number="203" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;AddProductToLikedCollectionAsync&gt;d__14" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="PetFindMeShop.Services.ProductService/&lt;AddProductToLikedCollectionAsync&gt;d__14" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="215" hits="0" branch="False" />
-                <line number="216" hits="0" branch="False" />
-                <line number="218" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="215" hits="1" branch="False" />
+                <line number="216" hits="1" branch="False" />
+                <line number="218" hits="1" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="181" type="jump" coverage="0%" />
+                    <condition number="181" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="219" hits="0" branch="False" />
-                <line number="220" hits="0" branch="False" />
-                <line number="221" hits="0" branch="False" />
-                <line number="222" hits="0" branch="False" />
-                <line number="223" hits="0" branch="False" />
-                <line number="224" hits="0" branch="False" />
-                <line number="226" hits="0" branch="False" />
-                <line number="227" hits="0" branch="False" />
-                <line number="228" hits="0" branch="False" />
-                <line number="229" hits="0" branch="False" />
+                <line number="219" hits="1" branch="False" />
+                <line number="220" hits="1" branch="False" />
+                <line number="221" hits="1" branch="False" />
+                <line number="222" hits="1" branch="False" />
+                <line number="223" hits="1" branch="False" />
+                <line number="224" hits="1" branch="False" />
+                <line number="226" hits="1" branch="False" />
+                <line number="227" hits="1" branch="False" />
+                <line number="228" hits="1" branch="False" />
+                <line number="229" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="215" hits="0" branch="False" />
-            <line number="216" hits="0" branch="False" />
-            <line number="218" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="215" hits="1" branch="False" />
+            <line number="216" hits="1" branch="False" />
+            <line number="218" hits="1" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="181" type="jump" coverage="0%" />
+                <condition number="181" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="219" hits="0" branch="False" />
-            <line number="220" hits="0" branch="False" />
-            <line number="221" hits="0" branch="False" />
-            <line number="222" hits="0" branch="False" />
-            <line number="223" hits="0" branch="False" />
-            <line number="224" hits="0" branch="False" />
-            <line number="226" hits="0" branch="False" />
-            <line number="227" hits="0" branch="False" />
-            <line number="228" hits="0" branch="False" />
-            <line number="229" hits="0" branch="False" />
+            <line number="219" hits="1" branch="False" />
+            <line number="220" hits="1" branch="False" />
+            <line number="221" hits="1" branch="False" />
+            <line number="222" hits="1" branch="False" />
+            <line number="223" hits="1" branch="False" />
+            <line number="224" hits="1" branch="False" />
+            <line number="226" hits="1" branch="False" />
+            <line number="227" hits="1" branch="False" />
+            <line number="228" hits="1" branch="False" />
+            <line number="229" hits="1" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.Services.ProductService/&lt;AllAsync&gt;d__3" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="0" complexity="9">
@@ -1981,30 +1981,30 @@
             <line number="82" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;Archive&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;Archive&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="182" hits="0" branch="False" />
-                <line number="183" hits="0" branch="False" />
-                <line number="184" hits="0" branch="False" />
-                <line number="185" hits="0" branch="False" />
-                <line number="187" hits="0" branch="False" />
-                <line number="188" hits="0" branch="False" />
-                <line number="190" hits="0" branch="False" />
-                <line number="191" hits="0" branch="False" />
+                <line number="182" hits="2" branch="False" />
+                <line number="183" hits="2" branch="False" />
+                <line number="184" hits="2" branch="False" />
+                <line number="185" hits="2" branch="False" />
+                <line number="187" hits="2" branch="False" />
+                <line number="188" hits="2" branch="False" />
+                <line number="190" hits="2" branch="False" />
+                <line number="191" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="182" hits="0" branch="False" />
-            <line number="183" hits="0" branch="False" />
-            <line number="184" hits="0" branch="False" />
-            <line number="185" hits="0" branch="False" />
-            <line number="187" hits="0" branch="False" />
-            <line number="188" hits="0" branch="False" />
-            <line number="190" hits="0" branch="False" />
-            <line number="191" hits="0" branch="False" />
+            <line number="182" hits="2" branch="False" />
+            <line number="183" hits="2" branch="False" />
+            <line number="184" hits="2" branch="False" />
+            <line number="185" hits="2" branch="False" />
+            <line number="187" hits="2" branch="False" />
+            <line number="188" hits="2" branch="False" />
+            <line number="190" hits="2" branch="False" />
+            <line number="191" hits="2" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.Services.ProductService/&lt;Create&gt;d__9" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -2065,192 +2065,192 @@
             <line number="179" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;ExistsByIdAsync&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;ExistsByIdAsync&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="85" hits="0" branch="False" />
-                <line number="86" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="False" />
-                <line number="90" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
+                <line number="85" hits="2" branch="False" />
+                <line number="86" hits="2" branch="False" />
+                <line number="87" hits="2" branch="False" />
+                <line number="88" hits="2" branch="False" />
+                <line number="90" hits="2" branch="False" />
+                <line number="91" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="85" hits="0" branch="False" />
-            <line number="86" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
-            <line number="88" hits="0" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
+            <line number="85" hits="2" branch="False" />
+            <line number="86" hits="2" branch="False" />
+            <line number="87" hits="2" branch="False" />
+            <line number="88" hits="2" branch="False" />
+            <line number="90" hits="2" branch="False" />
+            <line number="91" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;GetDetailsByIdAsync&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="0" complexity="6">
+        <class name="PetFindMeShop.Services.ProductService/&lt;GetDetailsByIdAsync&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="0.5" complexity="6">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="6">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="0.5" complexity="6">
               <lines>
-                <line number="103" hits="0" branch="False" />
-                <line number="104" hits="0" branch="False" />
-                <line number="105" hits="0" branch="False" />
-                <line number="106" hits="0" branch="False" />
-                <line number="107" hits="0" branch="False" />
-                <line number="108" hits="0" branch="False" />
-                <line number="110" hits="0" branch="False" />
-                <line number="112" hits="0" branch="True" condition-coverage="0% (0/6)">
+                <line number="103" hits="1" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="107" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="112" hits="1" branch="True" condition-coverage="50% (3/6)">
                   <conditions>
-                    <condition number="722" type="jump" coverage="0%" />
-                    <condition number="749" type="jump" coverage="0%" />
-                    <condition number="782" type="jump" coverage="0%" />
+                    <condition number="722" type="jump" coverage="50%" />
+                    <condition number="749" type="jump" coverage="50%" />
+                    <condition number="782" type="jump" coverage="50%" />
                   </conditions>
                 </line>
-                <line number="113" hits="0" branch="False" />
-                <line number="114" hits="0" branch="False" />
-                <line number="115" hits="0" branch="False" />
-                <line number="116" hits="0" branch="False" />
-                <line number="117" hits="0" branch="False" />
-                <line number="118" hits="0" branch="False" />
-                <line number="119" hits="0" branch="False" />
-                <line number="120" hits="0" branch="False" />
-                <line number="121" hits="0" branch="False" />
-                <line number="122" hits="0" branch="False" />
-                <line number="123" hits="0" branch="False" />
-                <line number="124" hits="0" branch="False" />
-                <line number="125" hits="0" branch="False" />
-                <line number="126" hits="0" branch="False" />
+                <line number="113" hits="1" branch="False" />
+                <line number="114" hits="1" branch="False" />
+                <line number="115" hits="1" branch="False" />
+                <line number="116" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
+                <line number="118" hits="1" branch="False" />
+                <line number="119" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="121" hits="1" branch="False" />
+                <line number="122" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="124" hits="1" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="103" hits="0" branch="False" />
-            <line number="104" hits="0" branch="False" />
-            <line number="105" hits="0" branch="False" />
-            <line number="106" hits="0" branch="False" />
-            <line number="107" hits="0" branch="False" />
-            <line number="108" hits="0" branch="False" />
-            <line number="110" hits="0" branch="False" />
-            <line number="112" hits="0" branch="True" condition-coverage="0% (0/6)">
+            <line number="103" hits="1" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="107" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="112" hits="1" branch="True" condition-coverage="50% (3/6)">
               <conditions>
-                <condition number="722" type="jump" coverage="0%" />
-                <condition number="749" type="jump" coverage="0%" />
-                <condition number="782" type="jump" coverage="0%" />
+                <condition number="722" type="jump" coverage="50%" />
+                <condition number="749" type="jump" coverage="50%" />
+                <condition number="782" type="jump" coverage="50%" />
               </conditions>
             </line>
-            <line number="113" hits="0" branch="False" />
-            <line number="114" hits="0" branch="False" />
-            <line number="115" hits="0" branch="False" />
-            <line number="116" hits="0" branch="False" />
-            <line number="117" hits="0" branch="False" />
-            <line number="118" hits="0" branch="False" />
-            <line number="119" hits="0" branch="False" />
-            <line number="120" hits="0" branch="False" />
-            <line number="121" hits="0" branch="False" />
-            <line number="122" hits="0" branch="False" />
-            <line number="123" hits="0" branch="False" />
-            <line number="124" hits="0" branch="False" />
-            <line number="125" hits="0" branch="False" />
-            <line number="126" hits="0" branch="False" />
+            <line number="113" hits="1" branch="False" />
+            <line number="114" hits="1" branch="False" />
+            <line number="115" hits="1" branch="False" />
+            <line number="116" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="118" hits="1" branch="False" />
+            <line number="119" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="121" hits="1" branch="False" />
+            <line number="122" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="124" hits="1" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;GetLikedProducts&gt;d__16" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;GetLikedProducts&gt;d__16" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="244" hits="0" branch="False" />
-                <line number="245" hits="0" branch="False" />
-                <line number="246" hits="0" branch="False" />
-                <line number="247" hits="0" branch="False" />
-                <line number="248" hits="0" branch="False" />
-                <line number="249" hits="0" branch="False" />
-                <line number="250" hits="0" branch="False" />
-                <line number="251" hits="0" branch="False" />
-                <line number="252" hits="0" branch="False" />
-                <line number="253" hits="0" branch="False" />
-                <line number="254" hits="0" branch="False" />
-                <line number="255" hits="0" branch="False" />
-                <line number="256" hits="0" branch="False" />
-                <line number="257" hits="0" branch="False" />
-                <line number="258" hits="0" branch="False" />
+                <line number="244" hits="4" branch="False" />
+                <line number="245" hits="4" branch="False" />
+                <line number="246" hits="4" branch="False" />
+                <line number="247" hits="4" branch="False" />
+                <line number="248" hits="4" branch="False" />
+                <line number="249" hits="4" branch="False" />
+                <line number="250" hits="4" branch="False" />
+                <line number="251" hits="4" branch="False" />
+                <line number="252" hits="4" branch="False" />
+                <line number="253" hits="4" branch="False" />
+                <line number="254" hits="4" branch="False" />
+                <line number="255" hits="4" branch="False" />
+                <line number="256" hits="4" branch="False" />
+                <line number="257" hits="4" branch="False" />
+                <line number="258" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="244" hits="0" branch="False" />
-            <line number="245" hits="0" branch="False" />
-            <line number="246" hits="0" branch="False" />
-            <line number="247" hits="0" branch="False" />
-            <line number="248" hits="0" branch="False" />
-            <line number="249" hits="0" branch="False" />
-            <line number="250" hits="0" branch="False" />
-            <line number="251" hits="0" branch="False" />
-            <line number="252" hits="0" branch="False" />
-            <line number="253" hits="0" branch="False" />
-            <line number="254" hits="0" branch="False" />
-            <line number="255" hits="0" branch="False" />
-            <line number="256" hits="0" branch="False" />
-            <line number="257" hits="0" branch="False" />
-            <line number="258" hits="0" branch="False" />
+            <line number="244" hits="4" branch="False" />
+            <line number="245" hits="4" branch="False" />
+            <line number="246" hits="4" branch="False" />
+            <line number="247" hits="4" branch="False" />
+            <line number="248" hits="4" branch="False" />
+            <line number="249" hits="4" branch="False" />
+            <line number="250" hits="4" branch="False" />
+            <line number="251" hits="4" branch="False" />
+            <line number="252" hits="4" branch="False" />
+            <line number="253" hits="4" branch="False" />
+            <line number="254" hits="4" branch="False" />
+            <line number="255" hits="4" branch="False" />
+            <line number="256" hits="4" branch="False" />
+            <line number="257" hits="4" branch="False" />
+            <line number="258" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;GetProductForEditByIdAsync&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;GetProductForEditByIdAsync&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="129" hits="0" branch="False" />
-                <line number="130" hits="0" branch="False" />
-                <line number="131" hits="0" branch="False" />
-                <line number="132" hits="0" branch="False" />
-                <line number="134" hits="0" branch="False" />
-                <line number="135" hits="0" branch="False" />
-                <line number="136" hits="0" branch="False" />
-                <line number="137" hits="0" branch="False" />
-                <line number="138" hits="0" branch="False" />
-                <line number="139" hits="0" branch="False" />
-                <line number="140" hits="0" branch="False" />
-                <line number="141" hits="0" branch="False" />
-                <line number="142" hits="0" branch="False" />
-                <line number="143" hits="0" branch="False" />
+                <line number="129" hits="1" branch="False" />
+                <line number="130" hits="1" branch="False" />
+                <line number="131" hits="1" branch="False" />
+                <line number="132" hits="1" branch="False" />
+                <line number="134" hits="1" branch="False" />
+                <line number="135" hits="1" branch="False" />
+                <line number="136" hits="1" branch="False" />
+                <line number="137" hits="1" branch="False" />
+                <line number="138" hits="1" branch="False" />
+                <line number="139" hits="1" branch="False" />
+                <line number="140" hits="1" branch="False" />
+                <line number="141" hits="1" branch="False" />
+                <line number="142" hits="1" branch="False" />
+                <line number="143" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="129" hits="0" branch="False" />
-            <line number="130" hits="0" branch="False" />
-            <line number="131" hits="0" branch="False" />
-            <line number="132" hits="0" branch="False" />
-            <line number="134" hits="0" branch="False" />
-            <line number="135" hits="0" branch="False" />
-            <line number="136" hits="0" branch="False" />
-            <line number="137" hits="0" branch="False" />
-            <line number="138" hits="0" branch="False" />
-            <line number="139" hits="0" branch="False" />
-            <line number="140" hits="0" branch="False" />
-            <line number="141" hits="0" branch="False" />
-            <line number="142" hits="0" branch="False" />
-            <line number="143" hits="0" branch="False" />
+            <line number="129" hits="1" branch="False" />
+            <line number="130" hits="1" branch="False" />
+            <line number="131" hits="1" branch="False" />
+            <line number="132" hits="1" branch="False" />
+            <line number="134" hits="1" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="136" hits="1" branch="False" />
+            <line number="137" hits="1" branch="False" />
+            <line number="138" hits="1" branch="False" />
+            <line number="139" hits="1" branch="False" />
+            <line number="140" hits="1" branch="False" />
+            <line number="141" hits="1" branch="False" />
+            <line number="142" hits="1" branch="False" />
+            <line number="143" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;GetProductShopIdAsync&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;GetProductShopIdAsync&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="94" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
-                <line number="96" hits="0" branch="False" />
-                <line number="97" hits="0" branch="False" />
-                <line number="99" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="96" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="94" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
-            <line number="96" hits="0" branch="False" />
-            <line number="97" hits="0" branch="False" />
-            <line number="99" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="96" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.Services.ProductService/&lt;LastestProductAsync&gt;d__2" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -2283,104 +2283,104 @@
             <line number="32" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;ProductAlreadyAddedToCustomerLikedCollection&gt;d__13" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;ProductAlreadyAddedToCustomerLikedCollection&gt;d__13" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="206" hits="0" branch="False" />
-                <line number="207" hits="0" branch="False" />
-                <line number="208" hits="0" branch="False" />
-                <line number="209" hits="0" branch="False" />
-                <line number="211" hits="0" branch="False" />
-                <line number="212" hits="0" branch="False" />
+                <line number="206" hits="4" branch="False" />
+                <line number="207" hits="4" branch="False" />
+                <line number="208" hits="4" branch="False" />
+                <line number="209" hits="4" branch="False" />
+                <line number="211" hits="4" branch="False" />
+                <line number="212" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="206" hits="0" branch="False" />
-            <line number="207" hits="0" branch="False" />
-            <line number="208" hits="0" branch="False" />
-            <line number="209" hits="0" branch="False" />
-            <line number="211" hits="0" branch="False" />
-            <line number="212" hits="0" branch="False" />
+            <line number="206" hits="4" branch="False" />
+            <line number="207" hits="4" branch="False" />
+            <line number="208" hits="4" branch="False" />
+            <line number="209" hits="4" branch="False" />
+            <line number="211" hits="4" branch="False" />
+            <line number="212" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;ProductAlreadyArchived&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ProductService/&lt;ProductAlreadyArchived&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="146" hits="0" branch="False" />
-                <line number="147" hits="0" branch="False" />
-                <line number="148" hits="0" branch="False" />
-                <line number="149" hits="0" branch="False" />
-                <line number="150" hits="0" branch="False" />
-                <line number="152" hits="0" branch="False" />
-                <line number="153" hits="0" branch="False" />
+                <line number="146" hits="2" branch="False" />
+                <line number="147" hits="2" branch="False" />
+                <line number="148" hits="2" branch="False" />
+                <line number="149" hits="2" branch="False" />
+                <line number="150" hits="2" branch="False" />
+                <line number="152" hits="2" branch="False" />
+                <line number="153" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="146" hits="0" branch="False" />
-            <line number="147" hits="0" branch="False" />
-            <line number="148" hits="0" branch="False" />
-            <line number="149" hits="0" branch="False" />
-            <line number="150" hits="0" branch="False" />
-            <line number="152" hits="0" branch="False" />
-            <line number="153" hits="0" branch="False" />
+            <line number="146" hits="2" branch="False" />
+            <line number="147" hits="2" branch="False" />
+            <line number="148" hits="2" branch="False" />
+            <line number="149" hits="2" branch="False" />
+            <line number="150" hits="2" branch="False" />
+            <line number="152" hits="2" branch="False" />
+            <line number="153" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ProductService/&lt;RemoveProductFromLikedCollectionAsync&gt;d__15" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="PetFindMeShop.Services.ProductService/&lt;RemoveProductFromLikedCollectionAsync&gt;d__15" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ProductService.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="232" hits="0" branch="False" />
-                <line number="233" hits="0" branch="False" />
-                <line number="234" hits="0" branch="False" />
-                <line number="236" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="232" hits="1" branch="False" />
+                <line number="233" hits="1" branch="False" />
+                <line number="234" hits="1" branch="False" />
+                <line number="236" hits="1" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="422" type="jump" coverage="0%" />
+                    <condition number="422" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="237" hits="0" branch="False" />
-                <line number="238" hits="0" branch="False" />
-                <line number="239" hits="0" branch="False" />
-                <line number="240" hits="0" branch="False" />
-                <line number="241" hits="0" branch="False" />
+                <line number="237" hits="1" branch="False" />
+                <line number="238" hits="1" branch="False" />
+                <line number="239" hits="1" branch="False" />
+                <line number="240" hits="1" branch="False" />
+                <line number="241" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="232" hits="0" branch="False" />
-            <line number="233" hits="0" branch="False" />
-            <line number="234" hits="0" branch="False" />
-            <line number="236" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="232" hits="1" branch="False" />
+            <line number="233" hits="1" branch="False" />
+            <line number="234" hits="1" branch="False" />
+            <line number="236" hits="1" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="422" type="jump" coverage="0%" />
+                <condition number="422" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="237" hits="0" branch="False" />
-            <line number="238" hits="0" branch="False" />
-            <line number="239" hits="0" branch="False" />
-            <line number="240" hits="0" branch="False" />
-            <line number="241" hits="0" branch="False" />
+            <line number="237" hits="1" branch="False" />
+            <line number="238" hits="1" branch="False" />
+            <line number="239" hits="1" branch="False" />
+            <line number="240" hits="1" branch="False" />
+            <line number="241" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopManagerService" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopManagerService" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(PetFindMeShop.Data.PetFindMeShopDbContext)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(PetFindMeShop.Data.PetFindMeShopDbContext)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
-                <line number="19" hits="0" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
+                <line number="19" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="19" hits="1" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.Services.ShopManagerService/&lt;Create&gt;d__10" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -2487,184 +2487,184 @@
             <line number="95" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopManagerService/&lt;GetManagerForEditByIdAsync&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopManagerService/&lt;GetManagerForEditByIdAsync&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="False" />
-                <line number="78" hits="0" branch="False" />
-                <line number="79" hits="0" branch="False" />
-                <line number="81" hits="0" branch="False" />
-                <line number="82" hits="0" branch="False" />
-                <line number="83" hits="0" branch="False" />
-                <line number="84" hits="0" branch="False" />
-                <line number="85" hits="0" branch="False" />
-                <line number="86" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
+                <line number="79" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="87" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
-            <line number="78" hits="0" branch="False" />
-            <line number="79" hits="0" branch="False" />
-            <line number="81" hits="0" branch="False" />
-            <line number="82" hits="0" branch="False" />
-            <line number="83" hits="0" branch="False" />
-            <line number="84" hits="0" branch="False" />
-            <line number="85" hits="0" branch="False" />
-            <line number="86" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
+            <line number="79" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="87" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopManagerService/&lt;GetManagerIdByUserIdAsync&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="0" complexity="2">
+        <class name="PetFindMeShop.Services.ShopManagerService/&lt;GetManagerIdByUserIdAsync&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0.7777" branch-rate="0.5" complexity="2">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="0" complexity="2">
+            <method name="MoveNext" signature="()" line-rate="0.7777" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="62" hits="0" branch="False" />
-                <line number="63" hits="0" branch="False" />
-                <line number="64" hits="0" branch="False" />
-                <line number="65" hits="0" branch="False" />
-                <line number="67" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="62" hits="3" branch="False" />
+                <line number="63" hits="3" branch="False" />
+                <line number="64" hits="3" branch="False" />
+                <line number="65" hits="3" branch="False" />
+                <line number="67" hits="3" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
-                    <condition number="328" type="jump" coverage="0%" />
+                    <condition number="328" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="68" hits="0" branch="False" />
                 <line number="69" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
+                <line number="72" hits="3" branch="False" />
+                <line number="73" hits="3" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="62" hits="0" branch="False" />
-            <line number="63" hits="0" branch="False" />
-            <line number="64" hits="0" branch="False" />
-            <line number="65" hits="0" branch="False" />
-            <line number="67" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="62" hits="3" branch="False" />
+            <line number="63" hits="3" branch="False" />
+            <line number="64" hits="3" branch="False" />
+            <line number="65" hits="3" branch="False" />
+            <line number="67" hits="3" branch="True" condition-coverage="50% (1/2)">
               <conditions>
-                <condition number="328" type="jump" coverage="0%" />
+                <condition number="328" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="68" hits="0" branch="False" />
             <line number="69" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
+            <line number="72" hits="3" branch="False" />
+            <line number="73" hits="3" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerAllowedToAccess&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerAllowedToAccess&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="50" hits="0" branch="False" />
-                <line number="51" hits="0" branch="False" />
-                <line number="53" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
-                <line number="55" hits="0" branch="False" />
-                <line number="56" hits="0" branch="False" />
-                <line number="58" hits="0" branch="False" />
-                <line number="59" hits="0" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="53" hits="2" branch="False" />
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="2" branch="False" />
+                <line number="56" hits="2" branch="False" />
+                <line number="58" hits="2" branch="False" />
+                <line number="59" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="50" hits="0" branch="False" />
-            <line number="51" hits="0" branch="False" />
-            <line number="53" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
-            <line number="55" hits="0" branch="False" />
-            <line number="56" hits="0" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="53" hits="2" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="2" branch="False" />
+            <line number="56" hits="2" branch="False" />
+            <line number="58" hits="2" branch="False" />
+            <line number="59" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerExistsByOtherPhoneNumberAsync&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerExistsByOtherPhoneNumberAsync&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="47" hits="0" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerExistsByPhoneNumberAsync&gt;d__3" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerExistsByPhoneNumberAsync&gt;d__3" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="34" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerExistsByUserIdAsync&gt;d__2" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopManagerService/&lt;ManagerExistsByUserIdAsync&gt;d__2" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopManagerService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
+                <line number="22" hits="2" branch="False" />
+                <line number="23" hits="2" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="25" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
+            <line number="22" hits="2" branch="False" />
+            <line number="23" hits="2" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="25" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopService" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopService" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name=".ctor" signature="(PetFindMeShop.Data.PetFindMeShopDbContext)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(PetFindMeShop.Data.PetFindMeShopDbContext)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="15" hits="0" branch="False" />
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.Services.ShopService/&lt;CreateAndReturnShopIdAsync&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopService.cs" line-rate="0" branch-rate="1" complexity="1">
@@ -2799,48 +2799,48 @@
             <line number="50" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopService/&lt;ShopExistsByIdAsync&gt;d__2" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopService/&lt;ShopExistsByIdAsync&gt;d__2" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
+                <line number="21" hits="2" branch="False" />
+                <line number="22" hits="2" branch="False" />
+                <line number="23" hits="2" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
+            <line number="21" hits="2" branch="False" />
+            <line number="22" hits="2" branch="False" />
+            <line number="23" hits="2" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Services.ShopService/&lt;ShopExistsByNameAsync&gt;d__3" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopService.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Services.ShopService/&lt;ShopExistsByNameAsync&gt;d__3" filename="Documents\PetFindMeShop\PetFindMeShop.Services\ShopService.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
+                <line number="30" hits="2" branch="False" />
+                <line number="31" hits="2" branch="False" />
+                <line number="32" hits="2" branch="False" />
+                <line number="33" hits="2" branch="False" />
+                <line number="35" hits="2" branch="False" />
+                <line number="36" hits="2" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
+            <line number="30" hits="2" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="2" branch="False" />
+            <line number="33" hits="2" branch="False" />
+            <line number="35" hits="2" branch="False" />
+            <line number="36" hits="2" branch="False" />
           </lines>
         </class>
       </classes>
@@ -3185,7 +3185,7 @@
         </class>
       </classes>
     </package>
-    <package name="PetFindMeShop.Tests" line-rate="0.5763" branch-rate="1" complexity="42">
+    <package name="PetFindMeShop.Tests" line-rate="0.9976999999999999" branch-rate="1" complexity="46">
       <classes>
         <class name="AutoGeneratedProgram" filename=".nuget\packages\microsoft.net.test.sdk\17.5.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
@@ -3199,7 +3199,7 @@
             <line number="4" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.CategoryServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
             <method name="OneTimeSetUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -3214,6 +3214,13 @@
                 <line number="29" hits="1" branch="False" />
               </lines>
             </method>
+            <method name="CleanUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+              </lines>
+            </method>
           </methods>
           <lines>
             <line number="19" hits="1" branch="False" />
@@ -3225,196 +3232,199 @@
             <line number="26" hits="1" branch="False" />
             <line number="28" hits="1" branch="False" />
             <line number="29" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByIdShouldReturnFalseWhenDoNotExist&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="33" hits="1" branch="False" />
-                <line number="34" hits="1" branch="False" />
-                <line number="36" hits="1" branch="False" />
-                <line number="37" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
             <line number="33" hits="1" branch="False" />
             <line number="34" hits="1" branch="False" />
-            <line number="36" hits="1" branch="False" />
-            <line number="37" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByIdShouldReturnTrueWhenExists&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByIdShouldReturnFalseWhenDoNotExist&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="41" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="40" hits="1" branch="False" />
                 <line number="42" hits="1" branch="False" />
-                <line number="44" hits="1" branch="False" />
-                <line number="46" hits="1" branch="False" />
-                <line number="47" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="41" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="40" hits="1" branch="False" />
             <line number="42" hits="1" branch="False" />
-            <line number="44" hits="1" branch="False" />
-            <line number="46" hits="1" branch="False" />
-            <line number="47" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByNameShouldReturnFalseWhenDoNotExist&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByIdShouldReturnTrueWhenExists&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="51" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="48" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
                 <line number="52" hits="1" branch="False" />
-                <line number="54" hits="1" branch="False" />
-                <line number="55" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="51" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="48" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
             <line number="52" hits="1" branch="False" />
-            <line number="54" hits="1" branch="False" />
-            <line number="55" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByNameShouldReturnTrueWhenExists&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByNameShouldReturnFalseWhenDoNotExist&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="59" hits="1" branch="False" />
+                <line number="57" hits="1" branch="False" />
+                <line number="58" hits="1" branch="False" />
                 <line number="60" hits="1" branch="False" />
-                <line number="62" hits="1" branch="False" />
-                <line number="64" hits="1" branch="False" />
-                <line number="65" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="59" hits="1" branch="False" />
+            <line number="57" hits="1" branch="False" />
+            <line number="58" hits="1" branch="False" />
             <line number="60" hits="1" branch="False" />
-            <line number="62" hits="1" branch="False" />
-            <line number="64" hits="1" branch="False" />
-            <line number="65" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByOtherNameShouldReturnFalseWhenDoNotExist&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByNameShouldReturnTrueWhenExists&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="69" hits="1" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
                 <line number="70" hits="1" branch="False" />
-                <line number="72" hits="1" branch="False" />
-                <line number="74" hits="1" branch="False" />
-                <line number="75" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="69" hits="1" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
             <line number="70" hits="1" branch="False" />
-            <line number="72" hits="1" branch="False" />
-            <line number="74" hits="1" branch="False" />
-            <line number="75" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByOtherNameShoulsReturnTrueWhenExists&gt;d__9" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByOtherNameShouldReturnFalseWhenDoNotExist&gt;d__9" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="79" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
                 <line number="80" hits="1" branch="False" />
                 <line number="81" hits="1" branch="False" />
-                <line number="83" hits="1" branch="False" />
-                <line number="85" hits="1" branch="False" />
-                <line number="86" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="79" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
             <line number="80" hits="1" branch="False" />
             <line number="81" hits="1" branch="False" />
-            <line number="83" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;CategoryExistsByOtherNameShoulsReturnTrueWhenExists&gt;d__10" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="87" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
             <line number="85" hits="1" branch="False" />
             <line number="86" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;DeleteCategory&gt;d__12" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="112" hits="1" branch="False" />
-                <line number="113" hits="1" branch="False" />
-                <line number="115" hits="1" branch="False" />
-                <line number="117" hits="1" branch="False" />
-                <line number="118" hits="1" branch="False" />
-                <line number="120" hits="1" branch="False" />
-                <line number="121" hits="1" branch="False" />
-                <line number="122" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="112" hits="1" branch="False" />
-            <line number="113" hits="1" branch="False" />
-            <line number="115" hits="1" branch="False" />
-            <line number="117" hits="1" branch="False" />
-            <line number="118" hits="1" branch="False" />
-            <line number="120" hits="1" branch="False" />
-            <line number="121" hits="1" branch="False" />
-            <line number="122" hits="1" branch="False" />
-          </lines>
-        </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;EdditingCurrentCategoryShouldBePossible&gt;d__10" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="90" hits="1" branch="False" />
-                <line number="91" hits="1" branch="False" />
-                <line number="93" hits="1" branch="False" />
-                <line number="95" hits="1" branch="False" />
-                <line number="96" hits="1" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="90" hits="1" branch="False" />
+            <line number="87" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
             <line number="91" hits="1" branch="False" />
-            <line number="93" hits="1" branch="False" />
-            <line number="95" hits="1" branch="False" />
-            <line number="96" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;ReturnAllCategoryNames&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;DeleteCategory&gt;d__13" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
             <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="100" hits="1" branch="False" />
+                <line number="118" hits="1" branch="False" />
+                <line number="119" hits="1" branch="False" />
+                <line number="121" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="124" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
+                <line number="127" hits="1" branch="False" />
+                <line number="128" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="118" hits="1" branch="False" />
+            <line number="119" hits="1" branch="False" />
+            <line number="121" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="124" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
+            <line number="127" hits="1" branch="False" />
+            <line number="128" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;EdditingCurrentCategoryShouldBePossible&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="96" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
                 <line number="101" hits="1" branch="False" />
                 <line number="102" hits="1" branch="False" />
-                <line number="103" hits="1" branch="False" />
-                <line number="104" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="96" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
+            <line number="102" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="PetFindMeShop.Tests.CategoryServiceTests/&lt;ReturnAllCategoryNames&gt;d__12" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\CategoryServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
                 <line number="106" hits="1" branch="False" />
                 <line number="107" hits="1" branch="False" />
                 <line number="108" hits="1" branch="False" />
+                <line number="109" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="112" hits="1" branch="False" />
+                <line number="113" hits="1" branch="False" />
+                <line number="114" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="100" hits="1" branch="False" />
-            <line number="101" hits="1" branch="False" />
-            <line number="102" hits="1" branch="False" />
-            <line number="103" hits="1" branch="False" />
-            <line number="104" hits="1" branch="False" />
             <line number="106" hits="1" branch="False" />
             <line number="107" hits="1" branch="False" />
             <line number="108" hits="1" branch="False" />
+            <line number="109" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="112" hits="1" branch="False" />
+            <line number="113" hits="1" branch="False" />
+            <line number="114" hits="1" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.Tests.DatabaseSeeder" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\DatabaseSeeder.cs" line-rate="1" branch-rate="1" complexity="1">
@@ -3593,7 +3603,7 @@
                 <line number="229" hits="4" branch="False" />
                 <line number="232" hits="4" branch="False" />
                 <line number="234" hits="4" branch="False" />
-                <line number="235" hits="1" branch="False" />
+                <line number="235" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
@@ -3770,12 +3780,12 @@
             <line number="229" hits="4" branch="False" />
             <line number="232" hits="4" branch="False" />
             <line number="234" hits="4" branch="False" />
-            <line number="235" hits="1" branch="False" />
+            <line number="235" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0.7777" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="OneTimeSetUp" signature="()" line-rate="0.7777" branch-rate="1" complexity="1">
+            <method name="OneTimeSetUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="21" hits="1" branch="False" />
                 <line number="22" hits="1" branch="False" />
@@ -3784,8 +3794,15 @@
                 <line number="25" hits="1" branch="False" />
                 <line number="27" hits="1" branch="False" />
                 <line number="28" hits="1" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="CleanUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -3797,377 +3814,380 @@
             <line number="25" hits="1" branch="False" />
             <line number="27" hits="1" branch="False" />
             <line number="28" hits="1" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;&gt;c" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;&gt;c" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="&lt;GetProducDetailsByIShouldReturnProductViewModel&gt;b__7_0" signature="(FluentAssertions.Equivalency.EquivalencyAssertionOptions`1&lt;PetFindMeShop.Data.Models.Product&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="&lt;GetProducDetailsByIShouldReturnProductViewModel&gt;b__8_0" signature="(FluentAssertions.Equivalency.EquivalencyAssertionOptions`1&lt;PetFindMeShop.Data.Models.Product&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="85" hits="0" branch="False" />
-                <line number="86" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="False" />
-                <line number="89" hits="0" branch="False" />
-                <line number="90" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
-                <line number="92" hits="0" branch="False" />
-                <line number="93" hits="0" branch="False" />
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="96" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="98" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
               </lines>
             </method>
-            <method name="&lt;GetProductForEditByIShouldReturnProductViewModel&gt;b__8_0" signature="(FluentAssertions.Equivalency.EquivalencyAssertionOptions`1&lt;PetFindMeShop.Data.Models.Product&gt;)" line-rate="0" branch-rate="1" complexity="1">
+            <method name="&lt;GetProductForEditByIShouldReturnProductViewModel&gt;b__9_0" signature="(FluentAssertions.Equivalency.EquivalencyAssertionOptions`1&lt;PetFindMeShop.Data.Models.Product&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="105" hits="0" branch="False" />
-                <line number="106" hits="0" branch="False" />
-                <line number="107" hits="0" branch="False" />
-                <line number="108" hits="0" branch="False" />
-                <line number="109" hits="0" branch="False" />
-                <line number="110" hits="0" branch="False" />
-                <line number="111" hits="0" branch="False" />
-                <line number="112" hits="0" branch="False" />
-                <line number="113" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="85" hits="0" branch="False" />
-            <line number="86" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
-            <line number="88" hits="0" branch="False" />
-            <line number="89" hits="0" branch="False" />
-            <line number="90" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
-            <line number="92" hits="0" branch="False" />
-            <line number="93" hits="0" branch="False" />
-            <line number="105" hits="0" branch="False" />
-            <line number="106" hits="0" branch="False" />
-            <line number="107" hits="0" branch="False" />
-            <line number="108" hits="0" branch="False" />
-            <line number="109" hits="0" branch="False" />
-            <line number="110" hits="0" branch="False" />
-            <line number="111" hits="0" branch="False" />
-            <line number="112" hits="0" branch="False" />
-            <line number="113" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ActivateProduct&gt;d__14" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="172" hits="0" branch="False" />
-                <line number="173" hits="0" branch="False" />
-                <line number="175" hits="0" branch="False" />
-                <line number="176" hits="0" branch="False" />
-                <line number="178" hits="0" branch="False" />
-                <line number="179" hits="0" branch="False" />
-                <line number="180" hits="0" branch="False" />
+                <line number="111" hits="1" branch="False" />
+                <line number="112" hits="1" branch="False" />
+                <line number="113" hits="1" branch="False" />
+                <line number="114" hits="1" branch="False" />
+                <line number="115" hits="1" branch="False" />
+                <line number="116" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
+                <line number="118" hits="1" branch="False" />
+                <line number="119" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="172" hits="0" branch="False" />
-            <line number="173" hits="0" branch="False" />
-            <line number="175" hits="0" branch="False" />
-            <line number="176" hits="0" branch="False" />
-            <line number="178" hits="0" branch="False" />
-            <line number="179" hits="0" branch="False" />
-            <line number="180" hits="0" branch="False" />
+            <line number="91" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="96" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="98" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
+            <line number="111" hits="1" branch="False" />
+            <line number="112" hits="1" branch="False" />
+            <line number="113" hits="1" branch="False" />
+            <line number="114" hits="1" branch="False" />
+            <line number="115" hits="1" branch="False" />
+            <line number="116" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="118" hits="1" branch="False" />
+            <line number="119" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;AddProductToLikedCollection&gt;d__15" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ActivateProduct&gt;d__15" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="184" hits="0" branch="False" />
-                <line number="185" hits="0" branch="False" />
-                <line number="186" hits="0" branch="False" />
-                <line number="187" hits="0" branch="False" />
-                <line number="189" hits="0" branch="False" />
-                <line number="191" hits="0" branch="False" />
-                <line number="193" hits="0" branch="False" />
-                <line number="194" hits="0" branch="False" />
+                <line number="178" hits="1" branch="False" />
+                <line number="179" hits="1" branch="False" />
+                <line number="181" hits="1" branch="False" />
+                <line number="182" hits="1" branch="False" />
+                <line number="184" hits="1" branch="False" />
+                <line number="185" hits="1" branch="False" />
+                <line number="186" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="184" hits="0" branch="False" />
-            <line number="185" hits="0" branch="False" />
-            <line number="186" hits="0" branch="False" />
-            <line number="187" hits="0" branch="False" />
-            <line number="189" hits="0" branch="False" />
-            <line number="191" hits="0" branch="False" />
-            <line number="193" hits="0" branch="False" />
-            <line number="194" hits="0" branch="False" />
+            <line number="178" hits="1" branch="False" />
+            <line number="179" hits="1" branch="False" />
+            <line number="181" hits="1" branch="False" />
+            <line number="182" hits="1" branch="False" />
+            <line number="184" hits="1" branch="False" />
+            <line number="185" hits="1" branch="False" />
+            <line number="186" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ArhiveProduct&gt;d__13" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;AddProductToLikedCollection&gt;d__16" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="161" hits="0" branch="False" />
-                <line number="162" hits="0" branch="False" />
-                <line number="164" hits="0" branch="False" />
-                <line number="166" hits="0" branch="False" />
-                <line number="167" hits="0" branch="False" />
-                <line number="168" hits="0" branch="False" />
+                <line number="190" hits="1" branch="False" />
+                <line number="191" hits="1" branch="False" />
+                <line number="192" hits="1" branch="False" />
+                <line number="193" hits="1" branch="False" />
+                <line number="195" hits="1" branch="False" />
+                <line number="197" hits="1" branch="False" />
+                <line number="199" hits="1" branch="False" />
+                <line number="200" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="161" hits="0" branch="False" />
-            <line number="162" hits="0" branch="False" />
-            <line number="164" hits="0" branch="False" />
-            <line number="166" hits="0" branch="False" />
-            <line number="167" hits="0" branch="False" />
-            <line number="168" hits="0" branch="False" />
+            <line number="190" hits="1" branch="False" />
+            <line number="191" hits="1" branch="False" />
+            <line number="192" hits="1" branch="False" />
+            <line number="193" hits="1" branch="False" />
+            <line number="195" hits="1" branch="False" />
+            <line number="197" hits="1" branch="False" />
+            <line number="199" hits="1" branch="False" />
+            <line number="200" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;GetProducDetailsByIShouldReturnProductViewModel&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ArhiveProduct&gt;d__14" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="63" hits="0" branch="False" />
-                <line number="64" hits="0" branch="False" />
-                <line number="65" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="68" hits="0" branch="False" />
-                <line number="69" hits="0" branch="False" />
-                <line number="70" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-                <line number="74" hits="0" branch="False" />
-                <line number="75" hits="0" branch="False" />
-                <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="False" />
-                <line number="78" hits="0" branch="False" />
-                <line number="79" hits="0" branch="False" />
-                <line number="80" hits="0" branch="False" />
-                <line number="82" hits="0" branch="False" />
-                <line number="84" hits="0" branch="False" />
-                <line number="94" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
+                <line number="167" hits="1" branch="False" />
+                <line number="168" hits="1" branch="False" />
+                <line number="170" hits="1" branch="False" />
+                <line number="172" hits="1" branch="False" />
+                <line number="173" hits="1" branch="False" />
+                <line number="174" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="63" hits="0" branch="False" />
-            <line number="64" hits="0" branch="False" />
-            <line number="65" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="68" hits="0" branch="False" />
-            <line number="69" hits="0" branch="False" />
-            <line number="70" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-            <line number="74" hits="0" branch="False" />
-            <line number="75" hits="0" branch="False" />
-            <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
-            <line number="78" hits="0" branch="False" />
-            <line number="79" hits="0" branch="False" />
-            <line number="80" hits="0" branch="False" />
-            <line number="82" hits="0" branch="False" />
-            <line number="84" hits="0" branch="False" />
-            <line number="94" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
+            <line number="167" hits="1" branch="False" />
+            <line number="168" hits="1" branch="False" />
+            <line number="170" hits="1" branch="False" />
+            <line number="172" hits="1" branch="False" />
+            <line number="173" hits="1" branch="False" />
+            <line number="174" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;GetProductForEditByIShouldReturnProductViewModel&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;GetProducDetailsByIShouldReturnProductViewModel&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="99" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
-                <line number="102" hits="0" branch="False" />
-                <line number="104" hits="0" branch="False" />
-                <line number="114" hits="0" branch="False" />
-                <line number="115" hits="0" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
+                <line number="79" hits="1" branch="False" />
+                <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="90" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
+                <line number="101" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="99" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
-            <line number="102" hits="0" branch="False" />
-            <line number="104" hits="0" branch="False" />
-            <line number="114" hits="0" branch="False" />
-            <line number="115" hits="0" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
+            <line number="79" hits="1" branch="False" />
+            <line number="80" hits="1" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="90" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;GetProductShopIdShouldReturnTheShopId&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;GetProductForEditByIShouldReturnProductViewModel&gt;d__9" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="53" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
-                <line number="56" hits="0" branch="False" />
-                <line number="58" hits="0" branch="False" />
-                <line number="59" hits="0" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="121" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="53" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
-            <line number="56" hits="0" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="121" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyArchivedShouldReturnFalse&gt;d__9" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;GetProductShopIdShouldReturnTheShopId&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="119" hits="0" branch="False" />
-                <line number="120" hits="0" branch="False" />
-                <line number="122" hits="0" branch="False" />
-                <line number="124" hits="0" branch="False" />
-                <line number="125" hits="0" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="62" hits="1" branch="False" />
+                <line number="64" hits="1" branch="False" />
+                <line number="65" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="119" hits="0" branch="False" />
-            <line number="120" hits="0" branch="False" />
-            <line number="122" hits="0" branch="False" />
-            <line number="124" hits="0" branch="False" />
-            <line number="125" hits="0" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="64" hits="1" branch="False" />
+            <line number="65" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyArchivedShouldReturnTrue&gt;d__10" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyArchivedShouldReturnFalse&gt;d__10" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="129" hits="0" branch="False" />
-                <line number="130" hits="0" branch="False" />
-                <line number="132" hits="0" branch="False" />
-                <line number="134" hits="0" branch="False" />
-                <line number="135" hits="0" branch="False" />
+                <line number="125" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
+                <line number="128" hits="1" branch="False" />
+                <line number="130" hits="1" branch="False" />
+                <line number="131" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="129" hits="0" branch="False" />
-            <line number="130" hits="0" branch="False" />
-            <line number="132" hits="0" branch="False" />
-            <line number="134" hits="0" branch="False" />
-            <line number="135" hits="0" branch="False" />
+            <line number="125" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
+            <line number="128" hits="1" branch="False" />
+            <line number="130" hits="1" branch="False" />
+            <line number="131" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyLikedShouldReturnFalse&gt;d__12" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyArchivedShouldReturnTrue&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="150" hits="0" branch="False" />
-                <line number="151" hits="0" branch="False" />
-                <line number="152" hits="0" branch="False" />
-                <line number="154" hits="0" branch="False" />
-                <line number="156" hits="0" branch="False" />
-                <line number="157" hits="0" branch="False" />
+                <line number="135" hits="1" branch="False" />
+                <line number="136" hits="1" branch="False" />
+                <line number="138" hits="1" branch="False" />
+                <line number="140" hits="1" branch="False" />
+                <line number="141" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="150" hits="0" branch="False" />
-            <line number="151" hits="0" branch="False" />
-            <line number="152" hits="0" branch="False" />
-            <line number="154" hits="0" branch="False" />
-            <line number="156" hits="0" branch="False" />
-            <line number="157" hits="0" branch="False" />
+            <line number="135" hits="1" branch="False" />
+            <line number="136" hits="1" branch="False" />
+            <line number="138" hits="1" branch="False" />
+            <line number="140" hits="1" branch="False" />
+            <line number="141" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyLikedShouldReturnTrue&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyLikedShouldReturnFalse&gt;d__13" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="139" hits="0" branch="False" />
-                <line number="140" hits="0" branch="False" />
-                <line number="141" hits="0" branch="False" />
-                <line number="143" hits="0" branch="False" />
-                <line number="145" hits="0" branch="False" />
-                <line number="146" hits="0" branch="False" />
+                <line number="156" hits="1" branch="False" />
+                <line number="157" hits="1" branch="False" />
+                <line number="158" hits="1" branch="False" />
+                <line number="160" hits="1" branch="False" />
+                <line number="162" hits="1" branch="False" />
+                <line number="163" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="139" hits="0" branch="False" />
-            <line number="140" hits="0" branch="False" />
-            <line number="141" hits="0" branch="False" />
-            <line number="143" hits="0" branch="False" />
-            <line number="145" hits="0" branch="False" />
-            <line number="146" hits="0" branch="False" />
+            <line number="156" hits="1" branch="False" />
+            <line number="157" hits="1" branch="False" />
+            <line number="158" hits="1" branch="False" />
+            <line number="160" hits="1" branch="False" />
+            <line number="162" hits="1" branch="False" />
+            <line number="163" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductExistsByIdShouldReturnFalseWhenDoNotExist&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductAlreadyLikedShouldReturnTrue&gt;d__12" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="39" hits="0" branch="False" />
+                <line number="145" hits="1" branch="False" />
+                <line number="146" hits="1" branch="False" />
+                <line number="147" hits="1" branch="False" />
+                <line number="149" hits="1" branch="False" />
+                <line number="151" hits="1" branch="False" />
+                <line number="152" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="39" hits="0" branch="False" />
+            <line number="145" hits="1" branch="False" />
+            <line number="146" hits="1" branch="False" />
+            <line number="147" hits="1" branch="False" />
+            <line number="149" hits="1" branch="False" />
+            <line number="151" hits="1" branch="False" />
+            <line number="152" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductExistsByIdShouldReturnTrueWhenExists&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductExistsByIdShouldReturnFalseWhenDoNotExist&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="49" hits="0" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="49" hits="0" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;RemoveProductFromLikedCollectionAsync&gt;d__16" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;ProductExistsByIdShouldReturnTrueWhenExists&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="198" hits="0" branch="False" />
-                <line number="199" hits="0" branch="False" />
-                <line number="200" hits="0" branch="False" />
-                <line number="201" hits="0" branch="False" />
-                <line number="203" hits="0" branch="False" />
-                <line number="205" hits="0" branch="False" />
-                <line number="207" hits="0" branch="False" />
-                <line number="208" hits="0" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="198" hits="0" branch="False" />
-            <line number="199" hits="0" branch="False" />
-            <line number="200" hits="0" branch="False" />
-            <line number="201" hits="0" branch="False" />
-            <line number="203" hits="0" branch="False" />
-            <line number="205" hits="0" branch="False" />
-            <line number="207" hits="0" branch="False" />
-            <line number="208" hits="0" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0.7777" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ProductServiceTests/&lt;RemoveProductFromLikedCollectionAsync&gt;d__17" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ProductServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="OneTimeSetUp" signature="()" line-rate="0.7777" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="204" hits="1" branch="False" />
+                <line number="205" hits="1" branch="False" />
+                <line number="206" hits="1" branch="False" />
+                <line number="207" hits="1" branch="False" />
+                <line number="209" hits="1" branch="False" />
+                <line number="211" hits="1" branch="False" />
+                <line number="213" hits="1" branch="False" />
+                <line number="214" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="204" hits="1" branch="False" />
+            <line number="205" hits="1" branch="False" />
+            <line number="206" hits="1" branch="False" />
+            <line number="207" hits="1" branch="False" />
+            <line number="209" hits="1" branch="False" />
+            <line number="211" hits="1" branch="False" />
+            <line number="213" hits="1" branch="False" />
+            <line number="214" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="OneTimeSetUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="21" hits="1" branch="False" />
                 <line number="22" hits="1" branch="False" />
@@ -4176,8 +4196,15 @@
                 <line number="25" hits="1" branch="False" />
                 <line number="27" hits="1" branch="False" />
                 <line number="28" hits="1" branch="False" />
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="CleanUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -4189,195 +4216,198 @@
             <line number="25" hits="1" branch="False" />
             <line number="27" hits="1" branch="False" />
             <line number="28" hits="1" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;GetManagerForEditByIdAShouldReturnManager&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;GetManagerForEditByIdAShouldReturnManager&gt;d__12" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="109" hits="0" branch="False" />
-                <line number="110" hits="0" branch="False" />
-                <line number="111" hits="0" branch="False" />
-                <line number="113" hits="0" branch="False" />
-                <line number="114" hits="0" branch="False" />
-                <line number="115" hits="0" branch="False" />
-                <line number="116" hits="0" branch="False" />
-                <line number="117" hits="0" branch="False" />
-                <line number="118" hits="0" branch="False" />
-                <line number="120" hits="0" branch="False" />
-                <line number="122" hits="0" branch="False" />
-                <line number="123" hits="0" branch="False" />
+                <line number="115" hits="1" branch="False" />
+                <line number="116" hits="1" branch="False" />
+                <line number="117" hits="1" branch="False" />
+                <line number="119" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="121" hits="1" branch="False" />
+                <line number="122" hits="1" branch="False" />
+                <line number="123" hits="1" branch="False" />
+                <line number="124" hits="1" branch="False" />
+                <line number="126" hits="1" branch="False" />
+                <line number="128" hits="1" branch="False" />
+                <line number="129" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="109" hits="0" branch="False" />
-            <line number="110" hits="0" branch="False" />
-            <line number="111" hits="0" branch="False" />
-            <line number="113" hits="0" branch="False" />
-            <line number="114" hits="0" branch="False" />
-            <line number="115" hits="0" branch="False" />
-            <line number="116" hits="0" branch="False" />
-            <line number="117" hits="0" branch="False" />
-            <line number="118" hits="0" branch="False" />
-            <line number="120" hits="0" branch="False" />
-            <line number="122" hits="0" branch="False" />
-            <line number="123" hits="0" branch="False" />
+            <line number="115" hits="1" branch="False" />
+            <line number="116" hits="1" branch="False" />
+            <line number="117" hits="1" branch="False" />
+            <line number="119" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="121" hits="1" branch="False" />
+            <line number="122" hits="1" branch="False" />
+            <line number="123" hits="1" branch="False" />
+            <line number="124" hits="1" branch="False" />
+            <line number="126" hits="1" branch="False" />
+            <line number="128" hits="1" branch="False" />
+            <line number="129" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;GetManagerIdByUserIdAShouldReturnTrue&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;GetManagerIdByUserIdAShouldReturnTrue&gt;d__9" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="76" hits="0" branch="False" />
-                <line number="77" hits="0" branch="False" />
-                <line number="78" hits="0" branch="False" />
-                <line number="80" hits="0" branch="False" />
-                <line number="82" hits="0" branch="False" />
-                <line number="83" hits="0" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="76" hits="0" branch="False" />
-            <line number="77" hits="0" branch="False" />
-            <line number="78" hits="0" branch="False" />
-            <line number="80" hits="0" branch="False" />
-            <line number="82" hits="0" branch="False" />
-            <line number="83" hits="0" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByOtherPhoneNumberhouldReturnTrueWhenExists&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByOtherPhoneNumberhouldReturnTrueWhenExists&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="65" hits="0" branch="False" />
-                <line number="66" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="69" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
+                <line number="71" hits="1" branch="False" />
+                <line number="72" hits="1" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="77" hits="1" branch="False" />
+                <line number="78" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="65" hits="0" branch="False" />
-            <line number="66" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="69" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
+            <line number="71" hits="1" branch="False" />
+            <line number="72" hits="1" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="77" hits="1" branch="False" />
+            <line number="78" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByPhoneNumberShouldReturnTrueWhenExists&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByPhoneNumberShouldReturnTrueWhenExists&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="55" hits="0" branch="False" />
-                <line number="56" hits="0" branch="False" />
-                <line number="58" hits="0" branch="False" />
-                <line number="60" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="62" hits="1" branch="False" />
+                <line number="64" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="55" hits="0" branch="False" />
-            <line number="56" hits="0" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="60" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="62" hits="1" branch="False" />
+            <line number="64" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByUserIdShouldReturnFalseWhenDoNotExist&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByUserIdShouldReturnFalseWhenDoNotExist&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
-                <line number="51" hits="0" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="56" hits="1" branch="False" />
+                <line number="57" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
-            <line number="51" hits="0" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="56" hits="1" branch="False" />
+            <line number="57" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByUserIdShouldReturnTrueWhenExists&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerExistsByUserIdShouldReturnTrueWhenExists&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="38" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerHasAccesShouldReturnFalse&gt;d__10" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerHasAccesShouldReturnFalse&gt;d__11" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="98" hits="0" branch="False" />
-                <line number="99" hits="0" branch="False" />
-                <line number="100" hits="0" branch="False" />
-                <line number="102" hits="0" branch="False" />
-                <line number="104" hits="0" branch="False" />
-                <line number="105" hits="0" branch="False" />
+                <line number="104" hits="1" branch="False" />
+                <line number="105" hits="1" branch="False" />
+                <line number="106" hits="1" branch="False" />
+                <line number="108" hits="1" branch="False" />
+                <line number="110" hits="1" branch="False" />
+                <line number="111" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="98" hits="0" branch="False" />
-            <line number="99" hits="0" branch="False" />
-            <line number="100" hits="0" branch="False" />
-            <line number="102" hits="0" branch="False" />
-            <line number="104" hits="0" branch="False" />
-            <line number="105" hits="0" branch="False" />
+            <line number="104" hits="1" branch="False" />
+            <line number="105" hits="1" branch="False" />
+            <line number="106" hits="1" branch="False" />
+            <line number="108" hits="1" branch="False" />
+            <line number="110" hits="1" branch="False" />
+            <line number="111" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerHasAccesShouldReturnTrue&gt;d__9" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopManagerServiceTests/&lt;ManagerHasAccesShouldReturnTrue&gt;d__10" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopManagerServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="False" />
-                <line number="89" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
-                <line number="93" hits="0" branch="False" />
-                <line number="94" hits="0" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="97" hits="1" branch="False" />
+                <line number="99" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="87" hits="0" branch="False" />
-            <line number="88" hits="0" branch="False" />
-            <line number="89" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
-            <line number="93" hits="0" branch="False" />
-            <line number="94" hits="0" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="97" hits="1" branch="False" />
+            <line number="99" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="0.7777" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopServiceTests" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="1" branch-rate="1" complexity="2">
           <methods>
-            <method name="OneTimeSetUp" signature="()" line-rate="0.7777" branch-rate="1" complexity="1">
+            <method name="OneTimeSetUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="18" hits="1" branch="False" />
                 <line number="19" hits="1" branch="False" />
@@ -4386,8 +4416,15 @@
                 <line number="22" hits="1" branch="False" />
                 <line number="24" hits="1" branch="False" />
                 <line number="25" hits="1" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="CleanUp" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
@@ -4399,89 +4436,92 @@
             <line number="22" hits="1" branch="False" />
             <line number="24" hits="1" branch="False" />
             <line number="25" hits="1" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="1" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByIdReturnFalseWhenDoNotExist&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByIdReturnFalseWhenDoNotExist&gt;d__4" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="32" hits="0" branch="False" />
-                <line number="33" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="32" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByIdReturnTrueWhenExists&gt;d__5" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByIdReturnTrueWhenExists&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByNameReturnFalseWhenDoNotExist&gt;d__6" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByNameReturnFalseWhenDoNotExist&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="50" hits="0" branch="False" />
-                <line number="51" hits="0" branch="False" />
-                <line number="53" hits="0" branch="False" />
-                <line number="54" hits="0" branch="False" />
+                <line number="56" hits="1" branch="False" />
+                <line number="57" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="50" hits="0" branch="False" />
-            <line number="51" hits="0" branch="False" />
-            <line number="53" hits="0" branch="False" />
-            <line number="54" hits="0" branch="False" />
+            <line number="56" hits="1" branch="False" />
+            <line number="57" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByNameReturnTrueWhenExists&gt;d__7" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="0" branch-rate="1" complexity="1">
+        <class name="PetFindMeShop.Tests.ShopServiceTests/&lt;ShopExistsByNameReturnTrueWhenExists&gt;d__8" filename="Documents\PetFindMeShop\PetFindMeShop.Tests\ShopServiceTests.cs" line-rate="1" branch-rate="1" complexity="1">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="58" hits="0" branch="False" />
-                <line number="59" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="63" hits="0" branch="False" />
-                <line number="64" hits="0" branch="False" />
+                <line number="64" hits="1" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="63" hits="0" branch="False" />
-            <line number="64" hits="0" branch="False" />
+            <line number="64" hits="1" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
           </lines>
         </class>
       </classes>
     </package>
-    <package name="PetFindMeShop.ViewModels" line-rate="0" branch-rate="1" complexity="46">
+    <package name="PetFindMeShop.ViewModels" line-rate="0.37310000000000004" branch-rate="1" complexity="46">
       <classes>
         <class name="PetFindMeShop.ViewModels.ErrorViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\ErrorViewModel.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
@@ -4573,21 +4613,21 @@
             <line number="34" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.ViewModels.ShopManager.ShopManagerFormViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\ShopManager\ShopManagerFormViewModel.cs" line-rate="0" branch-rate="1" complexity="4">
+        <class name="PetFindMeShop.ViewModels.ShopManager.ShopManagerFormViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\ShopManager\ShopManagerFormViewModel.cs" line-rate="0.4285" branch-rate="1" complexity="4">
           <methods>
-            <method name="get_FirstName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_FirstName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="0" branch="False" />
+                <line number="14" hits="6" branch="False" />
               </lines>
             </method>
-            <method name="get_LastName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_LastName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="0" branch="False" />
+                <line number="19" hits="6" branch="False" />
               </lines>
             </method>
-            <method name="get_PhoneNumber" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_PhoneNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="0" branch="False" />
+                <line number="24" hits="6" branch="False" />
               </lines>
             </method>
             <method name="CreateMappings" signature="(AutoMapper.IProfileExpression)" line-rate="0" branch-rate="1" complexity="1">
@@ -4600,9 +4640,9 @@
             </method>
           </methods>
           <lines>
-            <line number="14" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
+            <line number="14" hits="6" branch="False" />
+            <line number="19" hits="6" branch="False" />
+            <line number="24" hits="6" branch="False" />
             <line number="27" hits="0" branch="False" />
             <line number="28" hits="0" branch="False" />
             <line number="29" hits="0" branch="False" />
@@ -4681,148 +4721,148 @@
             <line number="17" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.ViewModels.Product.LikedProductViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\LikedProductViewModel.cs" line-rate="0" branch-rate="1" complexity="4">
+        <class name="PetFindMeShop.ViewModels.Product.LikedProductViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\LikedProductViewModel.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
-            <method name="get_Status" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Status" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="5" hits="0" branch="False" />
+                <line number="5" hits="16" branch="False" />
               </lines>
             </method>
-            <method name="get_IsAvailable" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_IsAvailable" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="0" branch="False" />
+                <line number="7" hits="9" branch="False" />
               </lines>
             </method>
-            <method name="get_IsLiked" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_IsLiked" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="0" branch="False" />
+                <line number="9" hits="8" branch="False" />
               </lines>
             </method>
-            <method name="get_IsDeleted" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_IsDeleted" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="0" branch="False" />
+                <line number="11" hits="8" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="5" hits="0" branch="False" />
-            <line number="7" hits="0" branch="False" />
-            <line number="9" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
+            <line number="5" hits="16" branch="False" />
+            <line number="7" hits="9" branch="False" />
+            <line number="9" hits="8" branch="False" />
+            <line number="11" hits="8" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.ViewModels.Product.ProductDetailsViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\ProductDetailsViewModel.cs" line-rate="0" branch-rate="1" complexity="3">
+        <class name="PetFindMeShop.ViewModels.Product.ProductDetailsViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\ProductDetailsViewModel.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
-            <method name="get_ShopProviderName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_ShopProviderName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="5" hits="0" branch="False" />
+                <line number="5" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="get_Category" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Category" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="0" branch="False" />
+                <line number="7" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="get_Description" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="0" branch="False" />
+                <line number="9" hits="5" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="5" hits="0" branch="False" />
-            <line number="7" hits="0" branch="False" />
-            <line number="9" hits="0" branch="False" />
+            <line number="5" hits="4" branch="False" />
+            <line number="7" hits="4" branch="False" />
+            <line number="9" hits="5" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.ViewModels.Product.ProductFormViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\ProductFormViewModel.cs" line-rate="0" branch-rate="1" complexity="8">
+        <class name="PetFindMeShop.ViewModels.Product.ProductFormViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\ProductFormViewModel.cs" line-rate="1" branch-rate="1" complexity="8">
           <methods>
-            <method name="get_Title" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="19" hits="0" branch="False" />
+                <line number="19" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_ImageName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_ImageName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="0" branch="False" />
+                <line number="24" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_CategoryId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_CategoryId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="28" hits="0" branch="False" />
+                <line number="28" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_AvailableQuantity" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_AvailableQuantity" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="33" hits="0" branch="False" />
+                <line number="33" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_Price" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="38" hits="0" branch="False" />
+                <line number="38" hits="2" branch="False" />
               </lines>
             </method>
-            <method name="get_Description" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Description" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="43" hits="0" branch="False" />
+                <line number="43" hits="3" branch="False" />
               </lines>
             </method>
-            <method name="get_Categories" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Categories" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="45" hits="0" branch="False" />
+                <line number="45" hits="1" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="0" branch="False" />
-                <line number="12" hits="0" branch="False" />
-                <line number="13" hits="0" branch="False" />
-                <line number="14" hits="0" branch="False" />
+                <line number="11" hits="1" branch="False" />
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="38" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="45" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
-            <line number="12" hits="0" branch="False" />
-            <line number="13" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
+            <line number="19" hits="3" branch="False" />
+            <line number="24" hits="3" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="33" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="43" hits="3" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
           </lines>
         </class>
-        <class name="PetFindMeShop.ViewModels.Product.ProductViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\ProductViewModel.cs" line-rate="0" branch-rate="1" complexity="4">
+        <class name="PetFindMeShop.ViewModels.Product.ProductViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Product\ProductViewModel.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
-            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="0" branch="False" />
+                <line number="8" hits="9" branch="False" />
               </lines>
             </method>
-            <method name="get_Title" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="0" branch="False" />
+                <line number="10" hits="17" branch="False" />
               </lines>
             </method>
-            <method name="get_ImageName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_ImageName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="0" branch="False" />
+                <line number="12" hits="17" branch="False" />
               </lines>
             </method>
-            <method name="get_Price" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="get_Price" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="0" branch="False" />
+                <line number="14" hits="9" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="8" hits="0" branch="False" />
-            <line number="10" hits="0" branch="False" />
-            <line number="12" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
+            <line number="8" hits="9" branch="False" />
+            <line number="10" hits="17" branch="False" />
+            <line number="12" hits="17" branch="False" />
+            <line number="14" hits="9" branch="False" />
           </lines>
         </class>
         <class name="PetFindMeShop.ViewModels.Home.IndexViewModel" filename="Documents\PetFindMeShop\PetFindMeShop.ViewModels\Home\IndexViewModel.cs" line-rate="0" branch-rate="1" complexity="4">

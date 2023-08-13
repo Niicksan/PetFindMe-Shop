@@ -28,6 +28,12 @@
             this.categoryService = new CategoryService(this.dbContext);
         }
 
+        [OneTimeTearDown]
+        public void CleanUp()
+        {
+            this.dbContext.Database.EnsureDeleted();
+        }
+
         [Test, Order(1)]
         public async Task CategoryExistsByIdShouldReturnFalseWhenDoNotExist()
         {

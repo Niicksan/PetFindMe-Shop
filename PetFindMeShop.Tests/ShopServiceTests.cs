@@ -35,6 +35,12 @@
             Assert.IsFalse(result);
         }
 
+        [OneTimeTearDown]
+        public void CleanUp()
+        {
+            this.dbContext.Database.EnsureDeleted();
+        }
+
         [Test]
         public async Task ShopExistsByIdReturnTrueWhenExists()
         {
