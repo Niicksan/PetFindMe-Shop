@@ -3,8 +3,9 @@
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
+    using PetFindMeShop.Data.Configurations;
+    using PetFindMeShop.Data.Configurations.SeedDbConfigurations;
     using PetFindMeShop.Data.Models;
-    using System.Reflection;
 
     public class PetFindMeShopDbContext : IdentityDbContext<Customer, IdentityRole<Guid>, Guid>
     {
@@ -13,15 +14,6 @@
         public PetFindMeShopDbContext(DbContextOptions<PetFindMeShopDbContext> options, bool seed = true)
             : base(options)
         {
-            //if (Database.IsRelational())
-            //{
-            //    Database.Migrate();
-            //}
-            //else
-            //{
-            //    Database.EnsureCreated();
-            //}
-
             this.seedDb = seed;
         }
 
@@ -45,11 +37,21 @@
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new CategoryEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new CustomerEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ManagerEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ShopEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ShopsManagersEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductEntityConfiguration());
+
             if (this.seedDb)
             {
-                Assembly configAssembly = Assembly.GetAssembly(typeof(PetFindMeShopDbContext)) ??
-                                      Assembly.GetExecutingAssembly();
-                modelBuilder.ApplyConfigurationsFromAssembly(configAssembly);
+                modelBuilder.ApplyConfiguration(new SeedCategoriesEntityConfiguration());
+                modelBuilder.ApplyConfiguration(new SeedCustomersEntityConfiguration());
+                modelBuilder.ApplyConfiguration(new SeedManagersEntityConfiguration());
+                modelBuilder.ApplyConfiguration(new SeedShopsEntityConfiguration());
+                modelBuilder.ApplyConfiguration(new SeedShopsManagersEntityConfiguration());
+                modelBuilder.ApplyConfiguration(new SeedProductsEntityConfiguration());
             }
 
             base.OnModelCreating(modelBuilder);
