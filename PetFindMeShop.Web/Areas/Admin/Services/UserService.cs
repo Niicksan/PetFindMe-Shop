@@ -28,7 +28,7 @@
             foreach (UserViewModel user in allUsers)
             {
                 ShopManager? manager = this.dbContext
-                    .ShopManager
+                    .ShopManagers
                     .FirstOrDefault(m => m.CustomerId.ToString() == user.Id);
 
                 if (manager != null)
