@@ -35,6 +35,10 @@
 
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; } = null!;
 
+        public DbSet<Order> Orders { get; set; } = null!;
+
+        public DbSet<OrderItem> OrderItems { get; set; } = null!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CategoryEntityConfiguration());
@@ -43,6 +47,10 @@
             modelBuilder.ApplyConfiguration(new ShopEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ShopsManagersEntityConfiguration());
             modelBuilder.ApplyConfiguration(new ProductEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ShoppingCartEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ShoppingCartItemEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderItemEntityConfiguration());
 
             if (this.seedDb)
             {
