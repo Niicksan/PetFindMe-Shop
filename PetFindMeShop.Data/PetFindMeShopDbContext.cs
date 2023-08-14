@@ -21,7 +21,7 @@
 
         public DbSet<Customer> Customers { get; set; } = null!;
 
-        public DbSet<ShopManager> ShopManager { get; set; } = null!;
+        public DbSet<ShopManager> ShopManagers { get; set; } = null!;
 
         public DbSet<Shop> Shops { get; set; } = null!;
 

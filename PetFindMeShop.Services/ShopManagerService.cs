@@ -21,7 +21,7 @@
         public async Task<bool> ManagerExistsByUserIdAsync(string userId)
         {
             bool result = await dbContext
-              .ShopManager
+              .ShopManagers
               .AnyAsync(m => m.CustomerId.ToString() == userId);
 
             return result;
@@ -30,7 +30,7 @@
         public async Task<bool> ManagerExistsByPhoneNumberAsync(string phoneNumber)
         {
             bool result = await dbContext
-                .ShopManager
+                .ShopManagers
                 .AnyAsync(m => m.PhoneNumber == phoneNumber);
 
             return result;
@@ -39,7 +39,7 @@
         public async Task<bool> ManagerExistsByOtherPhoneNumberAsync(string userId, string phoneNumber)
         {
             bool result = await dbContext
-                 .ShopManager
+                 .ShopManagers
                  .Where(m => m.CustomerId.ToString() != userId.ToString() && m.PhoneNumber == phoneNumber)
                  .AnyAsync();
 
@@ -61,7 +61,7 @@
         public async Task<string?> GetManagerIdByUserIdAsync(string userId)
         {
             ShopManager? manager = await dbContext
-               .ShopManager
+               .ShopManagers
                .FirstOrDefaultAsync(m => m.CustomerId.ToString() == userId);
 
             if (manager == null)
@@ -75,7 +75,7 @@
         public async Task<ShopManagerFormViewModel> GetManagerForEditByIdAsync(string userId)
         {
             ShopManager manager = await dbContext
-                .ShopManager
+                .ShopManagers
                 .FirstAsync(m => m.CustomerId.ToString() == userId);
 
             return new ShopManagerFormViewModel
@@ -113,14 +113,14 @@
             ShopManager manager = AutoMapperConfig.MapperInstance.Map<ShopManager>(model);
             manager.CustomerId = Guid.Parse(userId);
 
-            await dbContext.ShopManager.AddAsync(manager);
+            await dbContext.ShopManagers.AddAsync(manager);
             await dbContext.SaveChangesAsync();
         }
 
         public async Task Edit(string userId, ShopManagerFormViewModel model)
         {
             ShopManager manager = await dbContext
-                .ShopManager
+                .ShopManagers
                 .FirstAsync(m => m.CustomerId.ToString() == userId);
 
             manager.FirstName = model.FirstName;

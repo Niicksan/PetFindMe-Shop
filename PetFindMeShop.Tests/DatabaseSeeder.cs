@@ -207,8 +207,8 @@
             dbContext.Customers.Add(NikShopManagerUser);
 
             // Add Managers
-            dbContext.ShopManager.Add(ShopManager);
-            dbContext.ShopManager.Add(NikShopManager);
+            dbContext.ShopManagers.Add(ShopManager);
+            dbContext.ShopManagers.Add(NikShopManager);
 
             // Add Shops
             dbContext.Shops.Add(PetShopBg);
