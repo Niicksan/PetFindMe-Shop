@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PetFindMeShop.Data;
 using PetFindMeShop.Data.Models;
-using PetFindMeShop.Services;
 using PetFindMeShop.Services.Interfaces;
 using PetFindMeShop.Services.Mapping;
 using PetFindMeShop.ViewModels;
-using PetFindMeShop.Web.Areas.Admin.Services;
 using PetFindMeShop.Web.Infrastructure.Extensions;
 using PetFindMeShop.Web.Infrastructure.ModelBinders;
 using System.Reflection;
@@ -42,11 +40,7 @@ builder.Services.AddDefaultIdentity<Customer>(options =>
 .AddEntityFrameworkStores<PetFindMeShopDbContext>();
 
 // Register Services
-builder.Services.AddScoped<IShopManagerService, ShopManagerService>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IShopService, ShopService>();
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddApplicationServices(typeof(IProductService));
 
 builder.Services.AddMemoryCache();
 builder.Services.AddResponseCaching();
