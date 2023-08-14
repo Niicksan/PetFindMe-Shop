@@ -217,7 +217,7 @@
 
             if (alreadyAdded == false)
             {
-                var userBook = new LikedProducts
+                var userBook = new LikedProduct
                 {
                     CustomerId = Guid.Parse(userId),
                     ProductId = productId

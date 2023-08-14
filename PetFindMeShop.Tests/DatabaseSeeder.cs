@@ -20,7 +20,7 @@
         public static Product? DogFood;
         public static Product? CatFood;
         public static Product? DogBed;
-        public static LikedProducts? DogFoodLikedProduct;
+        public static LikedProduct? DogFoodLikedProduct;
 
         public static void SeedDatabase(PetFindMeShopDbContext dbContext)
         {
@@ -194,7 +194,7 @@
             };
 
             // Add Liked Product
-            DogFoodLikedProduct = new LikedProducts()
+            DogFoodLikedProduct = new LikedProduct()
             {
                 Id = 1,
                 ProductId = 1,

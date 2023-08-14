@@ -5,7 +5,7 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Comment("Liked Products")]
-    public class LikedProducts
+    public class LikedProduct
     {
         [Comment("Primery key")]
         [Key]
