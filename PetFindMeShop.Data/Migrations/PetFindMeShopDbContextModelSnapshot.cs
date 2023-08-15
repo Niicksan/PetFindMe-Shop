@@ -186,7 +186,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
 
                     b.HasComment("Category");
 
@@ -465,7 +465,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("LikedProducts");
+                    b.ToTable("LikedProducts", (string)null);
 
                     b.HasComment("Liked Products");
                 });
@@ -527,7 +527,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Order", (string)null);
 
                     b.HasComment("Order");
                 });
@@ -573,7 +573,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("ShopId");
 
-                    b.ToTable("OrderItem");
+                    b.ToTable("OrderItem", (string)null);
 
                     b.HasComment("Order Item");
                 });
@@ -649,7 +649,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("ShopId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
 
                     b.HasComment("Product");
 
@@ -739,7 +739,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shops");
+                    b.ToTable("Shops", (string)null);
 
                     b.HasComment("Shop");
 
@@ -800,7 +800,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("ShopManager");
+                    b.ToTable("ShopManager", (string)null);
 
                     b.HasComment("ShopManager");
 
@@ -844,7 +844,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("ShoppingCarts");
+                    b.ToTable("ShoppingCarts", (string)null);
 
                     b.HasComment("Shopping Cart");
                 });
@@ -884,7 +884,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("ShoppingCartId");
 
-                    b.ToTable("ShoppingCartItems");
+                    b.ToTable("ShoppingCartItems", (string)null);
 
                     b.HasComment("Shopping Cart Item");
                 });
@@ -924,7 +924,7 @@ namespace PetFindMeShop.Data.Migrations
 
                     b.HasIndex("ShopManagerId");
 
-                    b.ToTable("ShopsManagers");
+                    b.ToTable("ShopsManagers", (string)null);
 
                     b.HasComment("Shops Manager");
 
