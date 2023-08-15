@@ -9,9 +9,14 @@
     [Comment("Shopping Cart Item")]
     public class ShoppingCartItem
     {
+        public ShoppingCartItem()
+        {
+            this.Id = Guid.NewGuid();
+        }
+
         [Comment("Primery key")]
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Comment("ForeignKey to Product")]
         [Required]
