@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetFindMeShop.Data;
 
@@ -11,9 +12,10 @@ using PetFindMeShop.Data;
 namespace PetFindMeShop.Data.Migrations
 {
     [DbContext(typeof(PetFindMeShopDbContext))]
-    partial class PetFindMeShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230815114904_AddMissingEntityCongigurations")]
+    partial class AddMissingEntityCongigurations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
