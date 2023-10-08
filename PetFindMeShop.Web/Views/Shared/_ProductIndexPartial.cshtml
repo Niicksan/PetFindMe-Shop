@@ -14,6 +14,6 @@
                 </div>    
             </div>
         </a>
-        <partial name="_AddToCartPartial" model="@Model" />
+        <a class="btn btn-primary" asp-controller="Product" asp-action="Details" asp-route-id="@Model.Id">Предлед</a>
     </div>
 </div>

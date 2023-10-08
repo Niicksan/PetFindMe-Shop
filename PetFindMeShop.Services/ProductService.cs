@@ -122,6 +122,10 @@
                 IsLiked = isLiked ? true : false,
                 IsDeleted = product.DeletedAt != null ? true : false,
                 Description = product.Description,
+                BoughtQuantityForm = new ProductBoughtQuantityFormViewModel
+                {
+                    BoughtQuantity = 1
+                }
             };
         }
 

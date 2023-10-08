@@ -7,6 +7,7 @@ using PetFindMeShop.Services.Interfaces;
 using PetFindMeShop.Services.Mapping;
 using PetFindMeShop.ViewModels;
 using PetFindMeShop.Web.Infrastructure.Extensions;
+using PetFindMeShop.Web.Infrastructure.Filters;
 using PetFindMeShop.Web.Infrastructure.ModelBinders;
 using System.Reflection;
 using static PetFindMeShop.Common.GeneralApplicationConstants;
@@ -42,12 +43,15 @@ builder.Services.AddDefaultIdentity<Customer>(options =>
 // Register Services
 builder.Services.AddApplicationServices(typeof(IProductService));
 
+// Register Filters
+builder.Services.AddScoped<ProductExistsValidationFilter>();
+
 builder.Services.AddMemoryCache();
 builder.Services.AddResponseCaching();
 
 builder.Services.ConfigureApplicationCookie(cfg =>
 {
-    cfg.LoginPath = "/User/Login";
+    cfg.LoginPath = "/Identity/Account/Login";
     cfg.AccessDeniedPath = "/Home/Error/401";
 });
 

@@ -10,6 +10,7 @@
     public class ProductBoughtQuantityFormViewModel : IMapTo<ShoppingCartItem>, IHaveCustomMappings
     {
         [Required]
+        [Display(Name = "Количество")]
         [Range(typeof(decimal), OnSiteQuantityMinValue, OnSiteQuantityMaxValue)]
         public int BoughtQuantity { get; set; }
 

@@ -16,12 +16,24 @@
                 <p><b>Категория: </b>@Model.Category</p>
                 <p><b>Предлаган от: </b>@Model.ShopProviderName</p>
                 <p><b>Цена: @($"{Model.Price:f2}") лв.</b></p>
-                <p class="@(Model.IsAvailable ? "text-success" : "text-danger")" "><i>@Model.Status</i></p>
+                <p class="@(Model.IsAvailable ? "text-success" : "text-danger")"><i>@Model.Status</i></p>
             </div>
             <div class="product-buttons d-flex flex-column flex-column align-items-center justify-content-center w-100">
                 @if (!@Model.IsDeleted)
                 {
-                    <a class="btn btn-primary w-90 mb-2 @(Model.IsAvailable ? "" : "disabled")">Добави в количката</a>
+                    <partial name="_ProductBoughtQuantityFormPartial" model="@Model" />
+                    @*<form asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.Id" class="boughtQuantityForm" method="post">
+                        <div class="d-flex d-flex-row align-items-center align-self-start w-90" style="padding: 0 5%;">
+                            <label asp-for="@Model.BoughtQuantityForm.BoughtQuantity" class="mb-1" style="margin-right: 1rem"></label>
+                            <div class="wrapper mb-2">
+                                <a class="plusminus minus">-</a>
+                                <input asp-for="@Model.BoughtQuantityForm.BoughtQuantity" value="@(Model.BoughtQuantityForm.BoughtQuantity != 0 ? Model.BoughtQuantityForm.BoughtQuantity : 1)" class="num" min="1" max="100">
+                                <span asp-validation-for="@Model.BoughtQuantityForm.BoughtQuantity" class="small text-danger"></span>
+                                <a class="plusminus plus">+</a>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary w-90 mb-2 @(Model.IsAvailable ? "" : "disabled")">Добави в количката</button>
+                    </form>*@
                                     
                     @if (!@Model.IsLiked)
                     {
@@ -58,3 +70,5 @@
         </div>
     </div>
 </div>
+
+@*<script src="~/js/quantityValidation.js"></script>*@

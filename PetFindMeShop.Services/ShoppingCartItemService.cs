@@ -17,6 +17,14 @@
             this.dbContext = dbContext;
         }
 
+        public async Task<bool> ProductAddedToCart(int productId, string cartId)
+        {
+            return await this.dbContext
+                .ShoppingCartItems
+                .Where(sci => sci.ProductId == productId && sci.ShoppingCartId.ToString() == cartId)
+                .AnyAsync();
+        }
+
         public async Task AddProductToCart(int productId, string cartId, ProductBoughtQuantityFormViewModel formModel)
         {
             ShoppingCartItem cartItem = AutoMapperConfig.MapperInstance.Map<ShoppingCartItem>(formModel);
@@ -38,7 +46,7 @@
                 cartItemToUpdate.BoughtQuantity = formModel.BoughtQuantity;
                 cartItemToUpdate.UpdatedAt = DateTime.Now;
 
-                await dbContext.SaveChangesAsync();
+                await this.dbContext.SaveChangesAsync();
             }
         }
 
